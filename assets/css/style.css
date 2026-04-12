@@ -60,6 +60,33 @@ body {
     transform: translateY(1px);
 }
 
+/* Inline referral link (subtle but noticeable CTA) */
+.inline-ref-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-weight: 700;
+    color: #065f46;
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 2px;
+    text-decoration-color: rgba(6, 95, 70, 0.35);
+    transition: color 0.2s ease, text-decoration-color 0.2s ease, transform 0.2s ease;
+}
+.inline-ref-link:hover,
+.inline-ref-link:focus-visible {
+    color: #064e3b;
+    text-decoration-color: rgba(6, 78, 59, 0.8);
+}
+.inline-ref-link i {
+    opacity: 0.75;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.inline-ref-link:hover i,
+.inline-ref-link:focus-visible i {
+    opacity: 1;
+    transform: translateX(2px) translateY(-1px);
+}
+
 /* Section Headings */
 .section-title {
     position: relative;
