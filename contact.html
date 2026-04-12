@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ | 東北医科薬科大学病院 腫瘍内科</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{fontFamily:{sans:['"Noto Sans JP"','sans-serif']},colors:{primary:'#065f46',secondary:'#3b82f6',dark:'#1f2937',light:'#f9fafb',}}}}</script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" type="image/png" href="assets/images/TMPU medonc favicon.png">
+</head>
+<body class="bg-[#F3F6F4] text-dark flex flex-col min-h-screen">
+    <main class="flex-grow">
+        <!-- Page Header -->
+        <div class="bg-gray-100 py-12 border-b border-gray-200">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">お問い合わせ</h1>
+                <p class="text-gray-600">見学に関するご相談やご質問を受け付けております</p>
+            </div>
+        </div>
+
+        <section class="py-16 bg-white">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg mb-12 animate-fade-up">
+                    <p class="text-sm font-medium text-yellow-800 flex items-start gap-2">
+                        <i data-lucide="alert-circle" class="w-5 h-5 flex-shrink-0 mt-0.5"></i>
+                        個別の患者さんの病状や治療に関する医学的なご相談、初診予約については、Webやメールではお答えできません。かかりつけ医を通じて患者支援センターへご連絡ください。
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-8 mb-16">
+                    <!-- General Contact Info -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-8 animate-fade-up delay-50">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-100 pb-4 flex items-center gap-3">
+                            <i data-lucide="building" class="text-primary w-6 h-6"></i> 代表連絡先
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-sm font-bold text-gray-500 mb-1">所在地</h3>
+                                <p class="text-gray-900 font-medium">〒983-8512<br>宮城県仙台市宮城野区福室1丁目12-1<br>東北医科薬科大学病院</p>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-bold text-gray-500 mb-1">病院代表電話</h3>
+                                <p class="text-2xl font-bold text-primary font-mono bg-emerald-50 py-2 px-4 rounded inline-block">022-259-1221</p>
+                                <p class="text-sm text-gray-600 mt-2">受付時間：平日 8:30〜17:00（土・日・祝祭日・年末年始を除く）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#E8F1EE] rounded-xl p-8 border border-emerald-100 mb-12 animate-fade-up delay-100">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">腫瘍内科 見学／キャリア相談</h2>
+                    <p class="text-gray-700 text-center mb-8 max-w-xl mx-auto">
+                        見学のご希望、医局に関するご質問などは、下記のフォームからお気軽にお問い合わせください。担当者より折り返しご連絡いたします。
+                    </p>
+                    
+                    <!-- Google Form Embed -->
+                    <div class="w-full bg-white border border-gray-200 rounded text-center overflow-hidden">
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScdOInYA4m9GHysAWaqecOhymnQ7Z6oByUTIMppCjkTtAL8CQ/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+                    </div>
+                        
+                        <!-- Alternative Mailto as fallback -->
+                        <div class="mt-8 pt-6 border-t border-gray-100">
+                            <p class="text-sm text-gray-500 mb-2">見学フォームがうまく入力できない場合は、病院代表窓口（総務グループ）の下記メールアドレスへ直接ご連絡ください。</p>
+                            <a href="mailto:soumu@hosp.tohoku-mpu.ac.jp" class="text-primary font-bold hover:underline">
+                                soumu@hosp.tohoku-mpu.ac.jp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

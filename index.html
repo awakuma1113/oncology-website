@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>東北医科薬科大学病院 腫瘍内科</title>
+    <meta name="description" content="腫瘍内科は、薬物療法を中心にがん患者さんの治療と生活を支える診療科です。最新の知見と多職種連携によるチーム医療を提供しています。">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Noto Sans JP"', 'sans-serif'] },
+                    colors: {
+                        primary: '#065f46', // Blue 800 - Deep academic blue
+                        secondary: '#10b981', // Blue 500 - Interactive blue
+                        dark: '#1f2937', // Gray 800 - Text color
+                        light: '#f9fafb', // Gray 50 - Background
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" href="public/favicon.png">
+</head>
+<body class="bg-[#F3F6F4] text-dark flex flex-col min-h-screen">
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative pt-10 pb-20 lg:pt-20 lg:pb-28 overflow-hidden bg-[#123C35]">
+            <div class="absolute inset-0 z-0 overflow-hidden">
+                <div class="w-full h-full bg-gradient-to-r from-[#123C35] to-[#1F5B57] animate-hero-zoom origin-center opacity-90"></div>
+                
+                <!-- Watermark Logo -->
+                <div class="absolute inset-0 flex justify-end items-center opacity-15 pointer-events-none mix-blend-overlay pr-8 lg:pr-24">
+                    <img src="assets/images/TMPUmedonc logo.png" alt="" class="max-h-[60%] lg:max-h-[80%] w-auto object-contain max-w-[45%] lg:max-w-lg">
+                </div>
+
+                <div class="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="max-w-3xl animate-fade-up">
+                    <span class="block text-emerald-300 font-bold tracking-widest text-lg md:text-xl mb-4">東北医科薬科大学 医学部 腫瘍内科学教室</span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8">
+                        がん診療を通して、<br class="hidden md:block">
+                        <span class="text-emerald-200">患者さんの生活と将来を支える</span>
+                    </h1>
+                    <p class="text-lg text-[#E8F1EE] leading-relaxed mb-10 text-container ml-0 max-w-2xl">
+                        腫瘍内科は、薬物療法を中心に、がん患者さんの治療と生活を支える診療科です。<br>
+                        私たちは、多職種と連携しながら、一人ひとりの病状や背景に応じた診療を行っています。<br>
+                        患者さんにとってわかりやすく、学生・研修医にとって腫瘍内科の魅力が伝わる場を目指して情報を発信しています。
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row flex-wrap gap-4 animate-fade-up delay-100">
+                        <a href="patients.html" class="btn-primary inline-flex justify-center items-center px-6 py-4 rounded bg-primary text-white font-medium hover:bg-emerald-900 shadow-md">
+                            <i data-lucide="user" class="w-5 h-5 mr-2"></i> 受診をご検討の方へ
+                        </a>
+                        <a href="referral.html" class="btn-primary inline-flex justify-center items-center px-6 py-4 rounded border-2 border-primary text-emerald-100 font-medium hover:bg-emerald-800">
+                            <i data-lucide="building" class="w-5 h-5 mr-2"></i> 医療機関の方へ
+                        </a>
+                        <a href="recruit.html" class="btn-primary inline-flex justify-center items-center px-6 py-4 rounded border-2 border-gray-400 text-gray-200 font-medium hover:bg-emerald-800">
+                            <i data-lucide="graduation-cap" class="w-5 h-5 mr-2"></i> 見学申し込み
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3 Major Pathways Section -->
+        <section class="py-16 bg-[#E8F1EE]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-2xl font-bold text-center text-gray-900 section-title mb-12 animate-fade-up">目的別のご案内</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Patients -->
+                    <a href="patients.html" class="group bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-100 overflow-hidden transition-all duration-300 transform hover:-translate-y-1 animate-fade-up delay-50">
+                        <div class="h-40 bg-emerald-50 flex items-center justify-center img-placeholder group-hover:bg-emerald-100 transition-colors">
+                            <i data-lucide="users" class="w-16 h-16 text-primary"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors flex items-center justify-between">
+                                患者さんへ <i data-lucide="arrow-right" class="w-5 h-5 text-gray-400 group-hover:text-primary"></i>
+                            </h3>
+                            <p class="text-sm text-gray-600">
+                                当科での治療の進め方、初診の流れ、およびセカンドオピニオンについてご案内します。
+                            </p>
+                        </div>
+                    </a>
+
+                    <!-- Referrals -->
+                    <a href="referral.html" class="group bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-100 overflow-hidden transition-all duration-300 transform hover:-translate-y-1 animate-fade-up delay-100">
+                        <div class="h-40 bg-emerald-50 flex items-center justify-center img-placeholder group-hover:bg-emerald-100 transition-colors">
+                            <i data-lucide="stethoscope" class="w-16 h-16 text-emerald-700"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors flex items-center justify-between">
+                                医療機関の方へ <i data-lucide="arrow-right" class="w-5 h-5 text-gray-400 group-hover:text-emerald-700"></i>
+                            </h3>
+                            <p class="text-sm text-gray-600">
+                                紹介方法や受診相談の流れ、連携方針について医療従事者の皆様へご案内します。
+                            </p>
+                        </div>
+                    </a>
+
+                    <!-- Students -->
+                    <a href="recruit.html" class="group bg-white rounded-lg shadow-sm hover:shadow-lg border border-gray-100 overflow-hidden transition-all duration-300 transform hover:-translate-y-1 animate-fade-up delay-150">
+                        <div class="h-40 bg-amber-50 flex items-center justify-center img-placeholder group-hover:bg-amber-100 transition-colors">
+                            <i data-lucide="book-open" class="w-16 h-16 text-amber-700"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-amber-700 transition-colors flex items-center justify-between">
+                                見学・キャリア <i data-lucide="arrow-right" class="w-5 h-5 text-gray-400 group-hover:text-amber-700"></i>
+                            </h3>
+                            <p class="text-sm text-gray-600">
+                                臓器横断的な学びの魅力、教育体制、見学のお申し込みについてご案内します。
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Department Features -->
+        <section class="py-20 bg-transparent">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="animate-fade-up text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6 section-title">当科の特色</h2>
+                </div>
+                
+                <div class="space-y-8 mb-16">
+                    <!-- Feature 1 -->
+                    <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 animate-fade-up">
+                        <h3 class="text-xl sm:text-2xl font-bold text-emerald-900 mb-4 flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center flex-shrink-0 text-lg mt-0.5">1</div>
+                            専門性の高いがん薬物療法を、日々の生活のすぐそばで
+                        </h3>
+                        <p class="text-gray-700 leading-relaxed indent-0 sm:pl-14">
+                            私たちは、がん治療のプロフェッショナルとして、科学的根拠に基づいた最新の薬物療法を提供しています。高度な専門知識を備えつつも、大規模病院にありがちな「敷居の高さ」を感じさせない、一人ひとりの生活に寄り添った温かな医療を大切にしています。住み慣れた地域で、日常生活を維持しながら安心して治療を継続できる環境を整えています。
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 animate-fade-up delay-50">
+                        <h3 class="text-xl sm:text-2xl font-bold text-emerald-900 mb-4 flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center flex-shrink-0 text-lg mt-0.5">2</div>
+                            三陸・相馬エリアを支える広域がん診療の「ゲートウェイ」
+                        </h3>
+                        <p class="text-gray-700 leading-relaxed indent-0 sm:pl-14">
+                            仙台東部道路・三陸沿岸道路の結節点に近い立地を活かし、宮城県北部から福島県相馬エリアまで、広大な沿岸部をカバーする拠点としての役割を担っています。高速道路直結の利便性により、遠方の患者さんでも通院の負担を抑えながら、専門的な治療をスムーズに受けることが可能です。
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 animate-fade-up delay-100">
+                        <h3 class="text-xl sm:text-2xl font-bold text-emerald-900 mb-4 flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center flex-shrink-0 text-lg mt-0.5">3</div>
+                            東北大学病院との強固なネットワーク
+                        </h3>
+                        <p class="text-gray-700 leading-relaxed indent-0 sm:pl-14">
+                            より特殊な新薬や治験が必要となる場合には、東北大学病院と緊密に連携し、速やかに最適な選択肢を提示します。「日々の確実な治療は通い慣れた当院で、必要時には最先端のアカデミアへ」という、医療機関同士の強固な連携による二段構えのサポート体制を構築しています。
+                        </p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 animate-fade-up delay-150">
+                        <h3 class="text-xl sm:text-2xl font-bold text-emerald-900 mb-4 flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center flex-shrink-0 text-lg mt-0.5">4</div>
+                            生活の質（QOL）を最大化するチーム医療
+                        </h3>
+                        <p class="text-gray-700 leading-relaxed indent-0 sm:pl-14">
+                            治療の主役は、患者さんの「生活」そのものです。がん薬物療法専門医を中心に、専門薬剤師・看護師・緩和ケアチームが一体となり、副作用管理から心のケアまで徹底して行います。近隣の方はもちろん、遠方の患者さんに対しても、地元の医療機関と密な連携を図り、治療と生活の両立を強力にバックアップします。
+                        </p>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div class="bg-[#E8F1EE] rounded-2xl p-6 sm:p-8 shadow-sm border border-emerald-200 animate-fade-up delay-200">
+                        <h3 class="text-xl sm:text-2xl font-bold text-primary mb-4 flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center flex-shrink-0 text-lg mt-0.5">5</div>
+                            若手医師・学生へのメッセージ
+                        </h3>
+                        <p class="text-gray-800 leading-relaxed indent-0 sm:pl-14">
+                            腫瘍内科の魅力は、最新の分子標的薬や免疫療法を駆使する「科学者」の視点と、患者さんの人生の伴走者となる「人間学」が融合している点にあります。当科では、最先端のエビデンスを実臨床へ落とし込む高度な専門性はもちろん、全身管理のプロとして多職種チームを牽引するリーダーシップを磨くことができます。診断から緩和ケア、そして高次施設との戦略的な連携まで、がん医療の全体像を俯瞰し、自らの手で「次世代の標準治療」を実践したい志ある皆さんを待っています。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Doctors link -->
+                <div class="text-center animate-fade-up">
+                    <a href="members.html" class="inline-flex items-center justify-center bg-gray-900 text-white px-8 py-4 rounded-full font-bold hover:bg-primary transition-colors shadow-md transform hover:-translate-y-1">
+                        医師・スタッフ紹介を見る <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section class="py-16 bg-[#E8F1EE]">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-up">
+                <div class="flex justify-between items-end mb-8 border-b border-[#123C35]/20 pb-4">
+                    <h2 class="text-2xl font-bold text-gray-900">お知らせ</h2>
+                    <a href="news.html" class="text-sm font-medium text-primary hover:text-emerald-900 flex items-center">
+                        一覧を見る <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i>
+                    </a>
+                </div>
+                
+                <ul class="divide-y divide-gray-200 bg-white shadow-sm rounded-lg overflow-hidden border border-gray-100">
+                    <li class="p-5 sm:px-6 hover:bg-gray-50 transition-colors duration-150">
+                        <a href="news.html" class="flex flex-col sm:flex-row sm:items-center gap-3">
+                            <div class="flex items-center gap-3 w-40 flex-shrink-0">
+                                <time datetime="2026-04-01" class="text-sm text-gray-500">2026.04.01</time>
+                                <span class="px-2.5 py-1 text-xs font-semibold rounded bg-emerald-100 text-emerald-800">ご案内</span>
+                            </div>
+                            <h3 class="text-base text-gray-900 font-medium">ホームページを新設しました。</h3>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
