@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コラム | 東北医科薬科大学病院 腫瘍内科</title>
+    <meta name="description" content="腫瘍内科のスタッフが、患者さんやご家族に役立つ情報をシリーズ形式でお届けするコラムです。">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Noto Sans JP"', 'sans-serif'] },
+                    colors: {
+                        primary: '#065f46',
+                        secondary: '#10b981',
+                        dark: '#1f2937',
+                        light: '#f9fafb',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" href="../public/favicon.png">
+</head>
+<body class="bg-[#F3F6F4] text-dark flex flex-col min-h-screen">
+
+    <main class="flex-grow">
+        <!-- Page Header -->
+        <section class="bg-[#123C35] py-16 lg:py-24 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white via-transparent to-transparent pointer-events-none"></div>
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="animate-fade-up">
+                    <span class="block text-emerald-300 font-bold tracking-widest text-sm mb-3">COLUMN</span>
+                    <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">コラム</h1>
+                    <p class="text-emerald-100 text-base leading-relaxed max-w-2xl">
+                        腫瘍内科のスタッフが、患者さんやご家族に役立つ情報をシリーズ形式でお届けします。<br>
+                        治療・生活・制度など、日常の疑問や不安に寄り添う内容を発信しています。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Column List -->
+        <section class="py-16">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="grid grid-cols-1 gap-6 animate-fade-up">
+
+                    <!-- Vol.01 -->
+                    <a href="01.html" target="_blank" rel="noopener noreferrer"
+                       aria-label="コラム vol.01 がん治療とお金の不安（新しいタブで開きます）"
+                       class="group bg-white rounded-xl shadow-sm hover:shadow-md border border-gray-100 overflow-hidden transition-all duration-300 hover:-translate-y-0.5 flex flex-col sm:flex-row">
+
+                        <!-- Accent bar -->
+                        <div class="w-full sm:w-2 bg-primary flex-shrink-0"></div>
+
+                        <!-- Content -->
+                        <div class="p-6 sm:p-8 flex flex-col justify-between flex-grow gap-4">
+                            <div>
+                                <div class="flex flex-wrap items-center gap-2 mb-3">
+                                    <span class="inline-block bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">vol.01</span>
+                                    <span class="inline-block bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1 rounded-full">患者・ご家族向け</span>
+                                </div>
+                                <h2 class="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors leading-snug mb-2">
+                                    がん治療とお金の不安
+                                </h2>
+                                <p class="text-sm text-gray-500 italic mb-3">― 一人で抱え込まないために ―</p>
+                                <p class="text-sm text-gray-600 leading-relaxed">
+                                    治療費の見通しから高額療養費制度・傷病手当金・がん相談支援センターの活用まで、経済的な不安を一緒に整理するためのガイドです。
+                                </p>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-gray-400">文責：腫瘍内科 川村 佳史</span>
+                                <span class="inline-flex items-center gap-1 text-sm font-bold text-primary group-hover:underline">
+                                    読む <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Placeholder for future columns -->
+                    <div class="bg-white rounded-xl border border-dashed border-gray-200 p-8 text-center text-gray-400">
+                        <i data-lucide="file-plus" class="w-8 h-8 mx-auto mb-3 opacity-40"></i>
+                        <p class="text-sm">今後、vol.02 以降が随時追加されます</p>
+                    </div>
+
+                </div>
+
+                <!-- Back to top -->
+                <div class="mt-12 text-center animate-fade-up">
+                    <a href="../index.html" class="inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-emerald-900 transition-colors">
+                        <i data-lucide="chevron-left" class="w-4 h-4"></i> トップページへ戻る
+                    </a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
