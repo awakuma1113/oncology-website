@@ -28,7 +28,6 @@ const NAVIGATION_LINKS_EN = [
     { label: "Education", path: "recruit.html" },
     { label: "Staff", path: "members.html" },
     { label: "News", path: "news.html" },
-    { label: "Column", path: "column/index.html" },
 ];
 
 
@@ -57,6 +56,21 @@ function getBaseUrl() {
     return isEnglish() ? '../' : './';
 }
 
+/**
+ * Returns the prefix needed to reach the site root from the current page.
+ * - Root pages (/, /index.html, etc.)  → "./"
+ * - /en/ pages                         → "../"
+ * - /column/ or other subdirs          → "../"
+ * Extend the subdirPatterns array when new subdirectories are added.
+ */
+function getSitePrefix() {
+    const pathname = window.location.pathname;
+    const subdirPatterns = ['/column/'];
+    if (isEnglish()) return '../';
+    if (subdirPatterns.some(p => pathname.includes(p))) return '../';
+    return './';
+}
+
 function renderHeader() {
     const isEn = isEnglish();
     const currentPage = getPageName();
@@ -67,13 +81,15 @@ function renderHeader() {
     const mainTitle = isEn ? "Medical Oncology" : "腫瘍内科";
     
     // Path resolution
-    const prefix = isEn ? "../" : "./";
+    const prefix = getSitePrefix();
     const logoFile = isEn ? "Logo EN.png" : "Logo JP.png";
     
     // Lang toggle URLs
-    // If we are in local file system, constructing relative paths is easier
+    // Pages in subdirectories (e.g. /column/) have no English equivalent.
+    // Detect this so we can redirect to EN homepage instead of a broken URL.
+    const isSubdirPage = !isEn && window.location.pathname.includes('/column/');
     const jaUrl = isEn ? `../${currentPage}` : `#`;
-    const enUrl = isEn ? `#` : `en/${currentPage}`;
+    const enUrl = isEn ? `#` : isSubdirPage ? `${prefix}en/index.html` : `en/${currentPage}`;
 
     // Desktop Navigation
     const desktopNav = links.map(link => {
@@ -178,7 +194,7 @@ function renderHeader() {
 
 function renderFooter() {
     const isEn = isEnglish();
-    const prefix = isEn ? "../" : "./";
+    const prefix = getSitePrefix();
     const year = new Date().getFullYear();
     
     const fTitle = isEn ? "Dept. of Medical Oncology" : "腫瘍内科";
