@@ -635,6 +635,29 @@
   }
 
   /* ====== FOOTER ====== */
+  .back-home {
+    margin: 6px 0 24px;
+    text-align: center;
+  }
+
+  .back-home-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--green-700);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .back-home-link:hover {
+    color: var(--green-500);
+    border-bottom-color: var(--green-300);
+  }
+
   .footer {
     text-align: center;
     padding: 24px 0 40px;
@@ -1102,6 +1125,13 @@
     </a>
     <p class="cta-sub">予約不要・どなたでもご利用いただけます</p>
   </section>
+
+  <div class="back-home animate-in">
+    <a href="../index.html" class="back-home-link" aria-label="トップページへ戻る">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+      トップページへ戻る
+    </a>
+  </div>
 
   <!-- CREDIT -->
   <div class="credit-block">
