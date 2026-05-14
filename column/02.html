@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>がん遺伝子パネル検査を受ける前に｜tmpu-oncology.jp コラム vol.02</title>
+<meta name="description" content="がん遺伝子パネル検査を受ける前に知っておきたい基本情報。検査の流れ、わかること・わからないこと、費用、二次的所見について、東北医科薬科大学病院 腫瘍内科がわかりやすく解説します。">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ====== RESET & BASE ====== */
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --green-900: #1f4d3a;
+    --green-700: #2e7d5b;
+    --green-500: #4ca87b;
+    --green-300: #8fcfae;
+    --green-100: #d9ecdf;
+    --green-50: #eef7f1;
+    --bg: #ffffff;
+    --bg-soft: #fafbf9;
+    --text-primary: #1a2e26;
+    --text-secondary: #4a5a52;
+    --text-muted: #7a8a82;
+    --border: #e5ede8;
+    --accent-warn: #c97842;
+    --accent-warn-bg: #fcf3ec;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.85;
+    color: var(--text-primary);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .page-wrapper {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background: var(--bg);
+  }
+
+  /* ====== HEADER / META ====== */
+  .meta-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 0 16px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 28px;
+  }
+
+  .vol-tag {
+    font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    color: var(--green-700);
+    letter-spacing: 0.15em;
+    padding: 4px 10px;
+    background: var(--green-50);
+    border-radius: 4px;
+  }
+
+  .meta-category {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+  }
+
+  /* ====== HERO ====== */
+  .hero {
+    padding: 8px 0 36px;
+  }
+
+  .hero-eyebrow {
+    font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    color: var(--green-500);
+    letter-spacing: 0.2em;
+    margin-bottom: 14px;
+  }
+
+  .hero h1 {
+    font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 1.55;
+    color: var(--green-700);
+    letter-spacing: 0.04em;
+    margin-bottom: 16px;
+  }
+
+  .hero-lead {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.95;
+  }
+
+  /* ====== PURPOSE NOTICE ====== */
+  .purpose-notice {
+    display: flex;
+    gap: 12px;
+    padding: 16px 18px;
+    background: var(--green-50);
+    border-left: 3px solid var(--green-500);
+    border-radius: 4px;
+    margin-bottom: 40px;
+  }
+
+  .purpose-notice-icon {
+    flex-shrink: 0;
+    color: var(--green-700);
+    margin-top: 2px;
+  }
+
+  .purpose-notice-text {
+    font-size: 13px;
+    color: var(--green-900);
+    line-height: 1.8;
+  }
+
+  .purpose-notice-text strong {
+    font-weight: 700;
+  }
+
+  /* ====== SECTION ====== */
+  .section {
+    margin-bottom: 48px;
+  }
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .section-label-bar {
+    width: 20px;
+    height: 1px;
+    background: var(--green-500);
+  }
+
+  .section-label-text {
+    font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    color: var(--green-500);
+    letter-spacing: 0.2em;
+  }
+
+  .section-title {
+    font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.55;
+    color: var(--green-900);
+    letter-spacing: 0.03em;
+    margin-bottom: 18px;
+  }
+
+  .section-intro {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.9;
+    margin-bottom: 22px;
+  }
+
+  /* ====== CARD ====== */
+  .card {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 20px 18px;
+    margin-bottom: 14px;
+  }
+
+  .card-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .card-icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: var(--green-50);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--green-700);
+  }
+
+  .card-title {
+    font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--green-900);
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+  }
+
+  .card-body {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.9;
+  }
+
+  .card-body strong {
+    color: var(--green-700);
+    font-weight: 700;
+  }
+
+  /* ====== COMPARE (通常検査 vs パネル検査) ====== */
+  .compare {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .compare-row {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 16px 18px;
+  }
+
+  .compare-label {
+    font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    color: var(--green-500);
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+
+  .compare-title {
+    font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--green-900);
+    margin-bottom: 6px;
+  }
+
+  .compare-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.85;
+  }
+
+  /* ====== FLOW (検査の流れ) ====== */
+  .flow {
+    position: relative;
+    padding-left: 0;
+    margin-bottom: 14px;
+  }
+
+  .flow-step {
+    position: relative;
+    padding: 0 0 24px 44px;
+  }
+
+  .flow-step:last-child {
+    padding-bottom: 0;
+  }
+
+  .flow-step::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 32px;
+    bottom: 0;
+    width: 1px;
+    background: var(--green-100);
+  }
+
+  .flow-step:last-child::before {
+    display: none;
+  }
+
+  .flow-num {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--green-700);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+  }
+
+  .flow-step-title {
+    font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--green-900);
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+
+  .flow-step-meta {
+    display: inline-block;
+    font-size: 11px;
+    color: var(--green-500);
+    background: var(--green-50);
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+  }
+
+  .flow-step-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.85;
+  }
+
+  /* ====== VIDEO ====== */
+  .video-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 14px;
+  }
+
+  .video-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .video-caption {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    text-align: center;
+    margin-bottom: 22px;
+  }
+
+  .video-caption strong {
+    color: var(--green-700);
+    font-weight: 700;
+  }
+
+  .video-note {
+    display: flex;
+    gap: 10px;
+    padding: 14px 16px;
+    background: var(--green-50);
+    border-radius: 6px;
+    font-size: 12px;
+    color: var(--green-900);
+    line-height: 1.8;
+    margin-bottom: 14px;
+  }
+
+  .video-note-icon {
+    flex-shrink: 0;
+    color: var(--green-700);
+    margin-top: 2px;
+  }
+
+  /* ====== POINT (重要ポイント) ====== */
+  .point-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .point-item {
+    display: flex;
+    gap: 14px;
+    padding: 16px 18px;
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+  }
+
+  .point-marker {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--green-50);
+    color: var(--green-700);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    margin-top: 2px;
+  }
+
+  .point-content h4 {
+    font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--green-900);
+    line-height: 1.55;
+    margin-bottom: 6px;
+  }
+
+  .point-content p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.85;
+  }
+
+  /* ====== HIGHLIGHT BOX (二次的所見) ====== */
+  .highlight-box {
+    padding: 20px 18px;
+    background: var(--accent-warn-bg);
+    border-left: 3px solid var(--accent-warn);
+    border-radius: 4px;
+    margin-bottom: 14px;
+  }
+
+  .highlight-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .highlight-icon {
+    flex-shrink: 0;
+    color: var(--accent-warn);
+  }
+
+  .highlight-label {
+    font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--accent-warn);
+    letter-spacing: 0.05em;
+  }
+
+  .highlight-body {
+    font-size: 13px;
+    color: var(--text-primary);
+    line-height: 1.9;
+  }
+
+  .highlight-body strong {
+    font-weight: 700;
+  }
+
+  /* ====== COST TABLE ====== */
+  .cost-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 14px;
+    font-size: 13px;
+  }
+
+  .cost-table th,
+  .cost-table td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    line-height: 1.7;
+  }
+
+  .cost-table thead th {
+    background: var(--green-50);
+    font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    color: var(--green-900);
+    font-size: 12px;
+    letter-spacing: 0.05em;
+  }
+
+  .cost-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .cost-table .num {
+    font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    color: var(--green-700);
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .cost-note {
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 14px;
+  }
+
+  /* ====== PREPARE CHECKLIST ====== */
+  .check-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .check-item {
+    display: flex;
+    gap: 12px;
+    padding: 14px 16px;
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    align-items: flex-start;
+  }
+
+  .check-icon {
+    flex-shrink: 0;
+    color: var(--green-500);
+    margin-top: 2px;
+  }
+
+  .check-text {
+    font-size: 13px;
+    color: var(--text-primary);
+    line-height: 1.85;
+  }
+
+  .check-text strong {
+    font-weight: 700;
+    color: var(--green-700);
+  }
+
+  /* ====== KEY MESSAGE ====== */
+  .key-message {
+    padding: 28px 22px;
+    background: var(--green-700);
+    border-radius: 6px;
+    margin-bottom: 28px;
+    text-align: center;
+  }
+
+  .key-message-eyebrow {
+    font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    color: var(--green-300);
+    letter-spacing: 0.2em;
+    margin-bottom: 12px;
+  }
+
+  .key-message-text {
+    font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 1.75;
+    color: white;
+    letter-spacing: 0.04em;
+  }
+
+  /* ====== CTA ====== */
+  .cta-section {
+    padding: 0 0 32px;
+  }
+
+  .cta-lead {
+    font-size: 13px;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 16px;
+    line-height: 1.85;
+  }
+
+  .cta-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 18px 24px;
+    background: var(--green-700);
+    color: white;
+    font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+  }
+
+  .cta-button:hover {
+    background: var(--green-900);
+  }
+
+  .cta-button-arrow {
+    transition: transform 0.2s ease;
+  }
+
+  .cta-button:hover .cta-button-arrow {
+    transform: translateX(3px);
+  }
+
+  .cta-supplement {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 12px;
+    line-height: 1.7;
+  }
+
+  .back-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 24px;
+    padding: 12px 20px;
+    color: var(--green-700);
+    font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    border: 1px solid var(--green-300);
+    border-radius: 6px;
+    background: white;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  .back-to-top:hover {
+    background: var(--green-50);
+    color: var(--green-900);
+  }
+
+  /* ====== CREDIT ====== */
+  .credit-block {
+    border-top: 1px solid var(--green-100);
+    padding: 24px 0 32px;
+    margin-top: 8px;
+  }
+
+  .credit-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .credit-row {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+  }
+
+  .credit-row dt {
+    font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    color: var(--green-500);
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+    padding: 3px 10px;
+    background: var(--green-50);
+    border-radius: 100px;
+    line-height: 1.6;
+  }
+
+  .credit-row dd {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  /* ====== FOOTER ====== */
+  .footer {
+    border-top: 1px solid var(--border);
+    padding: 24px 0 32px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 11px;
+    line-height: 1.8;
+  }
+
+  .footer-logo {
+    font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--green-700);
+    margin-bottom: 6px;
+    letter-spacing: 0.05em;
+  }
+
+  /* ====== ANIMATION ====== */
+  .animate-in {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .animate-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (min-width: 640px) {
+    body { font-size: 16px; }
+    .page-wrapper { padding: 0 32px; }
+    .hero h1 { font-size: 32px; }
+    .section-title { font-size: 22px; }
+    .key-message-text { font-size: 22px; }
+  }
+
+  @media (min-width: 768px) {
+    .page-wrapper {
+      max-width: 720px;
+      padding: 0 40px;
+    }
+
+    .hero { padding: 48px 0 52px; }
+    .section { margin-bottom: 60px; }
+    .card,
+    .compare-row,
+    .point-item,
+    .check-item {
+      padding: 22px 24px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .page-wrapper {
+      max-width: 860px;
+      padding: 0 48px;
+    }
+
+    .hero { padding: 56px 0 64px; }
+    .hero h1 { font-size: 38px; }
+    .hero-lead,
+    .section-intro { font-size: 16px; }
+    .section-title { font-size: 26px; }
+    .card-body,
+    .point-content p,
+    .flow-step-desc,
+    .check-text { font-size: 15px; }
+    .card-title,
+    .flow-step-title { font-size: 17px; }
+    .cost-table { font-size: 15px; }
+    .cost-table th,
+    .cost-table td { padding: 14px 18px; }
+    .key-message-text { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-wrapper">
+
+  <!-- META BAR -->
+  <div class="meta-bar">
+    <span class="vol-tag">VOL.02</span>
+    <span class="meta-category">がん遺伝子パネル検査について</span>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero animate-in">
+    <div class="hero-eyebrow">BEFORE THE TEST</div>
+    <h1>がん遺伝子パネル検査<br>を受ける前に</h1>
+    <p class="hero-lead">
+      「自分のがんに合った治療を見つけたい」——<br>
+      がん遺伝子パネル検査は、その可能性を探るための検査です。<br>
+      ただし、検査を受ける前に知っておきたいことがいくつかあります。<br>
+      診察前にこのページを読んでおくと、説明がよりスムーズに理解できます。
+    </p>
+  </section>
+
+  <!-- PURPOSE NOTICE -->
+  <div class="purpose-notice animate-in">
+    <svg class="purpose-notice-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M12 8v4"/>
+      <circle cx="12" cy="16" r="0.5" fill="currentColor"/>
+    </svg>
+    <p class="purpose-notice-text">
+      <strong>このページの使い方</strong><br>
+      検査を検討中の方の事前学習用にまとめています。来院前、または待合室でお読みください。動画と合わせて、基本的な内容をあらかじめ把握しておくと、診察時の説明がより理解しやすくなります。
+    </p>
+  </div>
+
+  <!-- KNOW SECTION -->
+  <section class="section animate-in">
+    <div class="section-label">
+      <span class="section-label-bar"></span>
+      <span class="section-label-text">KNOW</span>
+    </div>
+    <h2 class="section-title">そもそも、どんな検査?</h2>
+    <p class="section-intro">
+      がん遺伝子パネル検査は、がん組織や血液から100種類以上の遺伝子をまとめて調べる検査です。がんの原因となっている遺伝子の変化を見つけることで、その変化に合った治療薬の候補が見つかる可能性があります。
+    </p>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 3v18"/>
+            <path d="M15 3v18"/>
+            <path d="M9 7c2 0 4 2 6 2"/>
+            <path d="M9 12c2 0 4 2 6 2"/>
+            <path d="M9 17c2 0 4 2 6 2"/>
+          </svg>
+        </div>
+        <h3 class="card-title">調べるのは「がんの遺伝子」</h3>
+      </div>
+      <p class="card-body">
+        手術や生検で採取した <strong>がん組織のDNA</strong> を解析します。生まれ持った体質を調べる検査ではなく、<strong>がん細胞だけに起きている遺伝子の変化</strong>を見るのが基本です（一部、血液で調べる方法もあります）。
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="7"/>
+            <path d="M16 16l5 5"/>
+          </svg>
+        </div>
+        <h3 class="card-title">わかること</h3>
+      </div>
+      <p class="card-body">
+        がんの増殖に関わる遺伝子の変化を見つけ、<strong>その変化に効く可能性のある薬</strong>があるかを探します。場合によっては、保険診療や治験で使える薬の候補が示されます。
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 9v4"/>
+            <circle cx="12" cy="16" r="0.5" fill="currentColor"/>
+            <path d="M10.3 3.9 2.6 17.4a2 2 0 0 0 1.7 3h15.4a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/>
+          </svg>
+        </div>
+        <h3 class="card-title">わからないこと・限界</h3>
+      </div>
+      <p class="card-body">
+        遺伝子の変化が見つかっても、<strong>必ず治療に結びつくとは限りません</strong>。実際に治療薬の候補が見つかる方は、検査を受けた方の <strong>およそ10〜20%程度</strong> と報告されています。
+      </p>
+    </div>
+  </section>
+
+  <!-- COMPARE SECTION -->
+  <section class="section animate-in">
+    <div class="section-label">
+      <span class="section-label-bar"></span>
+      <span class="section-label-text">COMPARE</span>
+    </div>
+    <h2 class="section-title">通常の遺伝子検査との違い</h2>
+    <p class="section-intro">
+      これまでも特定の遺伝子を1つずつ調べる検査(コンパニオン診断など)は行われてきました。パネル検査は調べる範囲が大きく異なります。
+    </p>
+
+    <div class="compare">
+      <div class="compare-row">
+        <div class="compare-label">これまでの検査</div>
+        <div class="compare-title">単一遺伝子検査</div>
+        <div class="compare-desc">
+          特定の薬を使うかどうかを判断するため、<strong>1つまたは数個</strong>の遺伝子をピンポイントで調べます。
+        </div>
+      </div>
+      <div class="compare-row" style="border-color: var(--green-300); background: var(--green-50);">
+        <div class="compare-label">パネル検査</div>
+        <div class="compare-title">100以上の遺伝子をまとめて</div>
+        <div class="compare-desc">
+          <strong>100〜数百種類の遺伝子</strong>を一度に解析。標準治療終了後でも使える薬の候補がないか、幅広く探します。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOW SECTION -->
+  <section class="section animate-in">
+    <div class="section-label">
+      <span class="section-label-bar"></span>
+      <span class="section-label-text">FLOW</span>
+    </div>
+    <h2 class="section-title">検査から結果説明までの流れ</h2>
+    <p class="section-intro">
+      検査を申し込んでから結果が出るまでには、おおむね <strong>1〜2か月程度</strong> かかります。複数の専門家による検討(エキスパートパネル)を経て、結果が説明されます。
+    </p>
+
+    <div class="flow">
+      <div class="flow-step">
+        <div class="flow-num">1</div>
+        <div class="flow-step-title">医師との相談・同意</div>
+        <span class="flow-step-meta">来院時</span>
+        <p class="flow-step-desc">
+          検査の目的、わかること・わからないこと、費用、二次的所見について説明を受け、同意書にサインします。
+        </p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">2</div>
+        <div class="flow-step-title">検体の提出</div>
+        <span class="flow-step-meta">数日〜</span>
+        <p class="flow-step-desc">
+          すでに手術や生検で採取した <strong>がん組織</strong> を使うことが多いですが、必要に応じて新たな採取や採血を行います。
+        </p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">3</div>
+        <div class="flow-step-title">解析</div>
+        <span class="flow-step-meta">約4〜6週間</span>
+        <p class="flow-step-desc">
+          検査会社で、100以上の遺伝子の変化を解析します。
+        </p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">4</div>
+        <div class="flow-step-title">エキスパートパネル</div>
+        <span class="flow-step-meta">結果到着後</span>
+        <p class="flow-step-desc">
+          腫瘍内科、病理、遺伝の専門家などが集まり、結果を医学的に検討して <strong>治療方針の候補</strong> をまとめます。
+        </p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">5</div>
+        <div class="flow-step-title">結果の説明</div>
+        <span class="flow-step-meta">来院時</span>
+        <p class="flow-step-desc">
+          検討された内容を主治医から説明し、今後の治療について一緒に考えます。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO SECTION -->
+  <section class="section animate-in">
+    <div class="section-label">
+      <span class="section-label-bar"></span>
+      <span class="section-label-text">VIDEO</span>
+    </div>
+    <h2 class="section-title">動画で学ぶ(C-CAT公式)</h2>
+    <p class="section-intro">
+      国立がん研究センター がんゲノム情報管理センター(C-CAT)が制作した公式解説動画です。検査の仕組みや結果の見方を、専門家がわかりやすく解説しています。
+    </p>
+
+    <div class="video-frame">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/?listType=playlist&amp;list=PLYQPAvzeUayIBDmmIwuSPbOi43CzynUKN&amp;rel=0"
+        title="C-CAT がん遺伝子パネル検査 解説動画(プレイリスト)"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <p class="video-caption">
+      <strong>出典:</strong> 国立がん研究センター がんゲノム情報管理センター(C-CAT)<br>
+      全4部構成。プレイヤー右上のリストアイコンから各動画を切り替えてご覧いただけます。<br>
+      <a href="https://www.youtube.com/playlist?list=PLYQPAvzeUayIBDmmIwuSPbOi43CzynUKN" target="_blank" rel="noopener" style="color: var(--green-700); text-decoration: underline;">▶ 再生できない場合はYouTubeで開く</a>
+    </p>
+
+    <div class="video-note">
+      <svg class="video-note-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="9"/>
+        <path d="M12 8v4"/>
+        <circle cx="12" cy="16" r="0.5" fill="currentColor"/>
+      </svg>
+      <p>
+        待合室でご覧いただく場合は、イヤホンのご使用をおすすめします。動画は通信量がかかりますので、Wi-Fi環境の利用もご検討ください。
+      </p>
+    </div>
+  </section>
+
+  <!-- POINT SECTION -->
+  <section class="section animate-in">
+    <div class="section-label">
+      <span class="section-label-bar"></span>
+      <span class="section-label-text">POINT</span>
+    </div>
+    <h2 class="section-title">受ける前に知っておきたい3つのこと</h2>
+    <p class="section-intro">
+      検査を受けるかどうか判断するうえで、特に重要なポイントです。
+    </p>
+
+    <div class="point-list">
+      <div class="point-item">
+        <div class="point-marker">1</div>
+        <div class="point-content">
+          <h4>治療に結びつかない可能性もある</h4>
+          <p>
+            検査で遺伝子の変化が見つかっても、それに対応する薬がまだ存在しなかったり、保険診療では使えなかったりすることがあります。<strong>治療薬の候補が見つかる方は10〜20%程度</strong>と覚えておいてください。
+          </p>
+        </div>
+      </div>
+      <div class="point-item">
+        <div class="point-marker">2</div>
+        <div class="point-content">
+          <h4>保険適用には条件がある</h4>
+          <p>
+            保険診療で受けるためには、<strong>標準治療が終了している(または終了見込み)</strong> など、いくつかの条件があります。検査が適応となるかは、主治医が判断します。
+          </p>
+        </div>
+      </div>
+      <div class="point-item">
+        <div class="point-marker">3</div>
+        <div class="point-content">
+          <h4>結果が出るまでに時間がかかる</h4>
+          <p>
+            検体提出から結果説明まで、<strong>おおむね2か月</strong>が目安です。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECONDARY FINDINGS -->
+    <div class="highlight-box">
+      <div class="highlight-head">
+        <svg class="highlight-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10.3 3.9 2.6 17.4a2 2 0 0 0 1.7 3h15.4a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/>
+          <path d="M12 9v4"/>
+          <circle cx="12" cy="16.5" r="0.5" fill="currentColor"/>
+        </svg>
+        <span class="highlight-label">二次的所見について</span>
+      </div>
+      <p class="highlight-body">
+        パネル検査では、がん細胞の遺伝子変化を調べる過程で、<strong>生まれつき持っている遺伝子の変化(生殖細胞系列バリアント)</strong> が偶然見つかることがあります。これを<strong>「二次的所見」</strong>と呼びます。<br><br>
+        二次的所見は、ご本人だけでなく <strong>血縁者の発がんリスク</strong> にも関わる可能性があるため、見つかった場合は遺伝カウンセリングをお勧めしています。検査前に、結果の開示を希望するかどうかをご本人に確認します。
+      </p>
+    </div>
+  </section>
+
+  <!-- COST SECTION -->
+  <section class="section animate-in">
+    <div class="section-label">
+      <span class="section-label-bar"></span>
+      <span class="section-label-text">COST</span>
+    </div>
+    <h2 class="section-title">費用のめやす</h2>
+    <p class="section-intro">
+      保険適用の条件を満たす場合、検査は保険診療で受けられます。一見高額に見えますが、<strong>高額療養費制度</strong>を利用することで、実際の自己負担額は大きく抑えられます。
+    </p>
+
+    <table class="cost-table">
+      <thead>
+        <tr>
+          <th>項目</th>
+          <th style="text-align: right;">金額のめやす</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>検査費用(総額)</td>
+          <td class="num">約56万円</td>
+        </tr>
+        <tr>
+          <td>3割負担の場合</td>
+          <td class="num">約16.8万円</td>
+        </tr>
+        <tr>
+          <td>1割負担の場合</td>
+          <td class="num">約5.6万円</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="cost-note">
+      ※ 検査前後の診察・採血等の費用は別途かかります。
+    </p>
+
+    <!-- HIGH-COST RELIEF EMPHASIS -->
+    <div class="card" style="background: var(--green-50); border-color: var(--green-300); margin-top: 18px;">
+      <div class="card-head">
+        <div class="card-icon" style="background: white;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v20"/>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+        </div>
+        <h3 class="card-title">高額療養費制度で<br>自己負担はさらに軽くなります</h3>
+      </div>
+      <p class="card-body">
+        ひと月あたりの医療費の自己負担額には <strong>上限</strong> が設けられており、それを超えた分は払い戻されます。年齢や所得によって上限は異なりますが、以下が目安です。
+      </p>
+    </div>
+
+    <table class="cost-table" style="margin-top: 12px;">
+      <thead>
+        <tr>
+          <th>所得区分(70歳未満)</th>
+          <th style="text-align: right;">ひと月の自己負担上限</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>年収 約370〜770万円</td>
+          <td class="num">約8〜9万円</td>
+        </tr>
+        <tr>
+          <td>年収 約370万円以下</td>
+          <td class="num">約5.8万円</td>
+        </tr>
+        <tr>
+          <td>住民税非課税</td>
+          <td class="num">3.5万円</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="cost-note">
+      ※ パネル検査を受けた月は、上記の上限を超えた分が払い戻される(または事前申請で窓口負担が上限額までで済む)ため、<strong>16.8万円の3割負担の方でも、実際の自己負担は8〜9万円程度に収まる</strong>のが一般的です。<br>
+      ※ 70歳以上の方や、所得区分によって金額は変わります。詳細は加入されている健康保険組合・市町村窓口、または病院の <strong>医事課</strong> にお問い合わせください。<br>
+      ※ 費用全般については「コラム vol.01 がん治療とお金の不安」もご参照ください。
+    </p>
+  </section>
+
+  <!-- PREPARE SECTION -->
+  <section class="section animate-in">
+    <div class="section-label">
+      <span class="section-label-bar"></span>
+      <span class="section-label-text">PREPARE</span>
+    </div>
+    <h2 class="section-title">来院前にできること</h2>
+    <p class="section-intro">
+      診察時間を有効に使うために、来院前に以下のことを整理しておくと役立ちます。
+    </p>
+
+    <div class="check-list">
+      <div class="check-item">
+        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12l4 4L19 6"/>
+        </svg>
+        <p class="check-text">
+          <strong>質問したいことをメモ</strong>しておく(費用、期間、結果がわかったらどうなるか、など)
+        </p>
+      </div>
+      <div class="check-item">
+        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12l4 4L19 6"/>
+        </svg>
+        <p class="check-text">
+          <strong>家族のがんの既往歴</strong>を整理しておく<br>
+          <span style="display: block; font-size: 12px; color: var(--text-secondary); margin-top: 6px; padding: 10px 12px; background: var(--green-50); border-radius: 4px; line-height: 1.75;">
+            <strong style="color: var(--green-700);">どこまで?</strong><br>
+            ・ご本人から見て <strong>三親等以内</strong> の血縁者(ご両親・きょうだい・お子さま・祖父母・おじおば・甥姪・孫)<br>
+            ・お一人ごとに「がんの種類」「発症年齢」「ご存命か(亡くなった場合は年齢と死因)」がわかると理想的です<br>
+            ・覚えている範囲で構いません。わからない部分は「不明」で大丈夫です
+          </span>
+        </p>
+      </div>
+      <div class="check-item">
+        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12l4 4L19 6"/>
+        </svg>
+        <p class="check-text">
+          重要な説明は <strong>ご家族と一緒に</strong> 聞かれることをおすすめします
+        </p>
+      </div>
+      <div class="check-item">
+        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12l4 4L19 6"/>
+        </svg>
+        <p class="check-text">
+          <strong>動画(上記)</strong>を一度ご覧いただくと、診察時の説明がよりスムーズに理解できます
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY MESSAGE -->
+  <section class="key-message animate-in">
+    <div class="key-message-eyebrow">MESSAGE</div>
+    <p class="key-message-text">
+      検査を受けるかどうかは、<br>
+      ご自身とご家族で<br>
+      じっくり考えてください。
+    </p>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section animate-in">
+    <a href="https://tmpu-oncology.jp/" class="back-to-top">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5"/>
+        <path d="M11 18l-6-6 6-6"/>
+      </svg>
+      トップページへ戻る
+    </a>
+  </section>
+
+  <!-- CREDIT -->
+  <div class="credit-block">
+    <dl class="credit-list">
+      <div class="credit-row">
+        <dt>文責</dt>
+        <dd>腫瘍内科　川村 佳史</dd>
+      </div>
+    </dl>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer-logo">tmpu-oncology.jp</p>
+    <p>&copy; 2026 tmpu-oncology.jp コラム vol.02</p>
+  </footer>
+
+</div>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.animate-in').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>

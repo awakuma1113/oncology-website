@@ -28,6 +28,7 @@ const NAVIGATION_LINKS_EN = [
     { label: "Education", path: "recruit.html" },
     { label: "Staff", path: "members.html" },
     { label: "News", path: "news.html" },
+    { label: "Column", path: "column/index.html" },
 ];
 
 
