@@ -16,6 +16,7 @@ const NAVIGATION_LINKS_JA = [
     { label: "見学・キャリア", path: "recruit.html" },
     { label: "医師・スタッフ", path: "members.html" },
     { label: "お知らせ", path: "news.html" },
+    { label: "コラム", path: "column/index.html" },
 ];
 
 const NAVIGATION_LINKS_EN = [
@@ -27,7 +28,10 @@ const NAVIGATION_LINKS_EN = [
     { label: "Education", path: "recruit.html" },
     { label: "Staff", path: "members.html" },
     { label: "News", path: "news.html" },
+    { label: "Column", path: "column/index.html" },
 ];
+
+
 
 function isEnglish() {
     return window.location.pathname.includes('/en/');
@@ -191,10 +195,17 @@ function renderFooter() {
                         <div class="flex items-start gap-3 mb-6">
                             <div class="flex flex-col">
                                 <span class="text-xs text-emerald-100 font-bold mb-1">${fSub}</span>
-                                <div class="flex items-center gap-3">
-                                    <span class="text-xl font-bold text-white tracking-tight">${fTitle}</span>
-                                    <a href="https://www.facebook.com/medoncoltmpu/" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity" title="${isEn ? 'Official Facebook Page' : '公式Facebookページ'}">
-                                        <img src="${prefix}assets/images/facebook-logo.svg" alt="Facebook" class="w-6 h-6 rounded-full bg-white shadow-sm ring-2 ring-white">
+                                <span class="text-xl font-bold text-white tracking-tight mb-3">${fTitle}</span>
+                                <div class="flex items-center gap-2" role="list" aria-label="${isEn ? 'Social media links' : 'SNSリンク'}">
+                                    <a href="https://www.facebook.com/medoncoltmpu/" target="_blank" rel="noopener noreferrer"
+                                       aria-label="${isEn ? 'Official Facebook Page (opens in new tab)' : '公式Facebookページ（新しいタブで開きます）'}"
+                                       class="sns-icon-link" role="listitem">
+                                        <img src="${prefix}assets/images/facebook-logo.svg" alt="Facebook" class="sns-icon">
+                                    </a>
+                                    <a href="https://www.instagram.com/tmpu_oncology/" target="_blank" rel="noopener noreferrer"
+                                       aria-label="${isEn ? 'Official Instagram Account (opens in new tab)' : '公式Instagramアカウント（新しいタブで開きます）'}"
+                                       class="sns-icon-link" role="listitem">
+                                        <img src="${prefix}assets/images/instagram-logo.svg" alt="Instagram" class="sns-icon">
                                     </a>
                                 </div>
                             </div>
