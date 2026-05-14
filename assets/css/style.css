@@ -156,3 +156,31 @@ img[src=""] {
 .animate-hero-zoom {
     animation: heroZoom 4s ease-out forwards;
 }
+
+/* ==========================================================================
+   SNS Icon Links  (Footer)
+   — Facebook & Instagram unified group
+   — No external icon libraries, no external scripts
+   ========================================================================== */
+
+.sns-icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+    /* Focus ring for keyboard navigation */
+    outline-offset: 3px;
+}
+.sns-icon-link:hover,
+.sns-icon-link:focus-visible {
+    opacity: 1;
+}
+
+.sns-icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: block;
+}

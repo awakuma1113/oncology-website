@@ -16,6 +16,7 @@ const NAVIGATION_LINKS_JA = [
     { label: "見学・キャリア", path: "recruit.html" },
     { label: "医師・スタッフ", path: "members.html" },
     { label: "お知らせ", path: "news.html" },
+    { label: "コラム", path: "column/index.html" },
 ];
 
 const NAVIGATION_LINKS_EN = [
@@ -28,6 +29,8 @@ const NAVIGATION_LINKS_EN = [
     { label: "Staff", path: "members.html" },
     { label: "News", path: "news.html" },
 ];
+
+
 
 function isEnglish() {
     return window.location.pathname.includes('/en/');
@@ -53,6 +56,21 @@ function getBaseUrl() {
     return isEnglish() ? '../' : './';
 }
 
+/**
+ * Returns the prefix needed to reach the site root from the current page.
+ * - Root pages (/, /index.html, etc.)  → "./"
+ * - /en/ pages                         → "../"
+ * - /column/ or other subdirs          → "../"
+ * Extend the subdirPatterns array when new subdirectories are added.
+ */
+function getSitePrefix() {
+    const pathname = window.location.pathname;
+    const subdirPatterns = ['/column/'];
+    if (isEnglish()) return '../';
+    if (subdirPatterns.some(p => pathname.includes(p))) return '../';
+    return './';
+}
+
 function renderHeader() {
     const isEn = isEnglish();
     const currentPage = getPageName();
@@ -63,13 +81,15 @@ function renderHeader() {
     const mainTitle = isEn ? "Medical Oncology" : "腫瘍内科";
     
     // Path resolution
-    const prefix = isEn ? "../" : "./";
+    const prefix = getSitePrefix();
     const logoFile = isEn ? "Logo EN.png" : "Logo JP.png";
     
     // Lang toggle URLs
-    // If we are in local file system, constructing relative paths is easier
+    // Pages in subdirectories (e.g. /column/) have no English equivalent.
+    // Detect this so we can redirect to EN homepage instead of a broken URL.
+    const isSubdirPage = !isEn && window.location.pathname.includes('/column/');
     const jaUrl = isEn ? `../${currentPage}` : `#`;
-    const enUrl = isEn ? `#` : `en/${currentPage}`;
+    const enUrl = isEn ? `#` : isSubdirPage ? `${prefix}en/index.html` : `en/${currentPage}`;
 
     // Desktop Navigation
     const desktopNav = links.map(link => {
@@ -174,7 +194,7 @@ function renderHeader() {
 
 function renderFooter() {
     const isEn = isEnglish();
-    const prefix = isEn ? "../" : "./";
+    const prefix = getSitePrefix();
     const year = new Date().getFullYear();
     
     const fTitle = isEn ? "Dept. of Medical Oncology" : "腫瘍内科";
@@ -191,10 +211,17 @@ function renderFooter() {
                         <div class="flex items-start gap-3 mb-6">
                             <div class="flex flex-col">
                                 <span class="text-xs text-emerald-100 font-bold mb-1">${fSub}</span>
-                                <div class="flex items-center gap-3">
-                                    <span class="text-xl font-bold text-white tracking-tight">${fTitle}</span>
-                                    <a href="https://www.facebook.com/medoncoltmpu/" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity" title="${isEn ? 'Official Facebook Page' : '公式Facebookページ'}">
-                                        <img src="${prefix}assets/images/facebook-logo.svg" alt="Facebook" class="w-6 h-6 rounded-full bg-white shadow-sm ring-2 ring-white">
+                                <span class="text-xl font-bold text-white tracking-tight mb-3">${fTitle}</span>
+                                <div class="flex items-center gap-2" role="list" aria-label="${isEn ? 'Social media links' : 'SNSリンク'}">
+                                    <a href="https://www.facebook.com/medoncoltmpu/" target="_blank" rel="noopener noreferrer"
+                                       aria-label="${isEn ? 'Official Facebook Page (opens in new tab)' : '公式Facebookページ（新しいタブで開きます）'}"
+                                       class="sns-icon-link" role="listitem">
+                                        <img src="${prefix}assets/images/facebook-logo.svg" alt="Facebook" class="sns-icon">
+                                    </a>
+                                    <a href="https://www.instagram.com/tmpu_oncology/" target="_blank" rel="noopener noreferrer"
+                                       aria-label="${isEn ? 'Official Instagram Account (opens in new tab)' : '公式Instagramアカウント（新しいタブで開きます）'}"
+                                       class="sns-icon-link" role="listitem">
+                                        <img src="${prefix}assets/images/instagram-logo.svg" alt="Instagram" class="sns-icon">
                                     </a>
                                 </div>
                             </div>
