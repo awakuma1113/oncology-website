@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>抗がん剤をやめると言われたときに | tmpu-oncology.jp コラム</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green-50: #f0faf4;
+    --green-100: #d6f0e0;
+    --green-200: #a8dfc0;
+    --green-300: #6cc89a;
+    --green-400: #3db37a;
+    --green-500: #1d8f5a;
+    --green-600: #167348;
+    --green-700: #115a38;
+    --accent-warm: #d4943a;
+    --accent-warm-light: #fef4e0;
+    --accent-blue: #4a90c4;
+    --accent-blue-light: #eaf3fb;
+    --accent-rose: #c4726a;
+    --accent-rose-light: #fdf0ee;
+    --text-primary: #1a2e23;
+    --text-secondary: #4a6356;
+    --text-muted: #7a9488;
+    --bg-white: #ffffff;
+    --bg-off: #f7faf8;
+    --bg-card: #ffffff;
+    --shadow-soft: 0 2px 16px rgba(29, 143, 90, 0.06);
+    --shadow-card: 0 4px 24px rgba(29, 143, 90, 0.08);
+    --shadow-hover: 0 8px 32px rgba(29, 143, 90, 0.12);
+    --radius: 14px;
+    --radius-sm: 10px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    color: var(--text-primary);
+    background: var(--bg-white);
+    line-height: 1.9;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  .page-wrapper { max-width: 520px; margin: 0 auto; padding: 0 20px; }
+
+  .hero { position: relative; padding: 56px 0 48px; text-align: center; overflow: hidden; }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: -40px; right: -40px; bottom: -20px;
+    background:
+      radial-gradient(ellipse 70% 50% at 20% 30%, rgba(168, 223, 192, 0.35) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 60% at 80% 60%, rgba(108, 200, 154, 0.2) 0%, transparent 70%),
+      radial-gradient(ellipse 80% 40% at 50% 80%, rgba(214, 240, 224, 0.4) 0%, transparent 60%);
+    z-index: 0;
+  }
+  .hero-content { position: relative; z-index: 1; }
+  .hero-illustration { width: 200px; height: 160px; margin: 0 auto 28px; display: block; }
+  .hero-badge {
+    display: inline-block; background: var(--green-100); color: var(--green-600);
+    font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+    padding: 6px 16px; border-radius: 100px; margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+    font-weight: 700; font-size: 27px; line-height: 1.55;
+    color: var(--green-700); letter-spacing: 0.04em; margin-bottom: 12px;
+  }
+  .hero-subtitle {
+    font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+    font-weight: 400; font-size: 15px; color: var(--text-muted); letter-spacing: 0.08em;
+  }
+  .hero-divider { width: 48px; height: 3px; background: linear-gradient(90deg, var(--green-300), var(--green-200)); border-radius: 2px; margin: 28px auto 0; }
+
+  .section { padding: 40px 0; }
+  .section-label { font-size: 11px; font-weight: 700; color: var(--green-400); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 8px; }
+  .section-title {
+    font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+    font-weight: 700; font-size: 20px; color: var(--text-primary); line-height: 1.6; margin-bottom: 20px;
+  }
+  .section-lead { font-size: 14.5px; color: var(--text-secondary); line-height: 1.9; margin-bottom: 24px; }
+  .soft-divider { width: 100%; height: 1px; background: linear-gradient(90deg, transparent, var(--green-100), transparent); margin: 8px 0; }
+
+  .empathy-section { background: var(--bg-off); border-radius: var(--radius); padding: 32px 24px; margin: 0 -4px; }
+  .checklist { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .checklist li {
+    display: flex; align-items: flex-start; gap: 12px; background: var(--bg-card);
+    padding: 16px 18px; border-radius: var(--radius-sm); box-shadow: var(--shadow-soft);
+    font-size: 14.5px; line-height: 1.7; color: var(--text-primary);
+  }
+  .check-icon { flex-shrink: 0; width: 24px; height: 24px; background: var(--green-100); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-top: 1px; }
+  .check-icon svg { width: 14px; height: 14px; }
+
+  .card-grid { display: flex; flex-direction: column; gap: 16px; }
+  .info-card { background: var(--bg-card); border: 1px solid var(--green-100); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow-soft); }
+  .card-icon { width: 48px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+  .card-icon.green { background: var(--green-50); }
+  .card-icon.warm { background: var(--accent-warm-light); }
+  .card-icon.blue { background: var(--accent-blue-light); }
+  .card-icon.rose { background: var(--accent-rose-light); }
+  .card-title { font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif; font-weight: 700; font-size: 16px; color: var(--text-primary); margin-bottom: 10px; line-height: 1.5; }
+  .card-text { font-size: 14px; color: var(--text-secondary); line-height: 1.85; }
+  .card-text + .card-text { margin-top: 10px; }
+
+  .voice-card { background: var(--bg-off); border-radius: var(--radius); padding: 24px; margin-top: 16px; position: relative; }
+  .voice-card::before { content: '\201C'; font-family: Georgia, serif; font-size: 48px; color: var(--green-200); position: absolute; top: 8px; left: 18px; line-height: 1; }
+  .voice-quote { font-size: 14px; color: var(--text-secondary); line-height: 1.9; padding-left: 8px; margin-bottom: 14px; font-style: italic; }
+  .example-label { display: inline-block; background: var(--accent-warm-light); color: var(--accent-warm); font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; padding: 3px 10px; border-radius: 100px; margin-bottom: 12px; }
+  .voice-after { margin-top: 16px; padding: 14px 18px; background: var(--bg-card); border-radius: var(--radius-sm); border-left: 3px solid var(--green-400); font-size: 13.5px; color: var(--text-secondary); line-height: 1.8; }
+  .voice-after-label { font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif; font-weight: 700; font-size: 12px; color: var(--green-500); letter-spacing: 0.06em; margin-bottom: 4px; }
+
+  .highlight-box { position: relative; background: linear-gradient(135deg, var(--green-500) 0%, var(--green-600) 100%); border-radius: var(--radius); padding: 32px 24px; color: #fff; overflow: hidden; }
+  .highlight-box .section-title { color: #fff; position: relative; z-index: 1; }
+  .highlight-text { font-size: 14.5px; line-height: 1.9; color: rgba(255,255,255,0.92); position: relative; z-index: 1; }
+  .notice-box { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.18); border-radius: var(--radius-sm); padding: 16px 18px; margin-top: 20px; position: relative; z-index: 1; display: flex; align-items: flex-start; gap: 10px; }
+  .notice-box p { font-size: 13px; color: rgba(255,255,255,0.88); line-height: 1.8; }
+
+  .services, .prep-steps { display: flex; flex-direction: column; gap: 14px; }
+  .service-item, .prep-step { display: flex; align-items: flex-start; gap: 16px; padding: 20px; background: var(--bg-card); border-radius: var(--radius-sm); border: 1px solid var(--green-100); }
+  .service-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--green-50); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .service-title, .prep-title { font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif; font-weight: 700; font-size: 15px; color: var(--text-primary); margin-bottom: 4px; line-height: 1.5; }
+  .service-desc, .prep-desc { font-size: 13.5px; color: var(--text-muted); line-height: 1.75; }
+  .prep-number { flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; background: var(--green-500); color: #fff; font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
+
+  .reference-list { padding-left: 1.2em; font-size: 12.5px; color: var(--text-secondary); line-height: 1.7; }
+  .reference-list li { margin-bottom: 8px; }
+  .ref-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    margin-left: 4px;
+    border-radius: 50%;
+    background: var(--green-100);
+    color: var(--green-700);
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: none;
+    vertical-align: super;
+    line-height: 1;
+    transition: all 0.2s ease;
+  }
+  .ref-link:hover { background: var(--green-400); color: #fff; transform: translateY(-1px); }
+  .reference-list li { scroll-margin-top: 100px; }
+  .credit-block { border-top: 1px solid var(--green-100); padding: 24px 0 32px; margin-top: 8px; }
+  .credit-list { display: flex; flex-direction: column; gap: 10px; }
+  .credit-row { display: flex; align-items: baseline; gap: 16px; }
+  .credit-row dt { font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif; font-weight: 700; font-size: 11px; color: var(--green-500); letter-spacing: 0.1em; white-space: nowrap; padding: 3px 10px; background: var(--green-50); border-radius: 100px; line-height: 1.6; }
+  .credit-row dd { font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
+  .footer { text-align: center; padding: 24px 0 40px; border-top: 1px solid var(--green-100); font-size: 11.5px; color: var(--text-muted); }
+  .footer-logo { font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif; font-weight: 700; font-size: 13px; color: var(--green-500); margin-bottom: 4px; }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  .animate-in { opacity: 0; animation: fadeUp 0.6s ease-out forwards; }
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.2s; }
+  .delay-3 { animation-delay: 0.3s; }
+  .delay-4 { animation-delay: 0.4s; }
+
+  @media (min-width: 768px) {
+    .page-wrapper { max-width: 720px; padding: 0 40px; }
+    .hero { padding: 72px 0 60px; }
+    .hero-illustration { width: 220px; height: 176px; }
+    .checklist, .card-grid, .services { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .prep-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .section { padding: 52px 0; }
+    .section-title { font-size: 24px; }
+    .section-lead { font-size: 15.5px; }
+  }
+  @media (min-width: 1024px) {
+    .page-wrapper { max-width: 860px; padding: 0 48px; }
+    .hero { padding: 88px 0 72px; }
+    .hero-illustration { width: 280px; height: 224px; }
+    .hero h1 { font-size: 38px; }
+    .hero-subtitle { font-size: 17px; }
+    .section { padding: 64px 0; }
+    .section-title { font-size: 26px; }
+    .section-lead { font-size: 16px; }
+    .info-card { padding: 32px; }
+    .highlight-box { padding: 48px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-wrapper">
+  <section class="hero">
+    <div class="hero-content">
+      <svg class="hero-illustration animate-in" viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <ellipse cx="100" cy="130" rx="80" ry="14" fill="#d6f0e0" opacity="0.5"/>
+        <path d="M62 100C62 78 78 62 100 62C122 62 138 78 138 100V120H62V100Z" fill="#e8f5ed" stroke="#6cc89a" stroke-width="1.5"/>
+        <circle cx="100" cy="47" r="24" fill="#f0faf4" stroke="#3db37a" stroke-width="1.5"/>
+        <path d="M89 48l7 7 16-18" stroke="#1d8f5a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="58" cy="75" r="13" fill="#a8dfc0" opacity="0.8"/>
+        <path d="M44 118C45 100 51 88 58 88C65 88 71 100 72 118" fill="#d6f0e0" stroke="#6cc89a" stroke-width="1.5"/>
+        <circle cx="142" cy="75" r="13" fill="#a8dfc0" opacity="0.8"/>
+        <path d="M128 118C129 100 135 88 142 88C149 88 155 100 156 118" fill="#d6f0e0" stroke="#6cc89a" stroke-width="1.5"/>
+        <path d="M158 42C158 37 162 34 166 34C170 34 174 37 174 42C174 49 166 56 166 56C166 56 158 49 158 42Z" fill="#d4943a" opacity="0.25"/>
+      </svg>
+      <div class="hero-badge animate-in delay-1">コラム vol.03</div>
+      <h1 class="animate-in delay-2">抗がん剤を「やめる」と言われたときに</h1>
+      <p class="hero-subtitle animate-in delay-3">― ご家族に知っておいてほしいこと ―</p>
+      <div class="hero-divider animate-in delay-4"></div>
+    </div>
+  </section>
+
+  <section class="section animate-in">
+    <div class="empathy-section">
+      <p class="section-label">CHECK</p>
+      <h2 class="section-title">こんな不安はありませんか？</h2>
+      <ul class="checklist">
+        <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#3db37a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17L4 12"/></svg></span>抗がん剤をやめたら、何もしてもらえなくなるのではないか</li>
+        <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#3db37a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17L4 12"/></svg></span>家族として、まだ治療を続けてほしいと言うべきか迷っている</li>
+        <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#3db37a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17L4 12"/></svg></span>本人に、今後の希望をどう聞けばよいかわからない</li>
+        <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#3db37a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17L4 12"/></svg></span>緩和ケアや在宅医療を勧められると、見放されたように感じてしまう</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="soft-divider"></div>
+
+  <section class="section">
+    <p class="section-label">MESSAGE</p>
+    <h2 class="section-title">抗がん剤をやめることは、医療が終わることではありません</h2>
+    <p class="section-lead">
+      がん治療では、治療を重ねるにつれて、抗がん剤で得られる効果が限られてくる一方で、副作用や通院、入院の負担が大きくなることがあります。特に体力が落ちている時期には、抗がん剤を続けることが、かえって生活の質を下げてしまう場合もあります。<a href="#ref-1" class="ref-link">1</a><a href="#ref-2" class="ref-link">2</a>
+    </p>
+    <div class="info-card animate-in">
+      <div class="card-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green-600)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21.2l8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></div>
+      <h3 class="card-title">「やめる」ではなく、目標を見直す</h3>
+      <p class="card-text">医療者が抗がん剤の終了を提案するとき、それは患者さんを見放すためではありません。痛みや息苦しさ、不安を和らげ、できるだけ穏やかに過ごせる時間を支えるために、治療の目標を見直す提案です。<a href="#ref-3" class="ref-link">3</a></p>
+    </div>
+  </section>
+
+  <div class="soft-divider"></div>
+
+  <section class="section">
+    <p class="section-label">CARE</p>
+    <h2 class="section-title">「がんを小さくする治療」から「生活を支える治療」へ</h2>
+    <p class="section-lead">抗がん剤を終了しても、できる医療は多くあります。痛み、息苦しさ、食欲低下、だるさ、不眠、不安への対応、在宅医療の調整、家族への支援などは、すべて大切な医療です。</p>
+    <div class="card-grid">
+      <div class="info-card animate-in"><div class="card-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M5 12h14"/><circle cx="12" cy="12" r="9"/></svg></div><h3 class="card-title">症状を和らげる</h3><p class="card-text">痛みや息苦しさ、吐き気、食欲低下、不眠などに対して、薬剤調整やケアの工夫を行います。</p></div>
+      <div class="info-card animate-in delay-1"><div class="card-icon warm"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-warm)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></div><h3 class="card-title">過ごしたい場所を整える</h3><p class="card-text">自宅、病院、緩和ケア病棟など、本人と家族が安心して過ごせる場所を一緒に考えます。</p></div>
+      <div class="info-card animate-in delay-2"><div class="card-icon rose"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-rose)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></div><h3 class="card-title">家族を支える</h3><p class="card-text">介護の負担、仕事との両立、医療費や制度の相談など、ご家族が一人で抱え込まないための支援があります。</p></div>
+      <div class="info-card animate-in delay-3"><div class="card-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green-600)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg></div><h3 class="card-title">希望を共有する</h3><p class="card-text">何を大切にしたいか、どのように過ごしたいかを、本人・家族・医療者で少しずつ共有します。</p></div>
+    </div>
+  </section>
+
+  <div class="soft-divider"></div>
+
+  <section class="section">
+    <p class="section-label">SDM</p>
+    <h2 class="section-title">決めるのは「本人だけ」でも「医師だけ」でもありません</h2>
+    <p class="section-lead">がん治療の方針は、医学的な見通しだけでなく、患者さんが何を大切にしているかによっても変わります。医師は情報を説明し、患者さんやご家族は希望や不安を伝え、その両方をすり合わせながら方針を決めていきます。<a href="#ref-3" class="ref-link">3</a><a href="#ref-4" class="ref-link">4</a></p>
+    <div class="voice-card animate-in">
+      <span class="example-label">問いかけの例</span>
+      <p class="voice-quote">「これからの時間で、いちばん大切にしたいことは何ですか」<br>「できるだけ避けたいことはありますか」<br>「家で過ごしたい、入院のほうが安心など、今の気持ちはありますか」</p>
+      <div class="voice-after"><p class="voice-after-label">▶ すぐに答えが出なくても大丈夫です</p>本人の気持ちは変わることがあります。何度も話し合い直してよい、という前提で進めることが大切です。<a href="#ref-5" class="ref-link">5</a></div>
+    </div>
+  </section>
+
+  <div class="soft-divider"></div>
+
+  <section class="section">
+    <p class="section-label">ACP</p>
+    <h2 class="section-title">ACPは「最期を決める話」ではなく、これからの希望を共有する話です</h2>
+    <p class="section-lead">ACP（アドバンス・ケア・プランニング）は、将来の医療や療養について、本人の価値観や希望を、家族や医療者と共有していくプロセスです。延命治療をするかしないかだけを決めるものではありません。<a href="#ref-6" class="ref-link">6</a></p>
+    <div class="prep-steps">
+      <div class="prep-step animate-in"><div class="prep-number">1</div><div><p class="prep-title">何を大切にしたいか</p><p class="prep-desc">家族との時間、仕事、食事、家で過ごすことなど、本人らしさにつながる希望を確認します。</p></div></div>
+      <div class="prep-step animate-in delay-1"><div class="prep-number">2</div><div><p class="prep-title">誰に相談してほしいか</p><p class="prep-desc">本人が十分に話せなくなったとき、誰が代わりに気持ちを伝えるかを共有します。</p></div></div>
+      <div class="prep-step animate-in delay-2"><div class="prep-number">3</div><div><p class="prep-title">必要に応じて見直す</p><p class="prep-desc">病状や気持ちは変化します。一度決めたことも、何度でも話し合い直して構いません。</p></div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="highlight-box animate-in">
+      <h2 class="section-title">早めの緩和ケアは、あきらめるための医療ではありません</h2>
+      <p class="highlight-text">緩和ケアは、終末期だけの医療ではありません。がん治療と並行して、症状や不安を和らげ、生活を支えるために利用できます。転移性肺がん患者を対象とした研究では、早期から緩和ケアを取り入れることで、生活の質や気分の落ち込みが改善し、終末期の過剰な治療を減らす可能性が示されています。<a href="#ref-7" class="ref-link">7</a></p>
+      <div class="notice-box"><p>「緩和ケアを紹介された」ことは、治療を見放されたという意味ではありません。患者さんとご家族が、より安心して過ごすための支援を増やすという意味です。</p></div>
+    </div>
+  </section>
+
+  <div class="soft-divider"></div>
+
+  <section class="section">
+    <p class="section-label">SUPPORT</p>
+    <h2 class="section-title">家族だけで抱え込まないでください</h2>
+    <p class="section-lead">抗がん剤をやめるかどうかの話し合いは、ご家族にとっても大きな負担です。主治医、看護師、薬剤師、医療ソーシャルワーカー、がん相談支援センター、緩和ケアチームに相談してください。</p>
+    <div class="services">
+      <div class="service-item animate-in"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green-600)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg></div><div><p class="service-title">医師・看護師</p><p class="service-desc">病状、治療の見通し、症状緩和について相談できます。</p></div></div>
+      <div class="service-item animate-in delay-1"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green-600)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div><div><p class="service-title">がん相談支援センター</p><p class="service-desc">療養場所、介護、仕事、費用、制度など生活面の不安を整理できます。</p></div></div>
+      <div class="service-item animate-in delay-2"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green-600)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div><div><p class="service-title">在宅医療・緩和ケア</p><p class="service-desc">自宅で過ごすための医療体制や、症状への対応を支えます。</p></div></div>
+      <div class="service-item animate-in delay-3"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green-600)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div><p class="service-title">ご家族自身の支援</p><p class="service-desc">介護する側の不安や疲れも、相談してよい大切なテーマです。</p></div></div>
+    </div>
+  </section>
+
+  <section class="section animate-in">
+    <div class="empathy-section">
+      <p class="section-label">SUMMARY</p>
+      <h2 class="section-title">最後に</h2>
+      <p class="section-lead">抗がん剤をやめるという話は、希望を失う話ではありません。これからの時間を、患者さんにとってよりよいものにするために、治療の目標を見直す話です。</p>
+      <p class="section-lead">「もう治療がない」ではなく、「これから何を大切にするか」。その視点で、患者さん、ご家族、医療者が一緒に考えていくことが大切です。</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-label">REFERENCES</p>
+    <h2 class="section-title">参考文献</h2>
+    <ol class="reference-list">
+      <li id="ref-1">Prigerson HG, Bao Y, Shah MA, et al. Chemotherapy Use, Performance Status, and Quality of Life at the End of Life. <em>JAMA Oncol.</em> 2015;1(6):778-784.</li>
+      <li id="ref-2">Murillo JR Jr, Koeller J. Chemotherapy given near the end of life by community oncologists for advanced non-small cell lung cancer. <em>Oncologist.</em> 2006;11(10):1095-1099.</li>
+      <li id="ref-3">Gilligan T, Coyle N, Frankel RM, et al. Patient-Clinician Communication: American Society of Clinical Oncology Consensus Guideline. <em>J Clin Oncol.</em> 2017;35(31):3618-3632.</li>
+      <li id="ref-4">Stiggelbout AM, Pieterse AH, De Haes JCJM. Shared decision making: Concepts, evidence, and practice. <em>Patient Educ Couns.</em> 2015;98(10):1172-1179.</li>
+      <li id="ref-5">Baile WF, Buckman R, Lenzi R, Glober G, Beale EA, Kudelka AP. SPIKES-A six-step protocol for delivering bad news: application to the patient with cancer. <em>Oncologist.</em> 2000;5(4):302-311.</li>
+      <li id="ref-6">Rietjens JAC, Sudore RL, Connolly M, et al. Definition and recommendations for advance care planning: an international consensus supported by the European Association for Palliative Care. <em>Lancet Oncol.</em> 2017;18(9):e543-e551.</li>
+      <li id="ref-7">Temel JS, Greer JA, Muzikansky A, et al. Early palliative care for patients with metastatic non-small-cell lung cancer. <em>N Engl J Med.</em> 2010;363(8):733-742.</li>
+    </ol>
+  </section>
+
+  <div class="credit-block"><dl class="credit-list"><div class="credit-row"><dt>文責</dt><dd>腫瘍内科　川村 佳史</dd></div></dl></div>
+
+  <footer class="footer"><p class="footer-logo">tmpu-oncology.jp</p><p>&copy; 2026 tmpu-oncology.jp コラム vol.03</p></footer>
+</div>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
