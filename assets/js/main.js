@@ -61,12 +61,12 @@ function getBaseUrl() {
  * Returns the prefix needed to reach the site root from the current page.
  * - Root pages (/, /index.html, etc.)  → "./"
  * - /en/ pages                         → "../"
- * - /column/ or other subdirs          → "../"
+ * - /column/ or /medical/ pages        → "../"
  * Extend the subdirPatterns array when new subdirectories are added.
  */
 function getSitePrefix() {
     const pathname = window.location.pathname;
-    const subdirPatterns = ['/column/'];
+    const subdirPatterns = ['/column/', '/medical/'];
     if (isEnglish()) return '../';
     if (subdirPatterns.some(p => pathname.includes(p))) return '../';
     return './';
@@ -86,9 +86,9 @@ function renderHeader() {
     const logoFile = isEn ? "Logo EN.png" : "Logo JP.png";
     
     // Lang toggle URLs
-    // Pages in subdirectories (e.g. /column/) have no English equivalent.
+    // Pages in subdirectories (e.g. /column/, /medical/) have no English equivalent.
     // Detect this so we can redirect to EN homepage instead of a broken URL.
-    const isSubdirPage = !isEn && window.location.pathname.includes('/column/');
+    const isSubdirPage = !isEn && (window.location.pathname.includes('/column/') || window.location.pathname.includes('/medical/'));
     const jaUrl = isEn ? `../${currentPage}` : `#`;
     const enUrl = isEn ? `#` : isSubdirPage ? `${prefix}en/index.html` : `en/${currentPage}`;
 
@@ -220,59 +220,47 @@ function renderFooter() {
                                         <img src="${prefix}assets/images/facebook-logo.svg" alt="Facebook" class="sns-icon">
                                     </a>
                                     <a href="https://www.instagram.com/tmpu_oncology/" target="_blank" rel="noopener noreferrer"
-                                       aria-label="${isEn ? 'Official Instagram Account (opens in new tab)' : '公式Instagramアカウント（新しいタブで開きます）'}"
+                                       aria-label="${isEn ? 'Official Instagram Page (opens in new tab)' : '公式Instagramページ（新しいタブで開きます）'}"
                                        class="sns-icon-link" role="listitem">
                                         <img src="${prefix}assets/images/instagram-logo.svg" alt="Instagram" class="sns-icon">
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <ul class="space-y-3 text-emerald-50 text-sm">
-                            <li class="flex items-start gap-3">
-                                <i data-lucide="map-pin" class="w-5 h-5 text-emerald-300 flex-shrink-0 mt-0.5"></i>
-                                <span>${fAdd}</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <i data-lucide="phone" class="w-5 h-5 text-emerald-300 flex-shrink-0"></i>
-                                <span>${fTel}</span>
-                            </li>
+                        <p class="text-emerald-100 text-sm leading-relaxed">
+                            ${isEn ? 'We provide comprehensive cancer care centered on medical oncology.' : '薬物療法を中心に、患者さん一人ひとりの生活と治療を支えるがん診療を行っています。'}
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-bold mb-6 text-emerald-100">${isEn ? 'Navigation' : 'サイトマップ'}</h4>
+                        <ul class="space-y-3">
+                            ${fLinks.map(link => `<li><a href="${prefix}${isEn ? 'en/' : ''}${link.path}" class="text-emerald-100 hover:text-white transition-colors text-sm">${link.label}</a></li>`).join('')}
                         </ul>
                     </div>
 
                     <div>
-                        <h3 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-emerald-600 pb-2">${isEn ? "Patients & Referrals" : "受診・連携"}</h3>
-                        <ul class="space-y-3">
-                            <li><a href="${prefix}${isEn ? 'en/' : ''}patients.html" class="text-emerald-100 hover:text-white transition-colors text-sm flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i> ${isEn ? "For Patients" : "患者さんへ"}</a></li>
-                            <li><a href="${prefix}${isEn ? 'en/' : ''}referral.html" class="text-emerald-100 hover:text-white transition-colors text-sm flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i> ${isEn ? "For Referring Providers" : "医療機関の方へ"}</a></li>
-                        </ul>
+                        <h4 class="text-lg font-bold mb-6 text-emerald-100">${isEn ? 'Access' : '所在地'}</h4>
+                        <address class="not-italic text-emerald-100 text-sm leading-relaxed">
+                            ${fSub}<br>
+                            ${fAdd}<br><br>
+                            TEL: ${fTel}
+                        </address>
                     </div>
 
                     <div>
-                        <h3 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-emerald-600 pb-2">${isEn ? "About Us & Education" : "医局・採用"}</h3>
-                        <ul class="space-y-3">
-                            <li><a href="${prefix}${isEn ? 'en/' : ''}about.html" class="text-emerald-100 hover:text-white transition-colors text-sm flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i> ${isEn ? "About Us" : "医局紹介"}</a></li>
-                            <li><a href="${prefix}${isEn ? 'en/' : ''}members.html" class="text-emerald-100 hover:text-white transition-colors text-sm flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i> ${isEn ? "Staff" : "医師・スタッフ紹介"}</a></li>
-                            <li><a href="${prefix}${isEn ? 'en/' : ''}recruit.html" class="text-emerald-100 hover:text-white transition-colors text-sm flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i> ${isEn ? "Observation / Career" : "見学・キャリア"}</a></li>
-                            <li><a href="${prefix}${isEn ? 'en/' : ''}research.html" class="text-emerald-100 hover:text-white transition-colors text-sm flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i> ${isEn ? "Research & Publications" : "研究・業績"}</a></li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h3 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-emerald-600 pb-2">${isEn ? "Information" : "インフォメーション"}</h3>
-                        <ul class="space-y-3">
-                            <li><a href="${prefix}${isEn ? 'en/' : ''}news.html" class="text-emerald-100 hover:text-white transition-colors text-sm flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i> ${isEn ? "News & Events" : "お知らせ"}</a></li>
-                            <li><a href="${prefix}${isEn ? 'en/' : ''}contact.html" class="text-emerald-100 hover:text-white transition-colors text-sm flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i> ${isEn ? "Contact Us" : "お問い合わせ"}</a></li>
-                        </ul>
+                        <h4 class="text-lg font-bold mb-6 text-emerald-100">${isEn ? 'Contact' : 'お問い合わせ'}</h4>
+                        <p class="text-emerald-100 text-sm leading-relaxed mb-4">
+                            ${isEn ? 'For inquiries, please contact us through the contact page.' : '診療・見学・連携に関するお問い合わせは、専用ページをご確認ください。'}
+                        </p>
+                        <a href="${prefix}${isEn ? 'en/' : ''}contact.html" class="inline-flex items-center gap-2 text-sm font-bold text-white underline underline-offset-4">
+                            ${contactText} <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
                     </div>
                 </div>
 
-                <div class="pt-8 border-t border-emerald-700 text-center md:flex md:justify-between md:text-left">
-                    <p class="text-emerald-200 text-sm mb-4 md:mb-0">
-                        &copy; ${year} ${fTitle}, ${fSub}
-                    </p>
-                    <div class="flex justify-center space-x-6">
-                        <a href="https://www.hosp.tohoku-mpu.ac.jp/" target="_blank" class="text-emerald-200 hover:text-white text-sm transition-colors font-bold">${isEn ? "TMPU Hospital Official" : "東北医科薬科大学病院 公式サイト"} <i data-lucide="external-link" class="w-3 h-3 inline"></i></a>
-                    </div>
+                <div class="border-t border-emerald-700 pt-8 text-center text-emerald-100 text-sm">
+                    <p>&copy; ${year} ${fSub} ${fTitle}. All rights reserved.</p>
                 </div>
             </div>
         </footer>
@@ -284,29 +272,7 @@ function renderFooter() {
 document.addEventListener('DOMContentLoaded', () => {
     renderHeader();
     renderFooter();
-    
-    // Global Watermark removed per user request
-
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();
     }
-
-    // IntersectionObserver for scroll animations
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
-    const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                obs.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    document.querySelectorAll('.animate-fade-up').forEach(el => {
-        observer.observe(el);
-    });
 });
