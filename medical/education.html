@@ -40,6 +40,7 @@
 
   <main id="protected-content" class="hidden">
     <section class="bg-[#123C35] py-16 lg:py-20 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10 pointer-events-none" style="background: radial-gradient(ellipse at top right, rgba(255,255,255,0.9), transparent 58%);"></div>
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <span class="block text-emerald-300 font-bold tracking-widest text-sm mb-3">MEDICAL EDUCATION</span>
         <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">教育コラム選択</h1>
@@ -61,7 +62,6 @@
               <div class="flex flex-wrap items-center gap-2 mb-3">
                 <span class="inline-block bg-red-100 text-red-700 text-xs font-bold px-3 py-1 rounded-full">教育コラム vol.02</span>
                 <span class="inline-block bg-sky-100 text-sky-700 text-xs font-medium px-3 py-1 rounded-full">医療者専用</span>
-                <span class="inline-block bg-amber-100 text-amber-700 text-xs font-medium px-3 py-1 rounded-full">たたき台</span>
               </div>
               <h2 class="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors leading-snug mb-2">救急外来で見逃したくない重症irAE</h2>
               <p class="text-sm text-gray-500 italic mb-3">― irAE脳炎・心筋炎・CRS・HLH/MAS様病態を疑う入口 ―</p>
@@ -115,6 +115,7 @@
     async function checkPassword(){const input=document.getElementById('password-input').value;const correctHash='87f5953bcd188607a570a9b49d214ddd92999fa580435f1bad30632bee39ff36';const inputHash=await sha256(input);if(inputHash===correctHash){sessionStorage.setItem('medicalAccess','granted');document.getElementById('password-screen').style.display='none';document.getElementById('protected-content').classList.remove('hidden')}else{document.getElementById('password-error').classList.remove('hidden')}}
     window.addEventListener('DOMContentLoaded',()=>{if(sessionStorage.getItem('medicalAccess')==='granted'){document.getElementById('password-screen').style.display='none';document.getElementById('protected-content').classList.remove('hidden')}});
     document.getElementById('password-input').addEventListener('keydown',e=>{if(e.key==='Enter')checkPassword()});
+    if(window.lucide){lucide.createIcons();}
   </script>
   <script src="../assets/js/main.js"></script>
 </body>
