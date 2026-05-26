@@ -23,18 +23,19 @@
       <div class="w-14 h-14 rounded-full bg-emerald-100 text-primary flex items-center justify-center mb-5">
         <i data-lucide="lock-keyhole" class="w-7 h-7"></i>
       </div>
-      <h1 class="text-2xl font-bold text-gray-900 mb-3">医療者向け教育資料</h1>
+      <h1 class="text-2xl font-bold text-gray-900 mb-3">医療者向け教育コラム</h1>
       <p class="text-sm text-gray-700 leading-relaxed mb-4">
         このページは医師・看護師・薬剤師・研修医・医学生など、医療従事者を対象とした教育資料です。患者さん・ご家族向けの説明資料ではありません。
       </p>
       <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-900 leading-relaxed mb-5">
-        閲覧には、申請フォームから発行されたパスワードが必要です。パスワードのSNS共有や患者さん・ご家族への転送はお控えください。
+        閲覧には、申請フォームから発行されたパスワードが必要です。パスワードのSNS共有や患者さん・ご家族への転送はお控えください。<br>
+        一度認証すると、同じブラウザでは30日間パスワード入力なしで閲覧できます。
       </div>
       <label for="password-input" class="block text-sm font-bold text-gray-700 mb-2">パスワード</label>
       <input id="password-input" class="password-input mb-3" type="password" placeholder="パスワードを入力" autocomplete="current-password">
       <p id="password-error" class="hidden text-sm text-red-700 mb-3">パスワードが違います。</p>
-      <button onclick="checkPassword()" class="w-full bg-primary text-white rounded-full py-3 font-bold hover:bg-emerald-900 transition-colors">閲覧する</button>
-      <p class="text-xs text-gray-500 mt-4 leading-relaxed">パスワードをお持ちでない医療従事者の方は、<a href="index.html" class="text-primary font-bold underline">申請フォーム案内ページ</a>をご確認ください。</p>
+      <button onclick="checkPassword()" class="w-full bg-primary text-white rounded-full py-3 font-bold hover:bg-emerald-900 transition-colors">パスワードを入力して読む</button>
+      <p class="text-xs text-gray-500 mt-4 leading-relaxed">パスワードをお持ちでない医療従事者の方は、<a href="index.html#application-form" class="text-primary font-bold underline">申請フォーム案内ページ</a>をご確認ください。</p>
     </div>
   </div>
 
@@ -50,6 +51,11 @@
 
     <section class="py-14">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+        <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <p class="text-sm font-bold text-emerald-800">認証済み：このブラウザでは30日間、追加のパスワード入力なしで閲覧できます。</p>
+          <button onclick="logoutMedicalAccess()" class="text-xs font-bold text-emerald-800 underline">認証を解除する</button>
+        </div>
+
         <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
           <h2 class="text-lg font-bold text-amber-900 mb-2 flex items-center gap-2"><i data-lucide="alert-triangle" class="w-5 h-5"></i> 医療者向け資料としての注意</h2>
           <p class="text-sm text-amber-900 leading-relaxed">本資料は教育目的の参考資料です。患者さん・ご家族への直接配布、SNSでのパスワード共有、個別症例の診療方針を規定する目的での使用はお控えください。</p>
@@ -94,15 +100,6 @@
           </div>
         </a>
 
-        <div class="bg-white rounded-2xl border border-gray-100 p-6 text-sm text-gray-600 leading-relaxed">
-          <p class="font-bold text-gray-900 mb-2">今後の拡張候補</p>
-          <ul class="list-disc pl-5 space-y-1">
-            <li>教育コラム vol.03：発熱性好中球減少症と感染症初期対応</li>
-            <li>教育コラム vol.04：ICI治療中の内分泌救急</li>
-            <li>教育コラム vol.05：抗がん薬治療中の肺障害・心毒性</li>
-          </ul>
-        </div>
-
         <div class="text-center pt-4">
           <a href="index.html" class="inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-emerald-900 transition-colors"><i data-lucide="chevron-left" class="w-4 h-4"></i> 医療者向け入口へ戻る</a>
         </div>
@@ -110,12 +107,14 @@
     </section>
   </main>
 
+  <script src="auth.js"></script>
   <script>
     async function sha256(text){const data=new TextEncoder().encode(text);const hashBuffer=await crypto.subtle.digest('SHA-256',data);return Array.from(new Uint8Array(hashBuffer)).map(b=>b.toString(16).padStart(2,'0')).join('')}
-    async function checkPassword(){const input=document.getElementById('password-input').value;const correctHash='87f5953bcd188607a570a9b49d214ddd92999fa580435f1bad30632bee39ff36';const inputHash=await sha256(input);if(inputHash===correctHash){sessionStorage.setItem('medicalAccess','granted');document.getElementById('password-screen').style.display='none';document.getElementById('protected-content').classList.remove('hidden')}else{document.getElementById('password-error').classList.remove('hidden')}}
-    window.addEventListener('DOMContentLoaded',()=>{if(sessionStorage.getItem('medicalAccess')==='granted'){document.getElementById('password-screen').style.display='none';document.getElementById('protected-content').classList.remove('hidden')}});
+    function showProtectedContent(){document.getElementById('password-screen').style.display='none';document.getElementById('protected-content').classList.remove('hidden');if(window.lucide){lucide.createIcons();}}
+    async function checkPassword(){const input=document.getElementById('password-input').value;const correctHash='87f5953bcd188607a570a9b49d214ddd92999fa580435f1bad30632bee39ff36';const inputHash=await sha256(input);if(inputHash===correctHash){grantMedicalAccess();showProtectedContent()}else{document.getElementById('password-error').classList.remove('hidden')}}
+    function logoutMedicalAccess(){clearMedicalAccess();window.location.reload();}
+    window.addEventListener('DOMContentLoaded',()=>{if(isMedicalAccessGranted()){showProtectedContent()}else if(window.lucide){lucide.createIcons();}});
     document.getElementById('password-input').addEventListener('keydown',e=>{if(e.key==='Enter')checkPassword()});
-    if(window.lucide){lucide.createIcons();}
   </script>
   <script src="../assets/js/main.js"></script>
 </body>
