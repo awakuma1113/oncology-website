@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>教育コラム選択 | 医療者向け教育資料</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['\"Noto Sans JP\"', 'sans-serif'] }, colors: { primary: '#065f46' } } } }
+  </script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="icon" href="../public/favicon.png">
+  <style>
+    .password-screen{min-height:100vh;display:flex;align-items:center;justify-content:center;background:#F3F6F4;padding:24px}.password-card{max-width:560px;width:100%;background:#fff;border:1px solid #d9ecdf;border-radius:24px;padding:32px;box-shadow:0 14px 40px rgba(6,95,70,.12)}.password-input{width:100%;border:1px solid #d1d5db;border-radius:12px;padding:14px 16px;font-size:16px;outline:none}.password-input:focus{border-color:#065f46;box-shadow:0 0 0 3px rgba(6,95,70,.12)}
+  </style>
+</head>
+<body class="bg-[#F3F6F4] text-gray-900 min-h-screen">
+  <div id="password-screen" class="password-screen">
+    <div class="password-card">
+      <div class="w-14 h-14 rounded-full bg-emerald-100 text-primary flex items-center justify-center mb-5">
+        <i data-lucide="lock-keyhole" class="w-7 h-7"></i>
+      </div>
+      <h1 class="text-2xl font-bold text-gray-900 mb-3">医療者向け教育コラム</h1>
+      <p class="text-sm text-gray-700 leading-relaxed mb-4">
+        このページは医師・看護師・薬剤師・研修医・医学生など、医療従事者を対象とした教育資料です。患者さん・ご家族向けの説明資料ではありません。
+      </p>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-900 leading-relaxed mb-5">
+        閲覧には、申請フォームから発行されたパスワードが必要です。パスワードのSNS共有や患者さん・ご家族への転送はお控えください。<br>
+        一度認証すると、同じブラウザでは30日間パスワード入力なしで閲覧できます。
+      </div>
+      <label for="password-input" class="block text-sm font-bold text-gray-700 mb-2">パスワード</label>
+      <input id="password-input" class="password-input mb-3" type="password" placeholder="パスワードを入力" autocomplete="current-password">
+      <p id="password-error" class="hidden text-sm text-red-700 mb-3">パスワードが違います。</p>
+      <button onclick="checkPassword()" class="w-full bg-primary text-white rounded-full py-3 font-bold hover:bg-emerald-900 transition-colors">パスワードを入力して読む</button>
+      <p class="text-xs text-gray-500 mt-4 leading-relaxed">パスワードをお持ちでない医療従事者の方は、<a href="index.html#application-form" class="text-primary font-bold underline">申請フォーム案内ページ</a>をご確認ください。</p>
+    </div>
+  </div>
+
+  <main id="protected-content" class="hidden">
+    <section class="bg-[#123C35] py-16 lg:py-20 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10 pointer-events-none" style="background: radial-gradient(ellipse at top right, rgba(255,255,255,0.9), transparent 58%);"></div>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <span class="block text-emerald-300 font-bold tracking-widest text-sm mb-3">MEDICAL EDUCATION</span>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">教育コラム選択</h1>
+        <p class="text-emerald-100 text-base leading-relaxed max-w-2xl">医療従事者向け教育資料です。実際の診療では各施設の診療体制と患者背景を踏まえて判断してください。</p>
+      </div>
+    </section>
+
+    <section class="py-14">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+        <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <p class="text-sm font-bold text-emerald-800">認証済み：このブラウザでは30日間、追加のパスワード入力なしで閲覧できます。</p>
+          <button onclick="logoutMedicalAccess()" class="text-xs font-bold text-emerald-800 underline">認証を解除する</button>
+        </div>
+
+        <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+          <h2 class="text-lg font-bold text-amber-900 mb-2 flex items-center gap-2"><i data-lucide="alert-triangle" class="w-5 h-5"></i> 医療者向け資料としての注意</h2>
+          <p class="text-sm text-amber-900 leading-relaxed">本資料は教育目的の参考資料です。患者さん・ご家族への直接配布、SNSでのパスワード共有、個別症例の診療方針を規定する目的での使用はお控えください。</p>
+        </div>
+
+        <a href="education-irAE-02.html" class="group bg-white rounded-2xl shadow-sm hover:shadow-md border border-red-100 overflow-hidden transition-all duration-300 hover:-translate-y-0.5 flex flex-col sm:flex-row">
+          <div class="w-full sm:w-2 bg-red-500 flex-shrink-0"></div>
+          <div class="p-6 sm:p-8 flex flex-col justify-between flex-grow gap-4">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="inline-block bg-red-100 text-red-700 text-xs font-bold px-3 py-1 rounded-full">教育コラム vol.02</span>
+                <span class="inline-block bg-sky-100 text-sky-700 text-xs font-medium px-3 py-1 rounded-full">医療者専用</span>
+              </div>
+              <h2 class="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors leading-snug mb-2">救急外来で見逃したくない重症irAE</h2>
+              <p class="text-sm text-gray-500 italic mb-3">― irAE脳炎・心筋炎・CRS・HLH/MAS様病態を疑う入口 ―</p>
+              <p class="text-sm text-gray-600 leading-relaxed">ICI治療中または治療歴のある患者が、発熱・意識障害・ショック・心筋障害・多臓器障害で救急外来を受診した際に、敗血症だけでなく重症irAEを想起するための教育コラムです。</p>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-gray-400">文責：腫瘍内科 川村 佳史</span>
+              <span class="inline-flex items-center gap-1 text-sm font-bold text-primary group-hover:underline">読む <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+            </div>
+          </div>
+        </a>
+
+        <a href="education-irAE-02-er-supplement.html" class="group bg-white rounded-2xl shadow-sm hover:shadow-md border border-orange-100 overflow-hidden transition-all duration-300 hover:-translate-y-0.5 flex flex-col sm:flex-row">
+          <div class="w-full sm:w-2 bg-orange-500 flex-shrink-0"></div>
+          <div class="p-6 sm:p-8 flex flex-col justify-between flex-grow gap-4">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="inline-block bg-orange-100 text-orange-700 text-xs font-bold px-3 py-1 rounded-full">教育コラム vol.02 追補版</span>
+                <span class="inline-block bg-sky-100 text-sky-700 text-xs font-medium px-3 py-1 rounded-full">救急科医向け</span>
+                <span class="inline-block bg-amber-100 text-amber-700 text-xs font-medium px-3 py-1 rounded-full">医療者専用</span>
+              </div>
+              <h2 class="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors leading-snug mb-2">敗血症に見えるirAE</h2>
+              <p class="text-sm text-gray-500 italic mb-3">― 救急外来で「感染症だけ」にしないための実践ノート ―</p>
+              <p class="text-sm text-gray-600 leading-relaxed">ICI治療中または治療歴のある患者の発熱・ショックを、敗血症として対応しながらCRS/HLH/MAS様病態を並走で拾うための追補資料です。</p>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-gray-400">文責：腫瘍内科 川村 佳史</span>
+              <span class="inline-flex items-center gap-1 text-sm font-bold text-primary group-hover:underline">読む <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+            </div>
+          </div>
+        </a>
+
+        <div class="text-center pt-4">
+          <a href="index.html" class="inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-emerald-900 transition-colors"><i data-lucide="chevron-left" class="w-4 h-4"></i> 医療者向け入口へ戻る</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="auth.js"></script>
+  <script>
+    async function sha256(text){const data=new TextEncoder().encode(text);const hashBuffer=await crypto.subtle.digest('SHA-256',data);return Array.from(new Uint8Array(hashBuffer)).map(b=>b.toString(16).padStart(2,'0')).join('')}
+    function showProtectedContent(){document.getElementById('password-screen').style.display='none';document.getElementById('protected-content').classList.remove('hidden');if(window.lucide){lucide.createIcons();}}
+    async function checkPassword(){const input=document.getElementById('password-input').value;const correctHash='87f5953bcd188607a570a9b49d214ddd92999fa580435f1bad30632bee39ff36';const inputHash=await sha256(input);if(inputHash===correctHash){grantMedicalAccess();showProtectedContent()}else{document.getElementById('password-error').classList.remove('hidden')}}
+    function logoutMedicalAccess(){clearMedicalAccess();window.location.reload();}
+    window.addEventListener('DOMContentLoaded',()=>{if(isMedicalAccessGranted()){showProtectedContent()}else if(window.lucide){lucide.createIcons();}});
+    document.getElementById('password-input').addEventListener('keydown',e=>{if(e.key==='Enter')checkPassword()});
+  </script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

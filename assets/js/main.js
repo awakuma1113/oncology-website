@@ -61,12 +61,12 @@ function getBaseUrl() {
  * Returns the prefix needed to reach the site root from the current page.
  * - Root pages (/, /index.html, etc.)  → "./"
  * - /en/ pages                         → "../"
- * - /column/ or other subdirs          → "../"
+ * - /column/ or /medical/ pages        → "../"
  * Extend the subdirPatterns array when new subdirectories are added.
  */
 function getSitePrefix() {
     const pathname = window.location.pathname;
-    const subdirPatterns = ['/column/'];
+    const subdirPatterns = ['/column/', '/medical/'];
     if (isEnglish()) return '../';
     if (subdirPatterns.some(p => pathname.includes(p))) return '../';
     return './';
@@ -86,9 +86,9 @@ function renderHeader() {
     const logoFile = isEn ? "Logo EN.png" : "Logo JP.png";
     
     // Lang toggle URLs
-    // Pages in subdirectories (e.g. /column/) have no English equivalent.
+    // Pages in subdirectories (e.g. /column/, /medical/) have no English equivalent.
     // Detect this so we can redirect to EN homepage instead of a broken URL.
-    const isSubdirPage = !isEn && window.location.pathname.includes('/column/');
+    const isSubdirPage = !isEn && (window.location.pathname.includes('/column/') || window.location.pathname.includes('/medical/'));
     const jaUrl = isEn ? `../${currentPage}` : `#`;
     const enUrl = isEn ? `#` : isSubdirPage ? `${prefix}en/index.html` : `en/${currentPage}`;
 
