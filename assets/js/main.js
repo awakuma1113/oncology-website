@@ -224,6 +224,11 @@ function renderFooter() {
                                        class="sns-icon-link" role="listitem">
                                         <img src="${prefix}assets/images/instagram-logo.svg" alt="Instagram" class="sns-icon">
                                     </a>
+                                    <a href="https://x.com/TMPU_Oncology" target="_blank" rel="noopener noreferrer"
+                                       aria-label="${isEn ? 'Official X Account (opens in new tab)' : '公式Xアカウント（新しいタブで開きます）'}"
+                                       class="sns-icon-link" role="listitem">
+                                        <img src="${prefix}assets/images/x-logo.svg" alt="X" class="sns-icon">
+                                    </a>
                                 </div>
                             </div>
                         </div>
