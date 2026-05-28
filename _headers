@@ -1,2 +1,11 @@
 /medical/*
   X-Robots-Tag: noindex, nofollow
+
+/column/04.html
+  X-Robots-Tag: noindex, nofollow
+
+/column/05.html
+  X-Robots-Tag: noindex, nofollow
+
+/column/05-er-supplement.html
+  X-Robots-Tag: noindex, nofollow

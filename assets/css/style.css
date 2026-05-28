@@ -130,17 +130,6 @@ img[src=""] {
 }
 
 /* ==========================================================================
-   Temporary Unpublish Rules
-   ========================================================================== */
-
-/* Hide public links to Education Column vol.02 while column/05.html is unpublished. */
-li:has(a[href="column/05.html"]),
-li:has(a[href="05.html"]),
-a[href="05.html"][aria-label*="教育コラム vol.02"] {
-    display: none !important;
-}
-
-/* ==========================================================================
    Scroll Animations
    ========================================================================== */
 .animate-fade-up {
