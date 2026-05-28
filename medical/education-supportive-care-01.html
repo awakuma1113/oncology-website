@@ -1,0 +1,1865 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>支持療法・有害事象対策 | tmpu-oncology.jp 教育コラム vol.01</title>
+<script src="auth.js"></script>
+<script>requireMedicalAccess();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green-50: #f0faf4;
+    --green-100: #d6f0e0;
+    --green-200: #a8dfc0;
+    --green-300: #6cc89a;
+    --green-400: #3db37a;
+    --green-500: #1d8f5a;
+    --green-600: #167348;
+    --green-700: #115a38;
+    --green-800: #0d4129;
+    --accent-warm: #d4943a;
+    --accent-warm-light: #fef4e0;
+    --accent-blue: #4a90c4;
+    --accent-blue-light: #eaf3fb;
+    --accent-rose: #c4726a;
+    --accent-rose-light: #fdf0ee;
+    --accent-purple: #7c6fad;
+    --accent-purple-light: #f0eef8;
+    --accent-orange: #c0622a;
+    --accent-orange-light: #fdf0e8;
+    --text-primary: #1a2e23;
+    --text-secondary: #4a6356;
+    --text-muted: #7a9488;
+    --bg-white: #ffffff;
+    --bg-off: #f7faf8;
+    --bg-card: #ffffff;
+    --shadow-soft: 0 2px 16px rgba(29,143,90,0.06);
+    --shadow-card: 0 4px 24px rgba(29,143,90,0.08);
+    --shadow-hover: 0 8px 32px rgba(29,143,90,0.12);
+    --radius: 14px;
+    --radius-sm: 10px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    color: var(--text-primary);
+    background: var(--bg-white);
+    line-height: 1.9;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  .page-wrapper { max-width: 520px; margin: 0 auto; padding: 0 20px; }
+
+  @media (min-width: 860px) {
+    .page-wrapper { max-width: 780px; padding: 0 48px; }
+    body { font-size: 15.5px; }
+    .hero h1 { font-size: 34px; }
+    .section-title { font-size: 22px; }
+    .point-card { padding: 28px 30px; }
+    .def-table td, .def-table th { padding: 12px 18px; font-size: 14px; }
+    .tx-table td, .tx-table th { padding: 11px 14px; font-size: 13.5px; }
+    .summary-list li { font-size: 14.5px; }
+    .point-card-body { font-size: 14.5px; }
+    .alert-box { font-size: 14px; padding: 18px 20px; }
+    .flow-step-body { font-size: 14px; }
+    .toc-list li a { font-size: 14.5px; }
+    .concept-box p { font-size: 15px; }
+  }
+
+  /* ====== HERO ====== */
+  .hero {
+    position: relative;
+    padding: 52px 0 44px;
+    text-align: center;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: -40px; right: -40px; bottom: -20px;
+    background:
+      radial-gradient(ellipse 70% 50% at 20% 30%, rgba(168,223,192,0.35) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 60% at 80% 60%, rgba(108,200,154,0.2) 0%, transparent 70%),
+      radial-gradient(ellipse 80% 40% at 50% 80%, rgba(214,240,224,0.4) 0%, transparent 60%);
+    z-index: 0;
+  }
+  .hero-content { position: relative; z-index: 1; }
+
+  .hero-badge {
+    display: inline-block;
+    background: var(--green-100);
+    color: var(--green-600);
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 6px 16px;
+    border-radius: 100px;
+    margin-bottom: 18px;
+  }
+
+  .hero-audience {
+    display: inline-block;
+    background: var(--accent-blue-light);
+    color: var(--accent-blue);
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 4px 14px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+    margin-left: 8px;
+  }
+
+  .hero h1 {
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.55;
+    color: var(--green-700);
+    letter-spacing: 0.04em;
+    margin-bottom: 12px;
+  }
+
+  .hero-subtitle {
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-size: 14px;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+  }
+
+  .hero-divider {
+    width: 48px; height: 3px;
+    background: linear-gradient(90deg, var(--green-300), var(--green-200));
+    border-radius: 2px;
+    margin: 24px auto 0;
+  }
+
+  /* ====== TOC ====== */
+  .toc {
+    background: var(--bg-off);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin: 32px 0 0;
+  }
+  .toc-title {
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+    margin-bottom: 14px;
+  }
+  .toc-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+  .toc-list li a {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: var(--radius-sm);
+    transition: background 0.2s, color 0.2s;
+    line-height: 1.5;
+  }
+  .toc-list li a:hover { background: var(--bg-card); color: var(--green-600); }
+  .toc-badge {
+    flex-shrink: 0;
+    width: 22px; height: 22px;
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; font-weight: 700;
+    color: #fff;
+  }
+
+  /* ====== SECTION ====== */
+  .section { padding: 40px 0 0; }
+  .section-anchor { padding-top: 8px; }
+
+  .section-label {
+    font-size: 11px; font-weight: 700;
+    color: var(--green-400);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .section-title {
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--text-primary);
+    line-height: 1.55;
+    margin-bottom: 18px;
+  }
+
+  .section-lead {
+    font-size: 14.5px;
+    color: var(--text-secondary);
+    line-height: 1.9;
+    margin-bottom: 20px;
+  }
+
+  .soft-divider {
+    width: 100%; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--green-100), transparent);
+    margin: 40px 0 0;
+  }
+
+  /* ====== CONCEPT BOX ====== */
+  .concept-box {
+    background: linear-gradient(135deg, var(--green-500) 0%, var(--green-600) 100%);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 24px;
+  }
+  .concept-box::before {
+    content: '';
+    position: absolute;
+    top: -30px; right: -30px;
+    width: 110px; height: 110px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 50%;
+  }
+  .concept-box p {
+    font-size: 14.5px;
+    color: rgba(255,255,255,0.92);
+    line-height: 1.9;
+    position: relative; z-index: 1;
+  }
+  .concept-box p + p { margin-top: 10px; }
+  .concept-box strong { color: #fff; font-weight: 700; }
+
+  /* ====== POINT CARDS ====== */
+  .point-card {
+    background: var(--bg-card);
+    border: 1px solid var(--green-100);
+    border-radius: var(--radius);
+    padding: 22px;
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 14px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .point-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-card); }
+
+  .point-card-header {
+    display: flex; align-items: flex-start; gap: 14px;
+    margin-bottom: 12px;
+  }
+  .point-icon {
+    flex-shrink: 0;
+    width: 40px; height: 40px;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .point-icon svg { width: 22px; height: 22px; }
+  .point-icon.green { background: var(--green-50); }
+  .point-icon.warm  { background: var(--accent-warm-light); }
+  .point-icon.blue  { background: var(--accent-blue-light); }
+  .point-icon.rose  { background: var(--accent-rose-light); }
+  .point-icon.purple { background: var(--accent-purple-light); }
+  .point-icon.orange { background: var(--accent-orange-light); }
+
+  .point-card-title {
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-weight: 700;
+    font-size: 15.5px;
+    color: var(--text-primary);
+    line-height: 1.5;
+  }
+  .point-card-sub {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+  .point-card-body {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.85;
+  }
+  .point-card-body + .point-card-body { margin-top: 8px; }
+
+  /* ====== ALERT BOX ====== */
+  .alert-box {
+    border-radius: var(--radius-sm);
+    padding: 16px 18px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13.5px;
+    line-height: 1.8;
+  }
+  .alert-box svg { width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px; }
+  .alert-box.warn {
+    background: var(--accent-warm-light);
+    border-left: 3px solid var(--accent-warm);
+    color: #7a4f1a;
+  }
+  .alert-box.info {
+    background: var(--accent-blue-light);
+    border-left: 3px solid var(--accent-blue);
+    color: #2a5a80;
+  }
+  .alert-box.danger {
+    background: var(--accent-rose-light);
+    border-left: 3px solid var(--accent-rose);
+    color: #7a3530;
+  }
+  .alert-box.tip {
+    background: var(--green-50);
+    border-left: 3px solid var(--green-400);
+    color: var(--green-700);
+  }
+
+  /* ====== DEFINITION TABLE ====== */
+  .def-table {
+    width: 100%;
+    min-width: 520px;
+    border-collapse: collapse;
+    margin-top: 14px;
+    font-size: 13.5px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+  }
+  .def-table th {
+    background: var(--green-500);
+    color: #fff;
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-weight: 700;
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+  }
+  .def-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--green-50);
+    color: var(--text-secondary);
+    vertical-align: top;
+    line-height: 1.75;
+  }
+  .def-table tr:last-child td { border-bottom: none; }
+  .def-table tr:nth-child(even) td { background: var(--bg-off); }
+  .def-table td:first-child {
+    font-weight: 700;
+    color: var(--text-primary);
+    white-space: nowrap;
+    width: 30%;
+  }
+
+  /* ====== TREATMENT TABLE ====== */
+  .tx-table {
+    width: 100%;
+    min-width: 620px;
+    min-width: 620px;
+    border-collapse: collapse;
+    margin-top: 14px;
+    font-size: 13px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+  }
+  .tx-table th {
+    background: var(--green-600);
+    color: #fff;
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-weight: 700;
+    padding: 9px 12px;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+  .tx-table td {
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--green-50);
+    color: var(--text-secondary);
+    vertical-align: middle;
+    line-height: 1.6;
+    text-align: center;
+  }
+  .tx-table tr:last-child td { border-bottom: none; }
+  .tx-table tr:nth-child(even) td { background: var(--bg-off); }
+  .tx-table td:first-child {
+    font-weight: 700;
+    color: var(--text-primary);
+    text-align: left;
+  }
+  .tx-table td.highlight { color: var(--green-600); font-weight: 700; }
+
+  /* ====== RISK TAG ====== */
+  .risk-tag {
+    display: inline-block;
+    font-size: 11px; font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 100px;
+    letter-spacing: 0.06em;
+    vertical-align: middle;
+  }
+  .risk-high { background: #fde8e8; color: #b91c1c; }
+  .risk-mid  { background: #fef3c7; color: #92400e; }
+  .risk-low  { background: #d1fae5; color: #065f46; }
+  .risk-min  { background: var(--bg-off); color: var(--text-muted); }
+
+  /* ====== FLOW STEPS ====== */
+  .flow-steps {
+    display: flex; flex-direction: column; gap: 0;
+    position: relative;
+    padding-left: 18px;
+  }
+  .flow-steps::before {
+    content: '';
+    position: absolute;
+    left: 8px; top: 14px; bottom: 14px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--green-200), var(--green-100));
+    border-radius: 1px;
+  }
+  .flow-step {
+    position: relative;
+    padding: 0 0 22px 26px;
+  }
+  .flow-step:last-child { padding-bottom: 0; }
+  .flow-dot {
+    position: absolute;
+    left: -10px; top: 4px;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background: var(--green-500);
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px var(--green-200);
+  }
+  .flow-step-title {
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-weight: 700;
+    font-size: 14.5px;
+    color: var(--text-primary);
+    margin-bottom: 5px;
+    line-height: 1.5;
+  }
+  .flow-step-body {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+  }
+
+  /* ====== DRUG LIST ====== */
+  .drug-tags {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    margin-top: 10px;
+  }
+  .drug-tag {
+    display: inline-block;
+    background: var(--bg-off);
+    border: 1px solid var(--green-100);
+    border-radius: 100px;
+    padding: 5px 12px;
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  /* ====== KEYWORD ====== */
+  /* 強調は「臨床判断・閾値・行動変化ポイント」に限定 */
+  .kw { color: var(--green-600); font-weight: 700; }
+  .kw-warn { color: var(--accent-orange); font-weight: 700; }
+  .kw-danger { color: var(--accent-rose); font-weight: 700; }
+
+  /* ====== SUMMARY BOX ====== */
+  .summary-box {
+    background: var(--bg-off);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin-top: 14px;
+  }
+  .summary-box-title {
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--green-500);
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+  }
+  .summary-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .summary-list li {
+    position: relative;
+    display: block;
+    padding-left: 18px;
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+  .summary-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.72em;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--green-400);
+  }
+
+  .clinical-tip-box {
+    background: linear-gradient(180deg, #ffffff 0%, var(--bg-off) 100%);
+    border: 1px solid var(--green-100);
+    box-shadow: var(--shadow-soft);
+  }
+  .clinical-tip-box .summary-box-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--green-600);
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+  }
+  .clinical-tip-box .summary-box-title::before {
+    content: '💡';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: var(--green-500);
+    color: #fff;
+    font-size: 15px;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .clinical-tip-box .summary-list { gap: 0; }
+  .clinical-tip-box .summary-list li {
+    padding: 14px 0 14px 26px;
+    font-size: 14.5px;
+    line-height: 2.05;
+    border-top: 1px dashed var(--green-100);
+    overflow-wrap: break-word;
+  }
+  .clinical-tip-box .summary-list li::before {
+    left: 2px;
+    top: 1.85em;
+    width: 8px;
+    height: 8px;
+    background: var(--green-500);
+  }
+  .clinical-tip-box .summary-list li:first-child { margin-top: 4px; }
+  .clinical-tip-box .kw { white-space: normal; }
+
+  /* ====== CREDIT & FOOTER ====== */
+  .credit-block {
+    border-top: 1px solid var(--green-100);
+    padding: 24px 0 32px;
+    margin-top: 40px;
+  }
+  .credit-list { display: flex; flex-direction: column; gap: 10px; }
+  .credit-row { display: flex; align-items: baseline; gap: 16px; }
+  .credit-row dt {
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    color: var(--green-500);
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+    padding: 3px 10px;
+    background: var(--green-50);
+    border-radius: 100px;
+    line-height: 1.6;
+  }
+  .credit-row dd { font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
+
+  .home-nav-section {
+    text-align: center;
+    padding: 12px 0 8px;
+  }
+
+  .home-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, var(--green-500) 0%, var(--green-400) 100%);
+    color: #fff;
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 15px 30px;
+    border-radius: 100px;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(29,143,90,0.24);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    letter-spacing: 0.04em;
+  }
+
+  .home-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(29,143,90,0.3);
+  }
+
+  .home-button svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.2s ease;
+  }
+
+  .home-button:hover svg { transform: translateX(-3px); }
+
+  .footer {
+    text-align: center;
+    padding: 24px 0 40px;
+    border-top: 1px solid var(--green-100);
+    font-size: 11.5px;
+    color: var(--text-muted);
+  }
+  .footer-logo {
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--green-500);
+    margin-bottom: 4px;
+  }
+
+  .ref-inline {
+    font-size: 11px;
+    color: var(--green-500);
+    font-weight: 700;
+    vertical-align: super;
+    line-height: 1;
+  }
+
+  /* ====== ANIMATIONS ====== */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-in {
+    opacity: 0;
+    animation: fadeUp 0.55s ease-out forwards;
+  }
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.2s; }
+  .delay-3 { animation-delay: 0.3s; }
+
+  @media (min-width: 640px) and (max-width: 859px) {
+    body { font-size: 16px; }
+    .page-wrapper { padding: 0 32px; }
+    .hero h1 { font-size: 30px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-wrapper">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content animate-in">
+      <div>
+        <span class="hero-badge">教育コラム vol.01</span>
+        <span class="hero-audience">医学生・研修医向け</span>
+      </div>
+      <h1>支持療法と<br>有害事象対策</h1>
+      <p class="hero-subtitle">― Supportive Care & Adverse Event Management ―</p>
+      <div class="hero-divider"></div>
+    </div>
+  </section>
+
+  <!-- 目次 -->
+  <nav class="toc animate-in delay-1">
+    <p class="toc-title">CONTENTS</p>
+    <ul class="toc-list">
+      <li><a href="#concept">
+        <span class="toc-badge" style="background:var(--green-500);">1</span>支持療法とは
+      </a></li>
+      <li><a href="#blood">
+        <span class="toc-badge" style="background:var(--accent-rose);">2</span>血液毒性（好中球減少・血小板減少・貧血）
+      </a></li>
+      <li><a href="#gi">
+        <span class="toc-badge" style="background:var(--accent-warm);">3</span>消化器毒性（悪心嘔吐・下痢・便秘・口内炎）
+      </a></li>
+      <li><a href="#neuro">
+        <span class="toc-badge" style="background:var(--accent-purple);">4</span>神経障害・皮膚障害
+      </a></li>
+      <li><a href="#organ">
+        <span class="toc-badge" style="background:var(--accent-blue);">5</span>臓器毒性・過敏性反応（肺・心・TLS・アレルギー）
+      </a></li>
+      <li><a href="#irae">
+        <span class="toc-badge" style="background:var(--accent-orange);">6</span>免疫関連有害事象（irAE）
+      </a></li>
+    </ul>
+  </nav>
+
+  <!-- ①支持療法とは -->
+  <div class="soft-divider"></div>
+  <section class="section" id="concept">
+    <div class="section-anchor"></div>
+    <p class="section-label">01 CONCEPT</p>
+    <h2 class="section-title">支持療法とは何か</h2>
+
+    <div class="concept-box animate-in">
+      <p><strong>支持療法</strong>とは、がんに伴う症状や治療による副作用に対して、症状の軽減・予防を目指す治療の総称である。</p>
+      <p>がん薬物療法を安全に継続させ、最大の治療効果を得るために不可欠な位置づけにある。</p>
+    </div>
+
+    <div class="point-card animate-in" style="margin-top:20px;">
+      <div class="point-card-header">
+        <div class="point-icon green">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--green-500)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <div>
+          <p class="point-card-title">治療域（治療安全域）の概念</p>
+          <p class="point-card-sub">抗がん薬は一般薬剤と根本的に異なる薬理学的特性を持つ</p>
+        </div>
+      </div>
+      <p class="point-card-body">一般的な薬剤では、効果が現れる濃度と毒性が現れる濃度の間に十分な幅（治療安全域）がある。しかし抗がん薬では<span class="kw">治療安全域が極めて狭く</span>、有効濃度と毒性発現濃度がほぼ重なっている。</p>
+      <p class="point-card-body" style="margin-top:10px;">このため抗がん薬は、最大の抗腫瘍効果を得ようとすると同時に高度な有害事象が発生しやすい。支持療法は、毒性曲線を右方向にシフトさせる（＝同じ濃度での毒性を軽減する）ことで、実質的に<span class="kw">治療安全域を拡大する戦略的介入</span>である。</p>
+      <div class="alert-box tip" style="margin-top:12px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--green-600)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        <span>支持療法の主な領域：制吐療法 / G-CSF製剤 / 輸血療法 / 疼痛対策（NSAIDs・オピオイド）/ 感染症対策 / 栄養療法</span>
+      </div>
+
+      <!-- 治療域アニメーション -->
+      <div id="tw-anim-wrap" style="margin-top:20px; background:var(--bg-off); border-radius:var(--radius-sm); padding:16px 12px 12px; user-select:none;">
+        <p style="font-family:'BIZ UDPGothic',sans-serif; font-weight:700; font-size:12.5px; color:var(--text-muted); letter-spacing:0.08em; text-align:center; margin-bottom:10px;">治療安全域と支持療法の効果（模式図）</p>
+        <canvas id="tw-canvas" style="width:100%; display:block; border-radius:6px;"></canvas>
+        <div style="display:flex; justify-content:center; gap:24px; margin-top:10px; font-size:11.5px; color:var(--text-muted); flex-wrap:wrap;">
+          <span style="display:flex; align-items:center; gap:5px;"><span style="display:inline-block; width:24px; height:2.5px; background:#1d8f5a; border-radius:2px;"></span>効果曲線</span>
+          <span style="display:flex; align-items:center; gap:5px;"><span style="display:inline-block; width:24px; height:2.5px; background:#c4726a; border-radius:2px; border-top:2px dashed #c4726a; background:none;"></span>毒性曲線</span>
+          <span style="display:flex; align-items:center; gap:5px;"><span style="display:inline-block; width:14px; height:14px; background:rgba(61,179,122,0.18); border-radius:2px;"></span>治療安全域</span>
+        </div>
+        <div style="display:flex; justify-content:center; gap:10px; margin-top:12px; flex-wrap:wrap;">
+          <button id="tw-btn-reset" onclick="twReset()" style="font-family:'BIZ UDPGothic',sans-serif; font-size:12px; font-weight:700; background:var(--bg-card); color:var(--text-secondary); border:1.5px solid var(--green-200); border-radius:100px; padding:7px 18px; cursor:pointer; transition:background 0.2s;">リセット</button>
+          <button id="tw-btn-apply" onclick="twApply()" style="font-family:'BIZ UDPGothic',sans-serif; font-size:12px; font-weight:700; background:var(--green-500); color:#fff; border:none; border-radius:100px; padding:7px 20px; cursor:pointer; box-shadow:0 2px 10px rgba(29,143,90,0.25); transition:background 0.2s;">支持療法を適用</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="point-card animate-in delay-1" style="margin-top:14px;">
+      <div class="point-card-header">
+        <div class="point-icon green">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--green-500)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div>
+          <p class="point-card-title">RDI（相対用量強度）と予後</p>
+          <p class="point-card-sub">支持療法は治療強度を維持し、生存期間改善に寄与する</p>
+        </div>
+      </div>
+      <p class="point-card-body"><strong>RDI（Relative Dose Intensity：相対用量強度）</strong>とは、計画された化学療法の用量・投与間隔に対して、実際に投与できた割合を示す指標である。有害事象による減量・延期はRDIを低下させ、治療効果に直接影響する。</p>
+
+      <div class="def-table-wrapper" style="margin-top:14px; overflow-x:auto;">
+        <table class="def-table">
+          <tr><th colspan="2">RDIと全生存期間（OS）の関係</th></tr>
+          <tr>
+            <td>RDI ≥80%</td>
+            <td>カルボプラチン系・FOLFOX・FOLFIRI・FOLFIRINOXレジメンにおいて、RDI ≥80%の患者は有意に長いOSを示した<span class="ref-inline">[1]</span></td>
+          </tr>
+          <tr>
+            <td>RDI &lt;80%</td>
+            <td>白金製剤系レジメンでRDI &lt;80/85%群は、そうでない群に比べ有意に短いOSと関連（HR 1.17; 95%CI: 1.07–1.27）<span class="ref-inline">[2]</span></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="alert-box tip" style="margin-top:12px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--green-600)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        <span>有害事象による減量・延期はRDIを下げ、予後を悪化させうる。支持療法によってRDIを維持することが、がん薬物療法の治療成績に直結する。</span>
+      </div>
+    </div>
+
+    <!-- 引用文献（概念セクション） -->
+    <div style="margin-top:16px; padding:14px 18px; background:var(--bg-off); border-radius:var(--radius-sm); font-size:12px; color:var(--text-muted); line-height:1.7;">
+      <p style="font-weight:700; color:var(--text-secondary); margin-bottom:8px; font-size:11px; letter-spacing:0.1em;">REFERENCES（本セクション）</p>
+      <p>[1] Nielson CM, et al. Relative Dose Intensity of Chemotherapy and Survival in Patients with Advanced Stage Solid Tumor Cancer: A Systematic Review and Meta-Analysis. <em>The Oncologist.</em> 2021;26(9):e1609–e1618. doi:10.1002/onco.13822. PMID: 33973301.</p>
+      <p style="margin-top:6px;">[2] Bylsma LC, et al. Chemotherapy Relative Dose Intensity, Overall Survival, and Hematologic Toxicity in Solid-Tumor Cancer Patients: A Literature Review and Meta-Analysis. <em>Blood.</em> 2020;136(Suppl 1):32–33. doi:10.1182/blood-2020-139279.</p>
+    </div>
+  </section>
+
+  <!-- ②血液毒性 -->
+  <div class="soft-divider"></div>
+  <section class="section" id="blood">
+    <div class="section-anchor"></div>
+    <p class="section-label">02 HEMATOLOGIC TOXICITY</p>
+    <h2 class="section-title">血液毒性</h2>
+
+    <!-- 好中球減少 -->
+    <div class="point-card animate-in">
+      <div class="point-card-header">
+        <div class="point-icon rose">
+          <!-- 好中球減少：体温計アイコン（発熱性好中球減少） -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-rose)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+        </div>
+        <div>
+          <p class="point-card-title">好中球減少</p>
+          <p class="point-card-sub">ほぼすべての殺細胞性抗がん薬 ／ 投与後10〜14日に好発</p>
+        </div>
+      </div>
+      <p class="point-card-body">骨髄抑制は殺細胞性抗がん薬に共通する副作用であり、<span class="kw">発熱時はFNとして迅速に評価する</span>。好中球減少期の発熱（発熱性好中球減少症：FN）は医療的緊急事態として対応する。</p>
+
+      <div class="def-table-wrapper" style="margin-top:14px; overflow-x:auto;">
+        <table class="def-table">
+          <tr><th colspan="2">FN（Febrile Neutropenia）の定義</th></tr>
+          <tr>
+            <td>好中球数</td>
+            <td>500/μL未満、または1,000/mm³未満で48時間以内に500/μL未満に減少すると予測される</td>
+          </tr>
+          <tr>
+            <td>発熱</td>
+            <td>腋窩温 37.5℃以上（口腔内温 38℃以上）</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="alert-box warn" style="margin-top:14px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-warm)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+        <span><span class="kw-warn">無熱性好中球減少症に対するルーチンの治療的G-CSF投与は推奨されない。</span>G-CSFは予防的投与が基本だが、重症感染症・肺炎・敗血症・高齢などを伴う高リスクFNでは、治療的投与を個別に検討する。</span>
+      </div>
+
+      <div class="summary-box clinical-tip-box" style="margin-top:16px;">
+        <p class="summary-box-title">臨床TIPS：単球数（AMC）の有用性</p>
+        <ul class="summary-list">
+          <li>絶対単球数（AMC）は<span class="kw">好中球回復の先行マーカー</span>として臨床的に有用である。AMC &gt;100–200/μL の出現は、<span class="kw">好中球回復の1〜2日前</span>に認められることが多く、骨髄回復の兆候として参考にできる。</li>
+          <li>また、前治療時の <span class="kw">AMC &lt;370/mm³</span> は、化学療法後のFN発症リスクの独立した予測因子であることが報告されており、<span class="kw">G-CSF予防投与の判断材料</span>となりうる（TPFレジメンにおけるOR: 6.0, 95%CI: 1.37–26.24）。</li>
+          <li>ルーティンの末梢血検査から得られる情報であり、骨髄抑制のモニタリングに積極的に活用する。</li>
+        </ul>
+      </div>
+
+      <p style="font-size:13.5px; font-weight:700; color:var(--text-primary); margin-top:18px; margin-bottom:8px;">ペグフィルグラスチムによる1次予防の適応</p>
+      <p style="font-size:12px; color:var(--text-muted); margin-bottom:12px;">（日本臨床腫瘍学会 FN診療ガイドライン 改訂第3版, 2024）</p>
+      <div class="flow-steps">
+        <div class="flow-step">
+          <div class="flow-dot"></div>
+          <p class="flow-step-title">FN発症頻度 ≥20%の2〜3週毎レジメン</p>
+          <p class="flow-step-body">抗がん薬投与終了から<span class="kw">24時間以上経過後</span>に投与。1次予防として推奨。</p>
+        </div>
+        <div class="flow-step">
+          <div class="flow-dot"></div>
+          <p class="flow-step-title">FN発症頻度 ≥10%かつリスク因子あり</p>
+          <p class="flow-step-body">リスク因子（65歳以上・既往の化学療法・放射線治療歴・肝腎機能障害・骨髄浸潤など）を評価して1次予防を考慮。</p>
+        </div>
+        <div class="flow-step">
+          <div class="flow-dot"></div>
+          <p class="flow-step-title">前コースでFNまたは高度好中球減少</p>
+          <p class="flow-step-body">同レジメン継続時に2次予防として使用を考慮。</p>
+        </div>
+      </div>
+
+      <p style="font-size:13.5px; font-weight:700; color:var(--text-primary); margin-top:18px; margin-bottom:8px;">FN初期治療：MASCCスコアでリスク評価</p>
+      <p style="font-size:12px; color:var(--text-muted); margin-bottom:12px;">（日本臨床腫瘍学会 FN診療ガイドライン 改訂第3版, 2024）</p>
+      <div class="flow-steps">
+        <div class="flow-step">
+          <div class="flow-dot"></div>
+          <p class="flow-step-title"><span class="risk-low">低リスク</span>（MASCCスコア ≥21）</p>
+          <p class="flow-step-body">外来での経口抗菌薬療法：シプロフロキサシン＋アモキシシリン/クラブラン酸</p>
+        </div>
+        <div class="flow-step">
+          <div class="flow-dot"></div>
+          <p class="flow-step-title"><span class="risk-high">高リスク</span>（MASCCスコア ≤20）</p>
+          <p class="flow-step-body">入院の上、<span class="kw">抗緑膿菌作用を持つβラクタム薬を速やかに投与</span>（セフェピム・メロペネム・タゾバクタム/ピペラシリンなど）を経静脈投与。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 血小板減少 -->
+    <div class="point-card animate-in delay-1">
+      <div class="point-card-header">
+        <div class="point-icon rose">
+          <!-- 血小板減少：しずく（出血イメージ） -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-rose)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6 8 4 12 4 15a8 8 0 0 0 16 0c0-3-2-7-8-13z"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/></svg>
+        </div>
+        <div>
+          <p class="point-card-title">血小板減少</p>
+          <p class="point-card-sub">化学療法開始から1〜2週後に好発</p>
+        </div>
+      </div>
+      <p class="point-card-body">骨髄抑制のほか、DIC・骨髄癌腫症・ITP・血小板凝集なども鑑別に挙がる。出血症状の有無を問診・身体診察で確認することが基本。</p>
+
+      <div class="summary-box" style="margin-top:14px;">
+        <p class="summary-box-title">予防・対策</p>
+        <ul class="summary-list">
+          <li>観血的検査・処置、皮下注射・筋肉内注射を避ける</li>
+          <li>教科書的な予防的血小板輸血の目安は、安定した患者では <span class="kw">1万/μL以下</span> とされることが多い。</li>
+          <li>一方、実臨床では発熱・感染・出血傾向・DIC疑い・侵襲的処置予定・抗凝固薬使用などを踏まえ、<span class="kw">3万/μL未満でも輸血を検討</span>を目安に輸血を検討することもある。</li>
+          <li>出血リスクが高い状況や処置前では、さらに高い閾値での対応が必要となる場合がある。</li>
+          <li>出血時は血小板数だけでなく、出血部位・重症度・凝固異常の有無を踏まえてより積極的に輸血を検討する。</li>
+          <li>患者の状態・出血リスク・処置の予定に応じた個別対応が必要</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 貧血 -->
+    <div class="point-card animate-in delay-2">
+      <div class="point-card-header">
+        <div class="point-icon rose">
+          <!-- 貧血：赤血球イメージ（円＋くぼみ） -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-rose)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="10" ry="6"/><path d="M2 12c0 2 4.5 6 10 6s10-4 10-6"/></svg>
+        </div>
+        <div>
+          <p class="point-card-title">貧血</p>
+          <p class="point-card-sub">骨髄抑制起因はコース数とともに徐々に進行</p>
+        </div>
+      </div>
+      <p class="point-card-body">化学療法以外の原因（消化管出血・自己免疫性溶血性貧血・DIC・骨髄癌腫症）も鑑別する。免疫学的溶血性貧血は投与7〜10日後に起きやすい。</p>
+      <div class="summary-box" style="margin-top:14px;">
+        <p class="summary-box-title">治療方針</p>
+        <ul class="summary-list">
+          <li>骨髄抑制による高度貧血では、<span class="kw">赤血球輸血が中心的治療</span>となる。</li>
+          <li>慢性的な貧血では、Hb &lt;7 g/dL 前後を輸血検討の目安とするが、症状・循環動態・併存疾患を踏まえて個別に判断する。</li>
+          <li>急激な低下（出血・溶血など）：Hb 7 g/dL以上でも症状・循環動態に応じて輸血を積極的に検討する</li>
+          <li>フェリチン &lt;20 ng/mL かつトランスフェリン飽和度（TSAT）&lt;20%であれば鉄剤投与を考慮</li>
+          <li>胃切除後はビタミンB₁₂補充を忘れない</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ③消化器毒性 -->
+  <div class="soft-divider"></div>
+  <section class="section" id="gi">
+    <div class="section-anchor"></div>
+    <p class="section-label">03 GI TOXICITY</p>
+    <h2 class="section-title">消化器毒性</h2>
+
+    <!-- 悪心・嘔吐 -->
+    <div class="point-card animate-in">
+      <div class="point-card-header">
+        <div class="point-icon warm">
+          <!-- 悪心嘔吐：波（消化器motilityイメージ） -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-warm)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c1.5-4 3.5-4 5 0s3.5 4 5 0 3.5-4 5 0"/><path d="M2 19c1.5-4 3.5-4 5 0s3.5 4 5 0 3.5-4 5 0"/><path d="M2 5c1.5-4 3.5-4 5 0s3.5 4 5 0 3.5-4 5 0"/></svg>
+        </div>
+        <div>
+          <p class="point-card-title">悪心・嘔吐（CINV）</p>
+          <p class="point-card-sub">発現時期による3分類が治療選択の基本</p>
+        </div>
+      </div>
+
+      <div class="def-table-wrapper" style="overflow-x:auto;">
+        <table class="def-table">
+          <tr><th>分類</th><th>発現時期・特徴</th></tr>
+          <tr>
+            <td>予測性</td>
+            <td>投与前から発現。精神的要因。前コースの制吐コントロール不良例に多い</td>
+          </tr>
+          <tr>
+            <td>急性</td>
+            <td>投与<span class="kw">24時間以内</span>に発現</td>
+          </tr>
+          <tr>
+            <td>遅発性</td>
+            <td>投与<span class="kw">24時間以降</span>に発現し2〜5日持続。急性嘔吐を経験した患者ほど強く出る</td>
+          </tr>
+        </table>
+      </div>
+
+      <p style="font-size:13.5px; font-weight:700; color:var(--text-primary); margin-top:18px; margin-bottom:10px;">催吐リスク分類と制吐レジメン</p>
+      <p style="font-size:12.5px; color:var(--text-muted); margin-bottom:10px;">NK₁受容体拮抗薬はアプレピタント（経口）、ホスアプレピタント（静注）、またはホスネツピタント（パロノセトロン配合・静注）から選択する。（日本癌治療学会 制吐薬適正使用ガイドライン 2023年10月改訂 第3版）</p>
+
+      <div style="overflow-x:auto;">
+        <table class="tx-table">
+          <thead>
+            <tr>
+              <th>催吐リスク</th>
+              <th>Day 1</th>
+              <th>Day 2〜</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="risk-high">高度</span> <span style="font-size:11px; color:var(--text-muted); display:block;">急性・遅発性とも ≥90%</span></td>
+              <td>NK₁拮抗薬※ + 5-HT₃拮抗薬 + DEX 9.9mg div</td>
+              <td>アプレピタント（Day2–3）＋ DEX 8mg po（Day2–4 or 5）</td>
+            </tr>
+            <tr>
+              <td><span class="risk-mid">中等度（カルボプラチン）</span></td>
+              <td>NK₁拮抗薬※ + 5-HT₃拮抗薬 + DEX 4.95mg div</td>
+              <td>アプレピタント（Day2–3）＋ DEX 4mg po（Day2–4）</td>
+            </tr>
+            <tr>
+              <td><span class="risk-mid">中等度</span></td>
+              <td>5-HT₃拮抗薬 + DEX 9.9mg div</td>
+              <td>DEX 8mg po（Day2–3 or 4）</td>
+            </tr>
+            <tr>
+              <td><span class="risk-low">軽度</span></td>
+              <td>DEX 6.6mg div<br><span style="font-size:11px; color:var(--text-muted);">※状況により5-HT₃拮抗薬の追加も考慮（第3版改訂点）</span></td>
+              <td class="highlight">なし</td>
+            </tr>
+            <tr>
+              <td><span class="risk-min">最小度</span></td>
+              <td class="highlight">なし</td>
+              <td class="highlight">なし</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="def-table-wrapper" style="margin-top:14px; overflow-x:auto;">
+        <table class="def-table">
+          <tr><th colspan="2">※ NK₁受容体拮抗薬の選択肢</th></tr>
+          <tr>
+            <td>アプレピタント</td>
+            <td>経口。Day1: 125mg、Day2–3: 80mg/日</td>
+          </tr>
+          <tr>
+            <td>ホスアプレピタント</td>
+            <td>静注（アプレピタントのプロドラッグ）。Day1単回150mg。経口困難例に有用</td>
+          </tr>
+          <tr>
+            <td>ホスネツピタント</td>
+            <td>静注。パロノセトロン（5-HT₃拮抗薬）との合剤（235mg/0.25mg）。Day1単回投与でNK₁＋5-HT₃を同時にカバー</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="alert-box tip" style="margin-top:14px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--green-600)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        <span>高度催吐リスクには<span class="kw">オランザピン 5〜10mg/日の追加</span>の追加を検討。予期性嘔吐にはロラゼパム・アルプラゾラムを考慮。DEX＝デキサメタゾン。</span>
+      </div>
+    </div>
+
+    <!-- 下痢 -->
+    <div class="point-card animate-in delay-1">
+      <div class="point-card-header">
+        <div class="point-icon warm">
+          <!-- 下痢：腸管（曲線的なループ） -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-warm)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3C5.8 3 4 4.8 4 7c0 2.2 1.8 4 4 4h8c2.2 0 4 1.8 4 4s-1.8 4-4 4H8"/><path d="M8 19l-2 2M8 19l2 2"/></svg>
+        </div>
+        <div>
+          <p class="point-card-title">下痢</p>
+          <p class="point-card-sub">発生機序によって治療薬が異なる</p>
+        </div>
+      </div>
+      <div class="def-table-wrapper" style="overflow-x:auto;">
+        <table class="def-table">
+          <tr><th>機序</th><th>特徴・治療</th></tr>
+          <tr>
+            <td>コリン作動性</td>
+            <td><span class="kw">投与直後</span>の早期性下痢。副交感神経刺激による腸管運動亢進。治療：ブチルスコポラミン・アトロピン</td>
+          </tr>
+          <tr>
+            <td>腸管粘膜障害</td>
+            <td>投与<span class="kw">24時間以降</span>（多くは数日後）。絨毛の委縮脱落。感染を伴わなければロペラミド</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- 便秘 -->
+    <div class="point-card animate-in delay-2">
+      <div class="point-card-header">
+        <div class="point-icon warm">
+          <!-- 便秘：下向き矢印がブロックされているイメージ -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-warm)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="3" x2="12" y2="13"/><polyline points="8 9 12 13 16 9"/><rect x="4" y="15" width="16" height="6" rx="2"/></svg>
+        </div>
+        <div>
+          <p class="point-card-title">便秘</p>
+          <p class="point-card-sub">5-HT₃受容体拮抗薬・ビンカアルカロイド・タキサン・オピオイドに注意</p>
+        </div>
+      </div>
+      <p class="point-card-body">食欲低下・水分摂取減少・運動量低下に加え、薬剤性（5-HT₃受容体拮抗薬・ビンカアルカロイド・タキサン・オピオイド）の腸管蠕動低下が主因。</p>
+      <div class="summary-box" style="margin-top:12px;">
+        <p class="summary-box-title">対策</p>
+        <ul class="summary-list">
+          <li>繊維質の多い食生活・十分な水分摂取・適度な運動の指導</li>
+          <li>便の性状と腸管運動の有無を評価し適切な下剤を処方</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 口内炎・味覚障害 -->
+    <div class="point-card animate-in delay-3">
+      <div class="point-card-header">
+        <div class="point-icon warm">
+          <!-- 口内炎：歯ブラシ（口腔ケアイメージ） -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-warm)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19c0 1.1-.9 2-2 2H7a2 2 0 0 1-2-2v-5h7v5z"/><path d="M7 14V5a5 5 0 0 1 10 0v4"/><line x1="5" y1="9" x2="12" y2="9"/></svg>
+        </div>
+        <div>
+          <p class="point-card-title">口内炎・味覚障害</p>
+          <p class="point-card-sub">投与後2〜10日目に好発</p>
+        </div>
+      </div>
+      <p class="point-card-body">粘膜細胞障害の直接作用と、好中球減少に伴う口腔内感染の間接作用が関与。</p>
+      <div class="summary-box" style="margin-top:12px;">
+        <p class="summary-box-title">予防・対策</p>
+        <ul class="summary-list">
+          <li><span class="kw">化学療法開始前の歯科介入</span>により、口腔内環境を評価し、感染源（歯周病など）を除去する</li>
+          <li>アズレンスルホン酸ナトリウム含嗽などによる口腔ケア、疼痛や炎症に応じたステロイド軟膏の塗布</li>
+          <li>味覚障害には口腔ケア・唾液分泌促進・亜鉛補給</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ④神経障害・皮膚障害 -->
+  <div class="soft-divider"></div>
+  <section class="section" id="neuro">
+    <div class="section-anchor"></div>
+    <p class="section-label">04 NEURO & SKIN</p>
+    <h2 class="section-title">神経障害・皮膚障害</h2>
+
+    <!-- 末梢神経障害 -->
+    <div class="point-card animate-in">
+      <div class="point-card-header">
+        <div class="point-icon purple">
+          <!-- 末梢神経障害：稲妻（しびれ・電気的感覚） -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div>
+          <p class="point-card-title">末梢神経障害（CIPN）</p>
+          <p class="point-card-sub">感覚性が多い ／ しびれ予防薬は現時点では存在しない</p>
+        </div>
+      </div>
+      <p class="point-card-body">手作業の巧緻性低下や歩行障害として現れ、日常生活に支障を来すことがある。<span class="kw">生活動作に踏み込んだ問診</span>（箸が使いにくい・ボタンが留めにくいなど）で評価することが重要。</p>
+
+      <p style="font-size:13px; font-weight:700; color:var(--text-primary); margin:14px 0 8px;">原因薬剤と特徴</p>
+      <div class="def-table-wrapper" style="overflow-x:auto;">
+        <table class="def-table">
+          <tr><th>薬剤</th><th>特徴</th></tr>
+          <tr>
+            <td>タキサン系 / ビンカアルカロイド系</td>
+            <td>感覚・運動性末梢神経障害。蓄積性。</td>
+          </tr>
+          <tr>
+            <td>シスプラチン / オキサリプラチン</td>
+            <td>感覚性末梢神経障害が主。オキサリプラチンは<span class="kw">寒冷刺激誘発性の急性神経障害</span>（口腔・手足の感覚異常、咽頭部違和感・絞扼感）が特徴的。これは遅発性の蓄積性障害とは別の機序による。</td>
+          </tr>
+          <tr>
+            <td>ボルテゾミブ</td>
+            <td>感覚性が主。疼痛を伴うことが多い。</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="summary-box" style="margin-top:14px;">
+        <p class="summary-box-title">治療・対策</p>
+        <ul class="summary-list">
+          <li><span class="kw-warn">予防的薬物療法は現時点で確立されていない。</span>最も重要な対策は症状に応じた<span class="kw">減量・休薬</span>。</li>
+          <li><span class="kw">疼痛性CIPNにはデュロキセチンを検討：</span>CIPN治療薬として推奨（CIPN診療ガイドライン2023年版）。オキサリプラチン・パクリタキセル誘発性CIPNに対して一定のエビデンスあり。</li>
+          <li>プレガバリン・ガバペンチン・三環系抗うつ薬は、CIPNへの十分なエビデンスは乏しく他の神経障害性疼痛の知見からの類推による。</li>
+          <li>オキサリプラチンの急性神経障害には、投与中の冷刺激回避を指導する。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 手足症候群 -->
+    <div class="point-card animate-in delay-1">
+      <div class="point-card-header">
+        <div class="point-icon purple">
+          <!-- 手足症候群：手のひら -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2 2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2v8"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+        </div>
+        <div>
+          <p class="point-card-title">手足症候群（HFS）</p>
+          <p class="point-card-sub">カペシタビン・ドキソルビシン内包リポソーム・血管新生阻害薬</p>
+        </div>
+      </div>
+      <p class="point-card-body">手足に好発する紅斑・色素沈着で始まり、増悪すると疼痛を伴う発赤腫脹・びらんを形成。殺細胞性薬では皮膚基底細胞の増殖能阻害とエクリン汗腺からの薬剤分泌が原因と考えられている。</p>
+      <div class="drug-tags" style="margin-bottom:12px;">
+        <span class="drug-tag">カペシタビン</span>
+        <span class="drug-tag">ドキソルビシンリポソーム</span>
+        <span class="drug-tag">ソラフェニブ</span>
+        <span class="drug-tag">スニチニブ</span>
+        <span class="drug-tag">レゴラフェニブ</span>
+      </div>
+      <div class="summary-box">
+        <p class="summary-box-title">予防・対策</p>
+        <ul class="summary-list">
+          <li>手足の安静・刺激を避ける</li>
+          <li><span class="kw">保湿と刺激回避</span>（尿素クリームなど）が重要</li>
+          <li>重症例ではステロイド外用</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 抗EGFR薬皮膚障害 -->
+    <div class="point-card animate-in delay-2">
+      <div class="point-card-header">
+        <div class="point-icon purple">
+          <!-- 抗EGFR皮膚障害：皮膚（点状発疹イメージ：円＋小点） -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="9" cy="9" r="1" fill="var(--accent-purple)"/><circle cx="15" cy="8" r="1" fill="var(--accent-purple)"/><circle cx="8" cy="14" r="1" fill="var(--accent-purple)"/><circle cx="14" cy="15" r="1" fill="var(--accent-purple)"/><circle cx="12" cy="11" r="1" fill="var(--accent-purple)"/></svg>
+        </div>
+        <div>
+          <p class="point-card-title">抗EGFR薬による皮膚障害</p>
+          <p class="point-card-sub">ざ瘡様皮疹（開始1〜4週後）・爪囲炎（開始2〜6ヵ月後）</p>
+        </div>
+      </div>
+      <p class="point-card-body">EGFRは腫瘍だけでなく皮膚にも発現しているため皮膚障害が生じる。顔面・前胸部に好発するざ瘡様皮疹と爪囲炎が代表的。</p>
+      <div class="drug-tags" style="margin-bottom:12px;">
+        <span class="drug-tag">セツキシマブ</span>
+        <span class="drug-tag">パニツムマブ</span>
+        <span class="drug-tag">ゲフィチニブ</span>
+        <span class="drug-tag">アファチニブ</span>
+        <span class="drug-tag">オシメルチニブ</span>
+      </div>
+      <div class="summary-box">
+        <p class="summary-box-title">予防・対策</p>
+        <ul class="summary-list">
+          <li><span class="kw">予防的スキンケア：</span>ヘパリン類似物質クリームなど。ミノサイクリン内服（予防的）を併用</li>
+          <li>症状増悪時はステロイド軟膏（頭皮にはローション剤）</li>
+          <li>爪囲炎にはスパイラルテープ法</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑤臓器毒性 -->
+  <div class="soft-divider"></div>
+  <section class="section" id="organ">
+    <div class="section-anchor"></div>
+    <p class="section-label">05 ORGAN TOXICITY</p>
+    <h2 class="section-title">臓器毒性・その他</h2>
+
+    <!-- 肺毒性 -->
+    <div class="point-card animate-in">
+      <div class="point-card-header">
+        <div class="point-icon blue">
+          <!-- 肺毒性：肺のシルエット -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v6"/><path d="M5 8c-1.5 1-2 3-2 5 0 3 2 6 5 7h1"/><path d="M19 8c1.5 1 2 3 2 5 0 3-2 6-5 7h-1"/><path d="M8 20c0-2 1-4 4-4s4 2 4 4"/></svg>
+        </div>
+        <div>
+          <p class="point-card-title">肺毒性（薬剤性肺障害）</p>
+          <p class="point-card-sub">間質性肺炎として発現することが多い</p>
+        </div>
+      </div>
+      <p class="point-card-body"><span class="kw-danger">すべての抗がん薬は間質性肺炎を起こす可能性がある</span>と認識する。ブレオマイシン・ゲフィチニブに限らない。症状（発熱・咳・呼吸困難）が出現した場合は画像検査を考慮し早期発見が重要。</p>
+      <div class="alert-box danger" style="margin-top:12px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-rose)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+        <span>治療：<span class="kw-danger">抗がん薬の中止</span>＋ステロイド（重症例ではステロイドパルス療法）</span>
+      </div>
+    </div>
+
+    <!-- 心毒性 -->
+    <div class="point-card animate-in delay-1">
+      <div class="point-card-header">
+        <div class="point-icon blue">
+          <!-- 心毒性：心電図波形 -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 12 6 12 8 6 10 18 12 9 14 14 16 12 22 12"/></svg>
+        </div>
+        <div>
+          <p class="point-card-title">心毒性</p>
+          <p class="point-card-sub">アントラサイクリン系 ／ 抗HER2薬 ／ 小分子化合物</p>
+        </div>
+      </div>
+      <p class="point-card-body">心筋は再生しないため<span class="kw">累積投与量に注意</span>が問題となる。ドキソルビシンの心毒性は累積投与量依存性で、実臨床では以下の頻度データが参考となる（Swain SM, Whaley FS, Ewer MS.
+Congestive heart failure in patients treated with doxorubicin:
+a retrospective analysis of three trials.
+Cancer. 2003;97(11):2869-2879.）。</p>
+
+      <div class="def-table-wrapper" style="overflow-x:auto; margin-top:12px;">
+        <table class="def-table">
+          <tr><th>累積投与量</th><th>心不全発生頻度</th></tr>
+          <tr><td>≤300 mg/m²</td><td>&lt;1%</td></tr>
+          <tr><td>301〜400 mg/m²</td><td>約1〜3%</td></tr>
+          <tr><td>401〜450 mg/m²</td><td>約5〜7%</td></tr>
+          <tr><td>&gt;550 mg/m²</td><td>約26%</td></tr>
+          <tr><td>&gt;700 mg/m²</td><td>約48%</td></tr>
+        </table>
+      </div>
+
+      <div class="alert-box warn" style="margin-top:12px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-warm)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+        <span>実臨床では多くの施設で<span class="kw-warn">400〜450 mg/m²を上限</span>として管理することが多い。550 mg/m²を超えると心不全リスクが急増するため、到達前にリスク評価を行う。</span>
+      </div>
+      <div class="summary-box" style="margin-top:12px;">
+        <p class="summary-box-title">注意点</p>
+        <ul class="summary-list">
+          <li>抗HER2薬（トラスツズマブなど）とアントラサイクリン系は<span class="kw">原則併用しない</span></li>
+          <li>スニチニブ・パゾパニブなど小分子化合物も心不全を来たしうる</li>
+          <li>心毒性を起こしうる薬剤では<span class="kw">心機能の定期的モニタリング</span>が必要</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TLS -->
+    <div class="point-card animate-in delay-2">
+      <div class="point-card-header">
+        <div class="point-icon blue">
+          <!-- TLS：細胞崩壊（破裂した円） -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><line x1="12" y1="1" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="7.05" y2="7.05"/><line x1="16.95" y1="16.95" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="7.05" y2="16.95"/><line x1="16.95" y1="7.05" x2="19.78" y2="4.22"/></svg>
+        </div>
+        <div>
+          <p class="point-card-title">腫瘍崩壊症候群（TLS）</p>
+          <p class="point-card-sub">化学療法感受性の高い血液腫瘍・腫瘍量の多い固形腫瘍</p>
+        </div>
+      </div>
+      <p class="point-card-body">腫瘍細胞の急速な崩壊により、核酸・蛋白・リン・カリウムが血中へ大量放出される代謝異常。高尿酸血症・高K血症・高P血症・低Ca血症・腎不全を来たす。</p>
+
+      <div class="summary-box" style="margin-top:12px;">
+        <p class="summary-box-title">予防・治療</p>
+        <ul class="summary-list">
+          <li>輸液による尿量確保（目標：尿量 100 mL/m²/h以上、尿比重 ≤1.010）</li>
+          <li>高尿酸血症の予防：フェブキソスタット・アロプリノール・ラスブリカーゼ</li>
+          <li>電解質の補正（高K・高P・低Ca）</li>
+          <li>TLS高リスク造血器腫瘍ではラスブリカーゼ 3mg 単回投与でも多くの場合予防可能</li>
+        </ul>
+      </div>
+
+      <div class="alert-box danger" style="margin-top:12px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-rose)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+        <span><span class="kw-danger">ラスブリカーゼの再投与は原則禁止。</span>霊長類に存在しない酵素であり抗体産生を来しやすく、再投与はアナフィラキシーショックを惹起しうる。</span>
+      </div>
+
+      <div class="alert-box info" style="margin-top:12px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        <span>発症しやすい腫瘍：白血病・悪性リンパ腫（特に腫瘍量の多い場合）、胚細胞性腫瘍・小細胞肺がん・神経芽腫などの一部固形腫瘍。</span>
+      </div>
+    </div>
+
+    <!-- 過敏性反応 -->
+    <div class="point-card animate-in delay-3">
+      <div class="point-card-header">
+        <div class="point-icon blue">
+          <!-- 過敏性反応：警告＋稲妻 -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+        </div>
+        <div>
+          <p class="point-card-title">過敏性反応・インフュージョンリアクション</p>
+          <p class="point-card-sub">即時型アレルギーとインフュージョンリアクションを区別する</p>
+        </div>
+      </div>
+      <div class="def-table-wrapper" style="overflow-x:auto;">
+        <table class="def-table">
+          <tr><th>分類</th><th>特徴</th></tr>
+          <tr>
+            <td>即時型アレルギー反応</td>
+            <td>免疫学的機序（IgE介在性など）。<span class="kw">投与開始15分以内</span>に多い。皮膚症状・呼吸器症状・血圧低下・意識障害が進行した場合は<span class="kw-danger">アナフィラキシーショック</span>。プラチナ系（蓄積投与量が多いほどリスク増）・タキサン系で生じやすい。</td>
+          </tr>
+          <tr>
+            <td>インフュージョンリアクション</td>
+            <td>補体活性化やサイトカイン放出が機序。<span class="kw">初回投与時は特に注意</span>に多い（リツキシマブ・セツキシマブなど）。臨床症状から両者の区別は困難なことが多い。</td>
+          </tr>
+        </table>
+      </div>
+      <div class="summary-box" style="margin-top:14px;">
+        <p class="summary-box-title">対応</p>
+        <ul class="summary-list">
+          <li><span class="kw">被疑薬の投与を即座に中止：</span>抗ヒスタミン薬・ステロイドを投与する</li>
+          <li>軽症の場合は前投薬の強化や点滴速度を落とすことで継続可能なことがある</li>
+          <li><span class="kw-danger">アナフィラキシー症状を来した場合、被疑薬の再開は禁忌</span></li>
+          <li>アドレナリン（エピネフリン）の準備・投与を検討し、必要に応じて救急要請</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑥irAE -->
+  <div class="soft-divider"></div>
+  <section class="section" id="irae">
+    <div class="section-anchor"></div>
+    <p class="section-label">06 irAE</p>
+    <h2 class="section-title">免疫関連有害事象（irAE）</h2>
+
+    <div class="concept-box animate-in">
+      <p><strong>irAE（immune-related Adverse Event）</strong>は、免疫チェックポイント阻害薬による過剰な免疫活性化に起因する自己免疫疾患様の有害反応である。</p>
+      <p><strong>特徴①：全身あらゆる臓器に発生しうる</strong>（皮膚・肺・消化管・肝・内分泌・神経・心臓など）</p>
+      <p><strong>特徴②：発生時期が特定しづらい</strong>（投与終了後に発現することもある）</p>
+    </div>
+
+    <!-- 頻度高irAE -->
+    <p style="font-family:'BIZ UDPGothic',sans-serif; font-weight:700; font-size:16px; color:var(--text-primary); margin:20px 0 14px;">頻度の高いirAEと対応</p>
+
+    <div class="point-card animate-in">
+      <div class="point-card-header">
+        <div class="point-icon orange">
+          <!-- irAE皮膚障害：体＋発疹点 -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="3"/><path d="M6 21v-2a6 6 0 0 1 12 0v2"/><circle cx="8" cy="13" r="1" fill="var(--accent-orange)"/><circle cx="16" cy="12" r="1" fill="var(--accent-orange)"/><circle cx="12" cy="15" r="1" fill="var(--accent-orange)"/></svg>
+        </div>
+        <div>
+          <p class="point-card-title">皮膚障害</p>
+          <p class="point-card-sub">最も高頻度 ／ 多くは軽症</p>
+        </div>
+      </div>
+      <p class="point-card-body">ステロイド外用薬で対応。<span class="kw-danger">出血・水疱・膿疱・潰瘍を伴う発疹は重篤化の可能性</span>があるため皮膚科専門医へ紹介。</p>
+    </div>
+
+    <div class="point-card animate-in delay-1">
+      <div class="point-card-header">
+        <div class="point-icon orange">
+          <!-- irAE肺障害：肺 -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v6"/><path d="M5 8c-1.5 1-2 3-2 5 0 3 2 6 5 7h1"/><path d="M19 8c1.5 1 2 3 2 5 0 3-2 6-5 7h-1"/><path d="M8 20c0-2 1-4 4-4s4 2 4 4"/></svg>
+        </div>
+        <div>
+          <p class="point-card-title">肺障害（免疫関連肺炎）</p>
+          <p class="point-card-sub">致死的irAEの中で最も多い死因 ／ 発症率：単剤2.7%・併用療法6.6%</p>
+        </div>
+      </div>
+      <p class="point-card-body">ICI単剤での全グレード肺炎発症率は約2.7%、ニボルマブ＋イピリムマブ併用療法では6.6%と増加する。発症頻度は低いが、致死的irAEの原因として最上位を占める（致死的irAEの約28〜35%が肺炎によるとされる）。<span class="kw-danger">胸部単純X線では初期変化の発見が困難であり、CTでの評価が必須。</span>疑ったら速やかに呼吸器内科専門医へ紹介。</p>
+    </div>
+
+    <div class="point-card animate-in delay-2">
+      <div class="point-card-header">
+        <div class="point-icon orange">
+          <!-- 肝・胃腸障害：消化管イメージ -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3C9 3 6 5 6 8c0 4 4 5 4 9a2 2 0 0 0 4 0c0-4 4-5 4-9 0-3-3-5-6-5z"/><line x1="12" y1="3" x2="12" y2="6"/></svg>
+        </div>
+        <div>
+          <p class="point-card-title">肝障害・胃腸障害</p>
+          <p class="point-card-sub">ニボルマブ＋イピリムマブで頻度・重症度増加</p>
+        </div>
+      </div>
+      <div class="def-table-wrapper" style="overflow-x:auto;">
+        <table class="def-table">
+          <tr><th>障害</th><th>特徴・対応</th></tr>
+          <tr>
+            <td>肝障害</td>
+            <td>ニボ＋イピで<span class="kw">Grade 3以上では速やかな介入が必要</span>。肝炎ウイルス・抗核抗体・抗ミトコンドリア抗体・画像確認。Grade 2以上でステロイド投与を検討。ステロイド抵抗性の場合はミコフェノール酸モフェチルの追加を考慮。消化器内科へ紹介。</td>
+          </tr>
+          <tr>
+            <td>胃腸障害（大腸炎）</td>
+            <td>下痢・大腸炎が30〜40%、Grade 3以上は10%。<span class="kw">投与開始2〜6ヵ月後にも注意</span>に好発。Grade 2以上でステロイド。ステロイド抵抗性の場合はインフリキシマブ（TNF-α阻害薬）の投与を考慮。消化器内科へ紹介。</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="point-card animate-in delay-3">
+      <div class="point-card-header">
+        <div class="point-icon orange">
+          <!-- 内分泌障害：バタフライ型（甲状腺） -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c-2-3-5-5-5-8a5 5 0 0 1 10 0c0 3-3 5-5 8z"/><path d="M12 12v8"/><path d="M9 18h6"/></svg>
+        </div>
+        <div>
+          <p class="point-card-title">内分泌障害</p>
+          <p class="point-card-sub">甲状腺機能障害が最多 ／ 下垂体炎は抗CTLA-4で高頻度</p>
+        </div>
+      </div>
+      <div class="def-table-wrapper" style="overflow-x:auto;">
+        <table class="def-table">
+          <tr><th>障害</th><th>特徴・対応</th></tr>
+          <tr>
+            <td>甲状腺機能障害</td>
+            <td>内分泌irAEで最頻度。TSH・FT3・FT4をモニタリング。症候性で内分泌専門医へ紹介</td>
+          </tr>
+          <tr>
+            <td>下垂体機能低下</td>
+            <td>抗CTLA-4抗体で多い。ACTH分泌低下→続発性副腎皮質機能低下症が主。ACTH・コルチゾールをモニタリング</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- 低頻度重篤 -->
+    <p style="font-family:'BIZ UDPGothic',sans-serif; font-weight:700; font-size:16px; color:var(--text-primary); margin:24px 0 14px;">頻度は低いが早急な対応が必要なirAE</p>
+
+    <div class="point-card animate-in">
+      <div class="point-card-header">
+        <div class="point-icon orange">
+          <!-- 早急対応必要：警告 -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+        </div>
+        <div>
+          <p class="point-card-title">劇症1型糖尿病・心筋炎</p>
+          <p class="point-card-sub">頻度は低いが致命的になりうる</p>
+        </div>
+      </div>
+      <div class="def-table-wrapper" style="overflow-x:auto;">
+        <table class="def-table">
+          <tr><th>病態</th><th>対応</th></tr>
+          <tr>
+            <td>劇症1型糖尿病</td>
+            <td>1%未満と稀。口渇・多飲・多尿・消化器症状が出現したら<span class="kw-danger">直ちにインスリン治療開始</span>。糖尿病専門医・内分泌専門医へ早急に紹介</td>
+          </tr>
+          <tr>
+            <td>心筋炎</td>
+            <td><span class="kw-danger">発症頻度は低いが致死率が高い。</span>心電図・心エコー・心筋障害マーカーの測定を行い循環器専門医へ早急に紹介</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 総括 -->
+  <div class="soft-divider"></div>
+  <section class="section animate-in">
+    <p class="section-label">SUMMARY</p>
+    <h2 class="section-title">総括</h2>
+    <div class="summary-box">
+      <ul class="summary-list">
+        <li>抗がん薬は治療域が狭く有害事象が生じやすい薬剤であると認識し、適切な支持療法・マネージメントが不可欠である。</li>
+        <li>分子標的治療薬・免疫チェックポイント阻害薬など新規抗がん薬の出現とともに有害事象も多彩化しており、各薬剤の特徴を十分理解することが重要である。</li>
+        <li>irAEは全臓器に起こりうる。発生時期は特定しづらく、投与終了後にも発現しうることを常に念頭に置く。ステロイド抵抗性の場合はインフリキシマブ・ミコフェノール酸モフェチルなどの免疫抑制薬を検討する。</li>
+        <li>過敏性反応・インフュージョンリアクションはアナフィラキシーに進展しうる。被疑薬の即時中止とアドレナリン投与の準備を怠らない。</li>
+        <li>CIPNに対してはデュロキセチンが治療薬として推奨されているが、最も重要な対策は抗がん薬の減量・休薬である。オキサリプラチンの急性神経障害（寒冷刺激誘発性）は別機序であることを理解する。</li>
+        <li>専門科との連携（皮膚科・呼吸器内科・消化器内科・内分泌科・循環器科）を積極的に活用する。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- HOME NAV -->
+  <section class="home-nav-section animate-in">
+    <a href="../index.html" class="home-button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      トップページへ戻る
+    </a>
+  </section>
+
+  <!-- CREDIT -->
+  <div class="credit-block">
+    <dl class="credit-list">
+      <div class="credit-row">
+        <dt>文責</dt>
+        <dd>腫瘍内科　川村 佳史</dd>
+      </div>
+    </dl>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer-logo">tmpu-oncology.jp</p>
+    <p>&copy; 2026 tmpu-oncology.jp 教育コラム</p>
+  </footer>
+
+</div>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationPlayState = 'running';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
+</script>
+
+<script>
+/* =====================================================
+   治療域アニメーション
+   スライドの図（一般薬→抗がん薬＋支持療法）を再現
+   ===================================================== */
+(function() {
+  const canvas = document.getElementById('tw-canvas');
+  if (!canvas) return;
+
+  // HiDPI対応
+  function setupCanvas(c) {
+    const wrap = c.parentElement;
+    const dpr  = window.devicePixelRatio || 1;
+    const w    = wrap.clientWidth - 24; // padding分引く
+    const h    = Math.round(w * 0.55);
+    c.width    = w * dpr;
+    c.height   = h * dpr;
+    c.style.width  = w + 'px';
+    c.style.height = h + 'px';
+    const ctx = c.getContext('2d');
+    ctx.scale(dpr, dpr);
+    return { ctx, w, h, dpr };
+  }
+
+  let { ctx, w, h } = setupCanvas(canvas);
+
+  // シグモイド関数
+  function sigmoid(x, center, k) {
+    return 1 / (1 + Math.exp(-k * (x - center)));
+  }
+
+  // カラー定義（デザインシステムに合わせる）
+  const C = {
+    effect:       '#1d8f5a',   // green-500
+    tox:          '#c4726a',   // accent-rose
+    toxShifted:   '#c4726a',
+    window:       'rgba(61,179,122,0.15)',
+    windowStroke: 'rgba(61,179,122,0.35)',
+    axis:         '#7a9488',   // text-muted
+    grid:         'rgba(168,223,192,0.3)',
+    label:        '#1a2e23',
+    muted:        '#7a9488',
+    badge:        '#1d8f5a',
+    badgeText:    '#ffffff',
+    arrowBg:      'rgba(29,143,90,0.1)',
+  };
+
+  // アニメーション状態
+  // toxCenter: 毒性曲線の中心（正規化0–1スペース上の値）
+  // 0=リセット, 1=支持療法適用後
+  let toxShift   = 0;    // 0→1でアニメーション
+  let animating  = false;
+  let animDir    = 0;    // 1=適用, -1=リセット
+  let rafId      = null;
+  let labelAlpha = 0;    // 支持療法ラベルのフェードイン
+
+  // パラメータ（0–1正規化空間）
+  const EFF_CENTER  = 0.33;  // 効果曲線中心（固定）
+  const TOX_BASE    = 0.52;  // 毒性曲線中心（支持療法なし）
+  const TOX_SHIFT   = 0.21;  // 右シフト量
+  const SLOPE       = 14;    // S字の急峻さ
+
+  function getToxCenter() {
+    return TOX_BASE + toxShift * TOX_SHIFT;
+  }
+
+  function drawFrame() {
+    ctx.clearRect(0, 0, w, h);
+
+    // 上部にラベル用スペースを確保（PAD_T大きめ）
+    const PAD_L = 44, PAD_R = 24, PAD_T = 50, PAD_B = 46;
+    const gw = w - PAD_L - PAD_R;
+    const gh = h - PAD_T - PAD_B;
+    const fs     = Math.max(10, Math.round(w * 0.027));
+    const fsSmall= Math.max(9,  Math.round(w * 0.022));
+
+    // --- グリッド ---
+    ctx.strokeStyle = C.grid;
+    ctx.lineWidth   = 1;
+    for (let i = 1; i < 4; i++) {
+      const y = PAD_T + gh * i / 4;
+      ctx.beginPath(); ctx.moveTo(PAD_L, y); ctx.lineTo(PAD_L + gw, y); ctx.stroke();
+    }
+
+    // --- 軸 ---
+    ctx.strokeStyle = C.axis;
+    ctx.lineWidth   = 1.5;
+    ctx.beginPath();
+    ctx.moveTo(PAD_L, PAD_T);
+    ctx.lineTo(PAD_L, PAD_T + gh);
+    ctx.lineTo(PAD_L + gw, PAD_T + gh);
+    ctx.stroke();
+
+    // 軸矢印
+    ctx.fillStyle = C.axis;
+    ctx.beginPath(); ctx.moveTo(PAD_L, PAD_T); ctx.lineTo(PAD_L-4, PAD_T+8); ctx.lineTo(PAD_L+4, PAD_T+8); ctx.closePath(); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(PAD_L+gw, PAD_T+gh); ctx.lineTo(PAD_L+gw-8, PAD_T+gh-4); ctx.lineTo(PAD_L+gw-8, PAD_T+gh+4); ctx.closePath(); ctx.fill();
+
+    // 軸ラベル
+    ctx.font = `bold ${fs}px 'Noto Sans JP',sans-serif`;
+    ctx.fillStyle = C.muted; ctx.textAlign = 'center';
+    ctx.fillText('濃度', PAD_L + gw - 10, PAD_T + gh + 16);
+    ctx.save();
+    ctx.translate(13, PAD_T + gh/2); ctx.rotate(-Math.PI/2);
+    ctx.fillText('反応', 0, 0);
+    ctx.restore();
+
+    // 目盛ラベル
+    ctx.font = `${fsSmall}px 'Noto Sans JP',sans-serif`;
+    ctx.fillStyle = C.muted; ctx.textAlign = 'right';
+    ctx.fillText('100%', PAD_L - 5, PAD_T + 4);
+    ctx.fillText('50%',  PAD_L - 5, PAD_T + gh/2 + 4);
+
+    // --- カーブ計算 ---
+    const N = 300;
+    function curvePoints(centerNorm, k) {
+      const pts = [];
+      for (let i = 0; i <= N; i++) {
+        const xn = i / N;
+        const yn = sigmoid(xn, centerNorm, k);
+        pts.push([PAD_L + xn * gw, PAD_T + gh - yn * gh]);
+      }
+      return pts;
+    }
+    function xAtY(pts, yTarget) {
+      const pxT = PAD_T + (1 - yTarget) * gh;
+      for (let i = 1; i < pts.length; i++) {
+        const [x0, y0] = pts[i-1], [x1, y1] = pts[i];
+        if ((y0 - pxT) * (y1 - pxT) <= 0) {
+          const t = (pxT - y0) / (y1 - y0);
+          return x0 + t * (x1 - x0);
+        }
+      }
+      return null;
+    }
+
+    const effPts = curvePoints(EFF_CENTER, SLOPE);
+    const toxPts = curvePoints(getToxCenter(), SLOPE);
+    const xWL    = xAtY(effPts, 0.5);
+    const xWR    = xAtY(toxPts, 0.5);
+
+    // --- 治療安全域を塗りつぶす ---
+    ctx.beginPath();
+    effPts.forEach(([px, py], i) => i===0 ? ctx.moveTo(px,py) : ctx.lineTo(px,py));
+    for (let i = toxPts.length-1; i >= 0; i--) ctx.lineTo(toxPts[i][0], toxPts[i][1]);
+    ctx.closePath();
+    ctx.fillStyle = C.window; ctx.fill();
+
+    // 垂線（境界）
+    if (xWL && xWR) {
+      ctx.strokeStyle = C.windowStroke; ctx.lineWidth = 1.2; ctx.setLineDash([4,4]);
+      ctx.beginPath(); ctx.moveTo(xWL, PAD_T); ctx.lineTo(xWL, PAD_T+gh); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(xWR, PAD_T); ctx.lineTo(xWR, PAD_T+gh); ctx.stroke();
+      ctx.setLineDash([]);
+    }
+
+    // --- 曲線描画 ---
+    // 効果（緑・実線）
+    ctx.strokeStyle = C.effect; ctx.lineWidth = 2.5; ctx.setLineDash([]);
+    ctx.beginPath();
+    effPts.forEach(([px,py],i) => i===0 ? ctx.moveTo(px,py) : ctx.lineTo(px,py));
+    ctx.stroke();
+
+    // 毒性（赤・破線）
+    ctx.strokeStyle = C.tox; ctx.lineWidth = 2.5; ctx.setLineDash([7,5]);
+    ctx.beginPath();
+    toxPts.forEach(([px,py],i) => i===0 ? ctx.moveTo(px,py) : ctx.lineTo(px,py));
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // =====================================================
+    // ラベル配置（グラフ上部の帯に集約 → 曲線と重ならない）
+    // =====================================================
+    const topBand = PAD_T - 6;  // 上部帯の基準y（軸より上）
+
+    // 「効果」タグ：左寄り（曲線の上流）
+    const effTagX = PAD_L + gw * 0.06;
+    ctx.font = `bold ${fs}px 'BIZ UDPGothic','Noto Sans JP',sans-serif`;
+    ctx.fillStyle = C.effect; ctx.textAlign = 'left';
+    ctx.fillText('━ 効果', effTagX, topBand);
+
+    // 「毒性」タグ：右寄り
+    const toxTagX = PAD_L + gw * 0.98;
+    ctx.fillStyle = C.tox; ctx.textAlign = 'right';
+    // 破線サンプル（短い）
+    ctx.save();
+    ctx.strokeStyle = C.tox; ctx.lineWidth = 2; ctx.setLineDash([5,3]);
+    const dashEndX = toxTagX - ctx.measureText('毒性').width - 6;
+    ctx.beginPath(); ctx.moveTo(dashEndX - 18, topBand - fs*0.35); ctx.lineTo(dashEndX, topBand - fs*0.35); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.restore();
+    ctx.font = `bold ${fs}px 'BIZ UDPGothic','Noto Sans JP',sans-serif`;
+    ctx.fillStyle = C.tox; ctx.textAlign = 'right';
+    ctx.fillText('毒性', toxTagX, topBand);
+
+    // 「治療安全域」：グラフ上部帯の中央
+    if (xWL && xWR) {
+      const midX  = (xWL + xWR) / 2;
+      const winW  = xWR - xWL;
+      const twY   = topBand;          // 曲線ラベルと同じ行
+      const arrY  = PAD_T + 2;        // 矢印は軸上端すぐ下
+
+      // ラベルテキスト（背景なしで色だけ、他ラベルと横並び）
+      ctx.font = `bold ${fs}px 'BIZ UDPGothic','Noto Sans JP',sans-serif`;
+      const twText = '治療安全域';
+      const twW    = ctx.measureText(twText).width;
+
+      // 背景バッジ（軽め）
+      ctx.fillStyle = 'rgba(61,179,122,0.13)';
+      roundRect(ctx, midX - twW/2 - 5, twY - fs - 2, twW + 10, fs + 7, 4);
+      ctx.fill();
+      ctx.fillStyle = C.badge; ctx.textAlign = 'center';
+      ctx.fillText(twText, midX, twY);
+
+      // ブラケット矢印（軸直下に小さく）
+      if (winW > 40) {
+        ctx.strokeStyle = C.badge; ctx.lineWidth = 1.3;
+        ctx.beginPath(); ctx.moveTo(xWL+3, arrY); ctx.lineTo(xWR-3, arrY); ctx.stroke();
+        ctx.fillStyle = C.badge;
+        ctx.beginPath(); ctx.moveTo(xWL+3,arrY); ctx.lineTo(xWL+9,arrY-3.5); ctx.lineTo(xWL+9,arrY+3.5); ctx.closePath(); ctx.fill();
+        ctx.beginPath(); ctx.moveTo(xWR-3,arrY); ctx.lineTo(xWR-9,arrY-3.5); ctx.lineTo(xWR-9,arrY+3.5); ctx.closePath(); ctx.fill();
+      }
+    }
+
+    // =====================================================
+    // 支持療法バッジ：グラフ下部（軸より下）→ 曲線と完全に分離
+    // =====================================================
+    if (labelAlpha > 0) {
+      const badgeText = '支持療法 → 毒性曲線が右方向にシフト';
+      const badgeFs   = Math.max(9.5, Math.round(w * 0.025));
+      ctx.font        = `bold ${badgeFs}px 'BIZ UDPGothic','Noto Sans JP',sans-serif`;
+      const tw4       = ctx.measureText(badgeText).width;
+      const bpad      = 7;
+      const badgeX    = PAD_L + gw / 2;
+      const badgeY    = PAD_T + gh + 32;   // 軸より下
+
+      ctx.globalAlpha = labelAlpha;
+      ctx.fillStyle   = 'rgba(29,143,90,0.88)';
+      roundRect(ctx, badgeX - tw4/2 - bpad, badgeY - badgeFs - bpad/2, tw4 + bpad*2, badgeFs + bpad + 2, 6);
+      ctx.fill();
+      ctx.fillStyle   = '#ffffff'; ctx.textAlign = 'center';
+      ctx.fillText(badgeText, badgeX, badgeY);
+      ctx.globalAlpha = 1;
+
+      // シフト方向矢印（グラフ内の下寄り・曲線が通らない領域）
+      if (toxShift > 0.2) {
+        const arrowMidY = PAD_T + gh * 0.78;  // 曲線の下方
+        const ax1       = PAD_L + TOX_BASE * gw;
+        const ax2       = ax1 + TOX_SHIFT * gw * toxShift;
+        ctx.globalAlpha = Math.min(1, labelAlpha * toxShift * 2);
+        ctx.strokeStyle = 'rgba(29,143,90,0.6)'; ctx.lineWidth = 1.8; ctx.setLineDash([5,3]);
+        ctx.beginPath(); ctx.moveTo(ax1, arrowMidY); ctx.lineTo(ax2-6, arrowMidY); ctx.stroke();
+        ctx.setLineDash([]);
+        ctx.fillStyle = 'rgba(29,143,90,0.6)';
+        ctx.beginPath(); ctx.moveTo(ax2,arrowMidY); ctx.lineTo(ax2-9,arrowMidY-4.5); ctx.lineTo(ax2-9,arrowMidY+4.5); ctx.closePath(); ctx.fill();
+        ctx.globalAlpha = 1;
+      }
+    }
+  }
+
+
+  function roundRect(ctx, x, y, w2, h2, r) {
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.lineTo(x + w2 - r, y);
+    ctx.quadraticCurveTo(x + w2, y, x + w2, y + r);
+    ctx.lineTo(x + w2, y + h2 - r);
+    ctx.quadraticCurveTo(x + w2, y + h2, x + w2 - r, y + h2);
+    ctx.lineTo(x + r, y + h2);
+    ctx.quadraticCurveTo(x, y + h2, x, y + h2 - r);
+    ctx.lineTo(x, y + r);
+    ctx.quadraticCurveTo(x, y, x + r, y);
+    ctx.closePath();
+  }
+
+  function animate() {
+    const SPEED = 0.016;
+    if (animDir === 1) {
+      toxShift   = Math.min(1, toxShift + SPEED);
+      labelAlpha = Math.min(1, labelAlpha + SPEED * 1.5);
+    } else if (animDir === -1) {
+      toxShift   = Math.max(0, toxShift - SPEED * 1.5);
+      labelAlpha = Math.max(0, labelAlpha - SPEED * 2);
+    }
+    drawFrame();
+    if ((animDir === 1 && toxShift < 1) || (animDir === -1 && toxShift > 0)) {
+      rafId = requestAnimationFrame(animate);
+    } else {
+      animating = false;
+      if (animDir === -1) { toxShift = 0; labelAlpha = 0; drawFrame(); }
+    }
+  }
+
+  window.twApply = function() {
+    if (animating && animDir === 1) return;
+    cancelAnimationFrame(rafId);
+    animDir  = 1;
+    animating = true;
+    rafId = requestAnimationFrame(animate);
+    document.getElementById('tw-btn-apply').style.background = '#167348';
+    document.getElementById('tw-btn-reset').style.background = '';
+  };
+
+  window.twReset = function() {
+    if (animating && animDir === -1) return;
+    cancelAnimationFrame(rafId);
+    animDir  = -1;
+    animating = true;
+    rafId = requestAnimationFrame(animate);
+    document.getElementById('tw-btn-reset').style.background = 'var(--green-100)';
+    document.getElementById('tw-btn-apply').style.background = 'var(--green-500)';
+  };
+
+  // 初期描画
+  drawFrame();
+
+  // リサイズ対応
+  let resizeTimer;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      const setup = setupCanvas(canvas);
+      ctx = setup.ctx; w = setup.w; h = setup.h;
+      drawFrame();
+    }, 150);
+  });
+})();
+</script>
+
+</body>
+</html>
