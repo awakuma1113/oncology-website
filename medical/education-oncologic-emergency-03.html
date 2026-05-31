@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>よくある症状に隠れるオンコロジックエマージェンシー | tmpu-oncology.jp 教育コラム vol.03</title>
+<script src="auth.js"></script>
+<script>requireMedicalAccess();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="../public/favicon.png">
+<style>
+  :root {
+    --green-50: #f0faf4;
+    --green-100: #d6f0e0;
+    --green-200: #a8dfc0;
+    --green-300: #6cc89a;
+    --green-400: #3db37a;
+    --green-500: #1d8f5a;
+    --green-600: #167348;
+    --green-700: #115a38;
+    --green-800: #0d4129;
+    --accent-warm: #d4943a;
+    --accent-warm-light: #fef4e0;
+    --accent-blue: #4a90c4;
+    --accent-blue-light: #eaf3fb;
+    --accent-rose: #c4726a;
+    --accent-rose-light: #fdf0ee;
+    --accent-purple: #7c6fad;
+    --accent-purple-light: #f0eef8;
+    --accent-orange: #c0622a;
+    --accent-orange-light: #fdf0e8;
+    --accent-red: #b91c1c;
+    --accent-red-light: #fef2f2;
+    --text-primary: #1a2e23;
+    --text-secondary: #4a6356;
+    --text-muted: #7a9488;
+    --bg-white: #ffffff;
+    --bg-off: #f7faf8;
+    --bg-card: #ffffff;
+    --shadow-soft: 0 2px 16px rgba(29,143,90,0.06);
+    --shadow-card: 0 4px 24px rgba(29,143,90,0.08);
+    --shadow-hover: 0 8px 32px rgba(29,143,90,0.12);
+    --radius: 14px;
+    --radius-sm: 10px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    color: var(--text-primary);
+    background: var(--bg-white);
+    line-height: 1.9;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  .page-wrapper { max-width: 520px; margin: 0 auto; padding: 0 20px; }
+
+  @media (min-width: 860px) {
+    .page-wrapper { max-width: 820px; padding: 0 48px; }
+    body { font-size: 15.5px; }
+    .hero h1 { font-size: 34px; }
+    .section-title { font-size: 22px; }
+    .point-card { padding: 28px 30px; }
+    .symptom-table td, .symptom-table th, .def-table td, .def-table th { padding: 12px 16px; font-size: 13.5px; }
+    .point-card-body { font-size: 14.5px; }
+    .alert-box { font-size: 14px; padding: 18px 20px; }
+    .concept-box p { font-size: 15px; }
+    .toc-list li a { font-size: 14.5px; }
+  }
+
+  @media (min-width: 640px) and (max-width: 859px) {
+    body { font-size: 16px; }
+    .page-wrapper { padding: 0 32px; }
+    .hero h1 { font-size: 30px; }
+  }
+
+  .hero { position: relative; padding: 52px 0 44px; text-align: center; overflow: hidden; }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: -40px; right: -40px; bottom: -20px;
+    background:
+      radial-gradient(ellipse 70% 50% at 20% 30%, rgba(168,223,192,0.34) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 60% at 80% 60%, rgba(212,148,58,0.16) 0%, transparent 70%),
+      radial-gradient(ellipse 80% 40% at 50% 80%, rgba(214,240,224,0.40) 0%, transparent 60%);
+    z-index: 0;
+  }
+  .hero-content { position: relative; z-index: 1; }
+  .hero-badge {
+    display: inline-block;
+    background: var(--green-100);
+    color: var(--green-600);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 6px 16px;
+    border-radius: 100px;
+    margin-bottom: 18px;
+  }
+  .hero-audience {
+    display: inline-block;
+    background: var(--accent-blue-light);
+    color: var(--accent-blue);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 4px 14px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+    margin-left: 8px;
+  }
+  .hero h1 {
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.55;
+    color: var(--green-700);
+    letter-spacing: 0.04em;
+    margin-bottom: 12px;
+  }
+  .hero h1 em { font-style: normal; color: var(--accent-red); }
+  .hero-subtitle {
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-size: 14px;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+  }
+  .hero-divider {
+    width: 48px; height: 3px;
+    background: linear-gradient(90deg, var(--green-300), var(--green-200));
+    border-radius: 2px;
+    margin: 24px auto 0;
+  }
+
+  .toc { background: var(--bg-off); border-radius: var(--radius); padding: 24px; margin: 32px 0 0; }
+  .toc-title {
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+    margin-bottom: 14px;
+  }
+  .toc-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+  .toc-list li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: var(--radius-sm);
+    transition: background 0.2s, color 0.2s;
+    line-height: 1.5;
+  }
+  .toc-list li a:hover { background: var(--bg-card); color: var(--green-600); }
+  .toc-badge {
+    flex-shrink: 0;
+    width: 22px; height: 22px;
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; font-weight: 700;
+    color: #fff;
+  }
+
+  .soft-divider {
+    width: 100%; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--green-100), transparent);
+    margin: 40px 0 0;
+  }
+  .section { padding: 40px 0 0; }
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--green-400);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .section-title {
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--text-primary);
+    line-height: 1.55;
+    margin-bottom: 18px;
+  }
+  .section-lead {
+    font-size: 14.5px;
+    color: var(--text-secondary);
+    line-height: 1.9;
+    margin-bottom: 20px;
+  }
+
+  .concept-box {
+    background: linear-gradient(135deg, var(--green-500) 0%, var(--green-600) 100%);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 22px;
+  }
+  .concept-box::before {
+    content: '';
+    position: absolute;
+    top: -30px; right: -30px;
+    width: 110px; height: 110px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 50%;
+  }
+  .concept-box p {
+    font-size: 14.5px;
+    color: rgba(255,255,255,0.92);
+    line-height: 1.9;
+    position: relative;
+    z-index: 1;
+  }
+  .concept-box p + p { margin-top: 10px; }
+  .concept-box strong { color: #fff; font-weight: 700; }
+
+  .point-card {
+    background: var(--bg-card);
+    border: 1px solid var(--green-100);
+    border-radius: var(--radius);
+    padding: 22px;
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 16px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .point-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-card); }
+  .point-card.danger-border { border-left: 4px solid var(--accent-red); }
+  .point-card.high-border { border-left: 4px solid var(--accent-rose); }
+  .point-card.warn-border { border-left: 4px solid var(--accent-warm); }
+  .point-card.blue-border { border-left: 4px solid var(--accent-blue); }
+  .point-card.purple-border { border-left: 4px solid var(--accent-purple); }
+  .point-card.green-border { border-left: 4px solid var(--green-500); }
+  .point-card-title {
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text-primary);
+    line-height: 1.45;
+    margin-bottom: 6px;
+  }
+  .point-card-sub { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; }
+  .point-card-body { font-size: 14px; color: var(--text-secondary); line-height: 1.85; }
+  .point-card-body + .point-card-body { margin-top: 10px; }
+
+  .alert-box {
+    border-radius: var(--radius-sm);
+    padding: 16px 18px;
+    margin-top: 14px;
+    font-size: 13.5px;
+    line-height: 1.8;
+  }
+  .alert-box.danger { background: var(--accent-red-light); border-left: 3px solid var(--accent-red); color: #7f1d1d; }
+  .alert-box.warn { background: var(--accent-warm-light); border-left: 3px solid var(--accent-warm); color: #7a4f1a; }
+  .alert-box.info { background: var(--accent-blue-light); border-left: 3px solid var(--accent-blue); color: #2a5a80; }
+  .alert-box.tip { background: var(--green-50); border-left: 3px solid var(--green-400); color: var(--green-700); }
+  .alert-box.neutral { background: var(--bg-off); border-left: 3px solid var(--green-200); color: var(--text-secondary); }
+
+  .summary-box { background: var(--bg-off); border-radius: var(--radius-sm); padding: 20px; margin-top: 14px; }
+  .summary-box-title {
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-weight: 700;
+    font-size: 12.5px;
+    color: var(--green-500);
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+  }
+  .summary-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .summary-list li {
+    position: relative;
+    display: block;
+    padding-left: 18px;
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    line-height: 1.75;
+  }
+  .summary-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.72em;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--green-400);
+  }
+
+  .kw { color: var(--green-600); font-weight: 700; }
+  .kw-warn { color: var(--accent-warm); font-weight: 700; }
+  .kw-danger { color: var(--accent-red); font-weight: 700; }
+  .kw-blue { color: var(--accent-blue); font-weight: 700; }
+  .ref-inline { font-size: 11px; color: var(--green-500); font-weight: 700; vertical-align: super; line-height: 1; }
+
+  .symptom-table, .def-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 14px;
+    font-size: 13px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+  }
+  .symptom-table th, .def-table th {
+    background: var(--green-500);
+    color: #fff;
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-weight: 700;
+    padding: 10px 12px;
+    text-align: left;
+    font-size: 12.5px;
+    letter-spacing: 0.04em;
+  }
+  .symptom-table td, .def-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--green-50);
+    color: var(--text-secondary);
+    vertical-align: top;
+    line-height: 1.65;
+  }
+  .symptom-table tr:nth-child(even) td, .def-table tr:nth-child(even) td { background: var(--bg-off); }
+  .symptom-table td:first-child, .def-table td:first-child { font-weight: 700; color: var(--text-primary); }
+  .symptom-table th:first-child,
+  .symptom-table td:first-child {
+    min-width: 7.5em;
+    white-space: nowrap;
+    word-break: keep-all;
+  }
+  .symptom-table th:nth-child(3),
+  .symptom-table td:nth-child(3) {
+    min-width: 14em;
+  }
+
+  .chip-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 4px; }
+  .chip {
+    display: inline-block;
+    background: var(--green-50);
+    border: 1px solid var(--green-100);
+    color: var(--green-700);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 100px;
+  }
+  .chip.red { background: var(--accent-red-light); border-color: #fecaca; color: var(--accent-red); }
+  .chip.blue { background: var(--accent-blue-light); border-color: #cfe2f3; color: var(--accent-blue); }
+  .chip.orange { background: var(--accent-orange-light); border-color: #f6c5a7; color: var(--accent-orange); }
+  .chip.purple { background: var(--accent-purple-light); border-color: #d7d1ec; color: var(--accent-purple); }
+
+  .check-grid { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 14px; }
+  @media (min-width: 700px) { .check-grid { grid-template-columns: 1fr 1fr; } }
+  .check-item {
+    background: #fff;
+    border: 1px solid var(--green-100);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+  .check-item strong { color: var(--green-700); }
+
+  .ref-section { padding: 28px 0 16px; }
+  .ref-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--green-100);
+  }
+  .ref-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .ref-list li { display: flex; gap: 10px; font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+  .ref-list a { color: var(--green-600); text-decoration: none; border-bottom: 1px dotted var(--green-300); }
+  .ref-list a:hover { color: var(--green-700); border-bottom-style: solid; }
+  .ref-num {
+    flex-shrink: 0;
+    width: 20px; height: 20px;
+    background: var(--green-50);
+    border: 1px solid var(--green-100);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    color: var(--green-600);
+    margin-top: 1px;
+  }
+  .credit-block { border-top: 1px solid var(--green-100); padding: 24px 0 32px; margin-top: 8px; }
+  .credit-row { display: flex; align-items: baseline; gap: 16px; margin-bottom: 10px; }
+  .credit-row dt {
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    color: var(--green-500);
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+    padding: 3px 10px;
+    background: var(--green-50);
+    border-radius: 100px;
+    line-height: 1.6;
+  }
+  .credit-row dd { font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
+
+  .home-nav-section { text-align: center; padding: 12px 0 8px; }
+  .home-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, var(--green-500) 0%, var(--green-400) 100%);
+    color: #fff;
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 15px 30px;
+    border-radius: 100px;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(29,143,90,0.24);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    letter-spacing: 0.04em;
+  }
+  .home-button:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(29,143,90,0.3); }
+  .footer { text-align: center; padding: 24px 0 40px; border-top: 1px solid var(--green-100); font-size: 11.5px; color: var(--text-muted); }
+  .footer-logo { font-family: 'BIZ UDPGothic', sans-serif; font-weight: 700; font-size: 13px; color: var(--green-500); margin-bottom: 4px; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+  .animate-in { opacity: 0; animation: fadeUp 0.55s ease-out forwards; }
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.2s; }
+</style>
+</head>
+<body>
+<div class="page-wrapper">
+  <section class="hero">
+    <div class="hero-content animate-in">
+      <div>
+        <span class="hero-badge">教育コラム vol.03</span>
+        <span class="hero-audience">救急外来・当直・研修医向け</span>
+      </div>
+      <h1>がん患者の<br><em>“よくある症状”</em>に隠れる<br>オンコロジックエマージェンシー</h1>
+      <p class="hero-subtitle">― 主訴から逆引きする見逃し予防ノート ―</p>
+      <div class="hero-divider"></div>
+    </div>
+  </section>
+
+  <nav class="toc animate-in delay-1">
+    <p class="toc-title">CONTENTS</p>
+    <ul class="toc-list">
+      <li><a href="#concept"><span class="toc-badge" style="background:var(--green-500);">0</span>このコラムの考え方</a></li>
+      <li><a href="#map"><span class="toc-badge" style="background:var(--accent-blue);">1</span>主訴別マップ</a></li>
+      <li><a href="#fever"><span class="toc-badge" style="background:var(--accent-red);">2</span>発熱に隠れるもの</a></li>
+      <li><a href="#dyspnea"><span class="toc-badge" style="background:var(--accent-rose);">3</span>呼吸苦・胸痛・低酸素に隠れるもの</a></li>
+      <li><a href="#delirium"><span class="toc-badge" style="background:var(--accent-purple);">4</span>意識障害・倦怠感に隠れるもの</a></li>
+      <li><a href="#backpain"><span class="toc-badge" style="background:var(--accent-orange);">5</span>腰背部痛・歩行障害に隠れるもの</a></li>
+      <li><a href="#abdomen"><span class="toc-badge" style="background:var(--accent-warm);">6</span>腹痛・嘔吐・黄疸に隠れるもの</a></li>
+      <li><a href="#renal"><span class="toc-badge" style="background:var(--green-600);">7</span>Cr上昇・尿量低下に隠れるもの</a></li>
+      <li><a href="#bleeding"><span class="toc-badge" style="background:var(--accent-purple);">8</span>出血・血小板低下に隠れるもの</a></li>
+      <li><a href="#ici"><span class="toc-badge" style="background:#b91c1c;">9</span>ICI時代の落とし穴</a></li>
+      <li><a href="#checklist"><span class="toc-badge" style="background:var(--green-700);">10</span>帰宅前チェックリスト</a></li>
+    </ul>
+  </nav>
+
+  <div class="soft-divider"></div>
+
+  <section class="section" id="concept">
+    <p class="section-label">00 CONCEPT</p>
+    <h2 class="section-title">オンコロジックエマージェンシーは疾患名では来ない</h2>
+    <div class="concept-box animate-in">
+      <p>オンコロジックエマージェンシー（oncologic emergency）は、早急に対応しなければ不可逆的な機能障害や生命危機につながりうる、がん関連の緊急病態である。教科書的には、腫瘍による圧迫・閉塞、代謝・内分泌異常、治療関連合併症、がん関連血栓塞栓症などに分類される<span class="ref-inline">[1]</span>。</p>
+      <p>しかし救急外来や当直の現場では、患者は「脊髄圧迫です」「高Ca血症です」「腫瘍崩壊症候群です」と来院するわけではない。多くは、<strong>発熱、息切れ、腰痛、食欲不振、腹部膨満、せん妄</strong>といった“よくある症状”として現れる。</p>
+      <p>本稿では、疾患名からではなく、<strong>最初に見える主訴から逆引きして、見逃したくない病態を拾う</strong>ことを目的に整理する。</p>
+    </div>
+    <div class="alert-box tip">
+      <span><span class="kw">中心メッセージ：</span>がん患者の症状を「がんだから仕方ない」「治療中だからよくある」と早く解釈しすぎない。よくある症状の中に、見逃すと取り返しがつかない病態が隠れている。</span>
+    </div>
+  </section>
+
+  <div class="soft-divider"></div>
+
+  <section class="section" id="map">
+    <p class="section-label">01 SYMPTOM MAP</p>
+    <h2 class="section-title">まず全体像：主訴別に何を考えるか</h2>
+    <p class="section-lead">頻度順のランキングではなく、救急外来で目の前に見える入口から考える。最初の数分で「普通の症状」に見えても、以下の病態を同時に想起する。</p>
+    <div style="overflow-x:auto;">
+      <table class="symptom-table">
+        <tr><th>主訴・状況</th><th>よくある原因</th><th>隠れているオンコロジックエマージェンシー</th><th>初動で確認</th></tr>
+        <tr><td>発熱</td><td>肺炎、尿路感染、胆管炎、薬剤熱</td><td>FN、敗血症、閉塞性感染、DIC、ICI関連CRS/HLH</td><td>好中球数、培養、感染巣、ICI歴、ステロイド歴</td></tr>
+        <tr><td>呼吸苦</td><td>肺炎、胸水、貧血、心不全</td><td>PTE、心タンポナーデ、SVC症候群、気道狭窄、ICI肺炎</td><td>SpO₂、造影CT適応、心エコー、顔面浮腫、頸静脈怒張</td></tr>
+        <tr><td>意識障害</td><td>せん妄、感染、脱水、薬剤性</td><td>高Ca血症、低Na血症、脳転移、がん性髄膜炎、ICI脳炎、副腎不全</td><td>Ca、Na、血糖、頭部画像、ACTH/コルチゾール</td></tr>
+        <tr><td>腰背部痛</td><td>骨転移痛、筋骨格痛</td><td>脊髄圧迫、病的骨折、馬尾症候群</td><td>麻痺、感覚障害、膀胱直腸障害、MRI</td></tr>
+        <tr><td>腹痛・嘔吐</td><td>便秘、胃腸炎、腹水、麻薬副作用</td><td>消化管閉塞、穿孔、出血、胆管炎、尿路閉塞</td><td>腹膜刺激症状、CT、黄疸、Cr、水腎症</td></tr>
+        <tr><td>Cr上昇</td><td>脱水、薬剤性腎障害、感染</td><td>尿路閉塞、TLS、高Ca血症、閉塞性腎盂腎炎</td><td>尿量、K/P/尿酸、Ca、LDH、腎エコー/CT</td></tr>
+        <tr><td>出血・紫斑</td><td>血小板減少、抗凝固薬、腫瘍出血</td><td>DIC、消化管出血、喀血、膀胱出血</td><td>Plt、PT-INR、Fib、FDP/D-dimer、出血源</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <div class="soft-divider"></div>
+
+  <section class="section" id="fever">
+    <p class="section-label">02 FEVER</p>
+    <h2 class="section-title">発熱に隠れるオンコロジックエマージェンシー</h2>
+    <div class="point-card danger-border">
+      <p class="point-card-title">発熱性好中球減少症（FN）</p>
+      <p class="point-card-sub">「白血球数」ではなく「好中球数」を確認する</p>
+      <p class="point-card-body">抗がん薬治療中の発熱では、まず直近の治療日と好中球数を確認する。FNは感染巣がはっきりしないことも多いが、初期対応が遅れると敗血症へ進展しうる。IDSAガイドラインはFNの初期評価、リスク分類、抗菌薬治療の基本を整理している<span class="ref-inline">[2]</span>。</p>
+      <div class="summary-box">
+        <p class="summary-box-title">初動で見る項目</p>
+        <ul class="summary-list">
+          <li>直近の抗がん薬投与日、レジメン、G-CSF使用の有無</li>
+          <li>好中球数、血圧、SpO₂、意識状態、乳酸、腎機能</li>
+          <li>血液培養2セット、ポート・カテーテル感染、肺炎、尿路感染、胆管炎、肛門痛、粘膜炎</li>
+          <li>低リスクに見えても、外来管理の可否はMASCC/CISNEなどのスコアだけでなく施設体制で判断する<span class="ref-inline">[3]</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="point-card warn-border">
+      <p class="point-card-title">閉塞を伴う感染症</p>
+      <p class="point-card-sub">胆管炎・閉塞性腎盂腎炎・無気肺後肺炎</p>
+      <p class="point-card-body">がん患者の発熱では、感染症そのものに加えて「腫瘍による閉塞」が背景にないかを確認する。胆道閉塞に伴う胆管炎は敗血症へ進展しやすく、Tokyo Guidelines 2018では重症度に応じた初期治療と胆道ドレナージが重視される<span class="ref-inline">[4]</span>。</p>
+      <div class="alert-box warn"><span><span class="kw-warn">抗菌薬だけで終わらせない。</span>発熱＋黄疸、発熱＋水腎症、発熱＋無気肺では、閉塞解除が必要な感染症を考える。</span></div>
+    </div>
+    <div class="point-card high-border">
+      <p class="point-card-title">DIC・血栓・腫瘍熱</p>
+      <p class="point-card-sub">「感染症らしくない発熱」でも採血の変化を見る</p>
+      <p class="point-card-body">発熱に血小板低下、FDP/D-dimer上昇、フィブリノゲン低下、PT延長を伴う場合はDICを考える。腫瘍熱は鑑別に挙がるが、救急外来では感染症、閉塞、血栓、irAEなどの危険な病態を先に評価する。</p>
+    </div>
+  </section>
+
+  <div class="soft-divider"></div>
+
+  <section class="section" id="dyspnea">
+    <p class="section-label">03 DYSPNEA / CHEST SYMPTOMS</p>
+    <h2 class="section-title">呼吸苦・胸痛・突然の低酸素に隠れるもの</h2>
+    <div class="point-card high-border">
+      <p class="point-card-title">肺血栓塞栓症（PTE）/ VTE</p>
+      <p class="point-card-sub">肺炎や胸水があってもPTEを除外したことにはならない</p>
+      <p class="point-card-body">がん患者はVTEの高リスクであり、ASCOガイドラインでも予防・治療の対象として重視されている<span class="ref-inline">[5]</span>。PTEは呼吸苦だけでなく、胸痛、頻脈、失神、発熱、倦怠感のみで現れることもある。</p>
+      <div class="chip-row"><span class="chip red">突然の低酸素</span><span class="chip red">頻脈</span><span class="chip red">胸痛</span><span class="chip blue">D-dimerは解釈注意</span></div>
+    </div>
+    <div class="point-card danger-border">
+      <p class="point-card-title">心タンポナーデ・SVC症候群・気道狭窄</p>
+      <p class="point-card-sub">胸部聴診だけでなく、顔・頸部・循環を見る</p>
+      <p class="point-card-body">悪性心嚢液では頻脈、息切れ、起座呼吸、血圧低下、頸静脈怒張を来しうる。SVC症候群では顔面頸部腫脹、頸静脈怒張、上肢浮腫、嗄声、仰臥位で増悪する呼吸苦が手がかりになる。中枢気道狭窄では喘鳴を喘息だけで説明しない<span class="ref-inline">[1]</span>。</p>
+      <div class="alert-box danger"><span><span class="kw-danger">呼吸苦＋頻脈＋血圧低下傾向</span>では心エコーを早めに考える。<span class="kw-danger">顔面浮腫・頸静脈怒張</span>を見たらSVC症候群を想起する。</span></div>
+    </div>
+    <div class="point-card blue-border">
+      <p class="point-card-title">悪性胸水・ICI肺炎・がん性リンパ管症</p>
+      <p class="point-card-sub">胸水があっても、それだけで説明しない</p>
+      <p class="point-card-body">悪性胸水は頻度の高い呼吸苦の原因である。ただし、胸水が存在してもPTE、肺炎、心タンポナーデ、ICI肺炎が併存することがある。免疫チェックポイント阻害薬使用中の呼吸苦では、感染症評価と並行してICI肺炎も考える<span class="ref-inline">[6,7]</span>。</p>
+    </div>
+  </section>
+
+  <div class="soft-divider"></div>
+
+  <section class="section" id="delirium">
+    <p class="section-label">04 DELIRIUM / FATIGUE</p>
+    <h2 class="section-title">意識障害・倦怠感・食欲不振に隠れるもの</h2>
+    <div class="point-card warn-border">
+      <p class="point-card-title">悪性腫瘍関連高Ca血症</p>
+      <p class="point-card-sub">“なんとなく元気がない”の裏にある代謝性エマージェンシー</p>
+      <p class="point-card-body">高Ca血症は倦怠感、食欲不振、便秘、口渇、多尿、眠気、せん妄、意識障害として現れる。Endocrine Societyガイドラインは、悪性腫瘍関連高Ca血症に対し、輸液などの初期対応に加えてデノスマブまたは静注ビスホスホネートを用いることを推奨している<span class="ref-inline">[8]</span>。ただし、デノスマブは有効な選択肢である一方で高額であり、実臨床では腎機能や重症度を確認しながら、ゾレドロン酸などの静注ビスホスホネートを選択することも多い。</p>
+      <div class="alert-box tip"><span><span class="kw">がん患者の「食べられない」「眠い」「便秘が強い」ではCaを見る。</span>終末期変化と決めつける前に、補正Caを確認する。</span></div>
+    </div>
+    <div class="point-card purple-border">
+      <p class="point-card-title">低Na血症・副腎不全・脳病変</p>
+      <p class="point-card-sub">せん妄で終わらせない</p>
+      <p class="point-card-body">低Na血症は悪心、頭痛、混乱、けいれん、昏睡を来す。SIADH、脱水、薬剤性、副腎不全を鑑別する。ICI使用中またはステロイド減量中では、下垂体炎・副腎不全、ICI脳炎も考える<span class="ref-inline">[6,7]</span>。</p>
+      <div class="summary-box">
+        <p class="summary-box-title">意識障害で最低限拾いたいもの</p>
+        <ul class="summary-list">
+          <li>Ca、Na、血糖、腎機能、感染症、薬剤性</li>
+          <li>頭痛・嘔吐・巣症状・けいれんがあれば頭部画像</li>
+          <li>ICI歴があれば脳炎、下垂体炎、副腎不全、心筋炎/筋炎合併を考慮</li>
+          <li>ステロイド使用歴・減量歴があれば副腎不全を忘れない</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="soft-divider"></div>
+
+  <section class="section" id="backpain">
+    <p class="section-label">05 BACK PAIN / GAIT DISTURBANCE</p>
+    <h2 class="section-title">腰背部痛・歩行障害に隠れるもの</h2>
+    <div class="point-card danger-border">
+      <p class="point-card-title">転移性脊髄圧迫（MSCC）</p>
+      <p class="point-card-sub">神経症状を伴う腰背部痛は、MSCCとして扱う</p>
+      <p class="point-card-body">がん患者の背部痛・腰痛では骨転移痛が多いが、脊髄圧迫を見逃してはいけない。一方で、救急外来で「がん患者の腰痛」をすべて緊急MRIに回すことは現実的ではない。カットオフは、痛みそのものではなく、<span class="kw-danger">神経症状の有無</span>、<span class="kw-danger">症状の進行速度</span>、<span class="kw-danger">痛みの性状</span>で考える。NICE NG234は、脊椎転移・MSCCの認識、紹介、画像検査、治療を扱い、早期診断により神経障害を防ぐことを目的としている<span class="ref-inline">[9]</span>。</p>
+      <div class="summary-box">
+        <p class="summary-box-title">緊急度が高い：当日MRIと専門科相談を強く考える所見</p>
+        <ul class="summary-list">
+          <li>新規または急速に進行する下肢脱力、立てない、転倒が増えた</li>
+          <li>歩行障害、感覚障害、しびれ、感覚レベルを疑う訴えが新規または増悪している</li>
+          <li>尿閉、便失禁、膀胱直腸障害、会陰部感覚障害</li>
+          <li>神経所見を伴う神経根痛、または急激に進行する背部痛に神経症状が合併している</li>
+        </ul>
+      </div>
+      <div class="summary-box">
+        <p class="summary-box-title">MRIを撮るなら：原則は全脊椎スクリーニング</p>
+        <ul class="summary-list">
+          <li>MSCCを疑う場合は、局所だけでなく全脊椎の矢状断でスクリーニングする</li>
+          <li>最低限、全脊椎の矢状断T1またはSTIR、矢状断T2で転移・硬膜外病変・脊髄/馬尾圧迫を評価する</li>
+          <li>矢状断で異常がある部位には、追加で軸位断を撮像する</li>
+          <li>造影MRIは施設プロトコールや鑑別に応じて検討するが、緊急判断ではまず圧迫の有無と高位を確認する</li>
+        </ul>
+      </div>
+      <div class="alert-box danger"><span><span class="kw-danger">腰痛＝即MRIではない。</span>ただし、がん患者の腰背部痛に、急速に進行する下肢脱力・歩行障害・感覚障害・膀胱直腸障害があれば、MSCCとして扱う。歩けるうちに評価し、麻痺してからでは遅い。</span></div>
+      <div class="alert-box info"><span>MRI禁忌や撮像困難例ではCTを検討する。ただし、単純X線で脊椎転移やMSCCを除外しない。</span></div>
+      <div class="alert-box warn"><span><span class="kw-warn">医療安全上の注意：</span>MSCCは診断の遅れが歩行機能や排尿機能の不可逆的障害につながりうる病態であり、診断遅延が裁判で問題となった例も報道されている。神経症状を伴う腰背部痛では、画像検査の適応を検討した過程、専門科へ相談した時刻、患者・家族への説明内容を診療録に残すことも重要である。</span></div>
+    </div>
+  </section>
+
+  <div class="soft-divider"></div>
+
+  <section class="section" id="abdomen">
+    <p class="section-label">06 ABDOMINAL SYMPTOMS</p>
+    <h2 class="section-title">腹痛・嘔吐・腹部膨満・黄疸に隠れるもの</h2>
+    <div class="point-card warn-border">
+      <p class="point-card-title">消化管閉塞・穿孔・出血</p>
+      <p class="point-card-sub">便秘・食欲不振・麻薬副作用に見える</p>
+      <p class="point-card-body">腹膜播種や消化管腫瘍では、悪心、嘔吐、腹部膨満、排便・排ガス停止として消化管閉塞が現れる。消化管穿孔は急激な腹痛、腹膜刺激症状、発熱、ショック、free air、乳酸上昇などが手がかりである。出血では黒色便、血便、吐血、貧血進行、抗凝固薬内服を確認する<span class="ref-inline">[1]</span>。</p>
+    </div>
+    <div class="point-card high-border">
+      <p class="point-card-title">胆道閉塞・胆管炎</p>
+      <p class="point-card-sub">抗菌薬だけでなくドレナージが必要なことがある</p>
+      <p class="point-card-body">膵胆道癌、胃癌リンパ節転移、肝門部病変などでは胆道閉塞を来す。発熱、黄疸、腹痛がそろわないこともあるため、発熱＋肝胆道系酵素上昇では胆管炎を疑う。Tokyo Guidelines 2018では重症度評価と胆道ドレナージの重要性が整理されている<span class="ref-inline">[4]</span>。</p>
+      <div class="alert-box warn"><span><span class="kw-warn">「抗菌薬で様子を見る」だけでよいかを確認する。</span>敗血症化しやすい閉塞性感染症では、消化器内科・外科との連携が重要。</span></div>
+    </div>
+    <div class="point-card blue-border">
+      <p class="point-card-title">悪性腹水・腹膜播種</p>
+      <p class="point-card-sub">腹部膨満を「腹水だけ」と決めつけない</p>
+      <p class="point-card-body">悪性腹水は腹部膨満、食欲不振、息苦しさの原因となる。一方で、腹水増加の背後に腸閉塞、胆管閉塞、尿路閉塞が隠れていることがある。腹部膨満が急に悪化した場合は、画像検査で閉塞や穿孔を確認する。</p>
+    </div>
+  </section>
+
+  <div class="soft-divider"></div>
+
+  <section class="section" id="renal">
+    <p class="section-label">07 RENAL / METABOLIC</p>
+    <h2 class="section-title">Cr上昇・尿量低下に隠れるもの</h2>
+    <div class="point-card blue-border">
+      <p class="point-card-title">尿路閉塞・腎後性腎不全</p>
+      <p class="point-card-sub">脱水だけで片付けない</p>
+      <p class="point-card-body">骨盤内腫瘍、後腹膜リンパ節転移、腹膜播種では尿管閉塞による腎後性腎不全が起こる。Cr上昇、尿量低下、発熱を見たら、腎エコーまたはCTで水腎症を確認する。閉塞性腎盂腎炎ではドレナージが必要になる。</p>
+    </div>
+    <div class="point-card danger-border">
+      <p class="point-card-title">腫瘍崩壊症候群（TLS）</p>
+      <p class="point-card-sub">救急外来よりも、治療開始後・入院中のモニタリングで拾うことが多い</p>
+      <p class="point-card-body">TLSは腫瘍細胞の急速な崩壊により、高尿酸血症、高K血症、高P血症、低Ca血症、腎不全、不整脈、けいれんを来す病態である。典型的には、血液腫瘍や高腫瘍量・高感受性腫瘍の治療開始後に、入院中の採血モニタリングで検出されることが多い。一方で、外来治療後のCr上昇、尿量低下、高K血症、けいれん、不整脈として救急外来に現れることもあるため、治療開始直後の患者では鑑別に残す。HowardらのレビューはTLSのリスク評価、診断、予防、治療を整理した代表的文献である<span class="ref-inline">[10]</span>。日本臨床腫瘍学会のTLS診療ガイダンスもリスク別対応を示している<span class="ref-inline">[11]</span>。</p>
+      <div class="summary-box">
+        <p class="summary-box-title">TLSを疑ったら確認</p>
+        <ul class="summary-list">
+          <li>K、P、Ca、尿酸、Cr、LDH、尿量、心電図</li>
+          <li>血液腫瘍、高腫瘍量、高感受性腫瘍、腎機能低下、脱水</li>
+          <li>固形癌では頻度は低いが、小細胞肺癌、胚細胞腫瘍、高腫瘍量・著効例では注意</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="soft-divider"></div>
+
+  <section class="section" id="bleeding">
+    <p class="section-label">08 BLEEDING / COAGULATION</p>
+    <h2 class="section-title">出血・紫斑・血小板低下に隠れるもの</h2>
+    <div class="point-card purple-border">
+      <p class="point-card-title">DIC・腫瘍出血・血栓塞栓症</p>
+      <p class="point-card-sub">DICと出血源の評価を並行する</p>
+      <p class="point-card-body">がん患者では腫瘍出血、骨髄抑制、抗凝固薬、肝障害などにより出血症状を来す。血小板低下、PT延長、FDP/D-dimer上昇、フィブリノゲン低下を伴う場合はDICを考える。吐血・黒色便・血便など消化管出血が疑われる場合は、出血源の同定や消化器内科での内視鏡治療・IVRの適応判断につなげるため、全身状態と腎機能を確認しながら造影CTを検討する<span class="ref-inline">[1]</span>。</p>
+      <div class="summary-box">
+        <p class="summary-box-title">確認したい項目</p>
+        <ul class="summary-list">
+          <li>Plt、PT-INR、APTT、フィブリノゲン、FDP/D-dimer</li>
+          <li>吐血・黒色便・血便・喀血・血尿・膀胱出血</li>
+          <li>消化管出血が疑われる場合は、造影CT、消化器内科・IVR・外科相談の必要性</li>
+          <li>感染症、腫瘍進行、APLなど血液腫瘍、抗凝固薬・抗血小板薬</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="soft-divider"></div>
+
+  <section class="section" id="ici">
+    <p class="section-label">09 IMMUNOTHERAPY ERA</p>
+    <h2 class="section-title">ICI時代の新しい落とし穴</h2>
+    <div class="point-card danger-border">
+      <p class="point-card-title">敗血症に見えるirAE</p>
+      <p class="point-card-sub">感染症対応を止めずに、irAE評価を並行する</p>
+      <p class="point-card-body">免疫チェックポイント阻害薬（ICI）の普及により、救急外来での見逃しパターンは変化した。発熱、ショック、低酸素、意識障害、肝障害、DIC様所見、フェリチン高値は敗血症に似て見えるが、ICI関連CRS/HLH様病態、心筋炎、脳炎、肺炎、内分泌障害の可能性もある。ASCOおよびESMOのガイドラインは、ICI治療中の新規症状ではirAEを念頭に評価することを示している<span class="ref-inline">[6,7]</span>。</p>
+      <div class="check-grid">
+        <div class="check-item"><strong>発熱＋意識障害：</strong>感染、脳転移だけでなくICI脳炎、副腎不全</div>
+        <div class="check-item"><strong>発熱＋トロポニン：</strong>ACS/PTEだけでなくICI心筋炎</div>
+        <div class="check-item"><strong>発熱＋CK：</strong>筋炎、心筋炎、重症筋無力症様症状の合併</div>
+        <div class="check-item"><strong>発熱＋フェリチン：</strong>CRS/HLH/MAS様病態を考慮</div>
+      </div>
+      <div class="alert-box danger"><span><span class="kw-danger">敗血症として初動する。しかし、敗血症だけで終わらせない。</span>抗菌薬・培養・感染巣検索と並行して、ICI歴、ステロイド減量歴、トロポニン、CK、フェリチン、フィブリノゲンを確認する。</span></div>
+    </div>
+  </section>
+
+  <div class="soft-divider"></div>
+
+  <section class="section" id="checklist">
+    <p class="section-label">10 BEFORE DISCHARGE</p>
+    <h2 class="section-title">がん患者救急で帰す前の10項目</h2>
+    <p class="section-lead">すべての患者に全項目を行うという意味ではない。帰宅判断の前に「考えたか」を確認するための安全確認リストである。</p>
+    <div class="check-grid">
+      <div class="check-item"><strong>1.</strong> 好中球数を確認したか</div>
+      <div class="check-item"><strong>2.</strong> Ca、Na、K、Crを確認したか</div>
+      <div class="check-item"><strong>3.</strong> SpO₂、胸部症状、D-dimerからPTEを考えたか</div>
+      <div class="check-item"><strong>4.</strong> 腰背部痛に神経症状はないか</div>
+      <div class="check-item"><strong>5.</strong> 嘔吐・腹部膨満に閉塞や穿孔はないか</div>
+      <div class="check-item"><strong>6.</strong> 発熱＋黄疸/肝胆道系酵素上昇で胆管炎を疑ったか</div>
+      <div class="check-item"><strong>7.</strong> Cr上昇で水腎症・尿路閉塞を確認したか</div>
+      <div class="check-item"><strong>8.</strong> ICI使用歴・治療終了後の期間を確認したか</div>
+      <div class="check-item"><strong>9.</strong> ステロイド使用歴・減量歴・副腎不全リスクを確認したか</div>
+      <div class="check-item"><strong>10.</strong> 「よくある症状」で説明しきれない違和感を残していないか</div>
+    </div>
+    <div class="alert-box tip"><span><span class="kw">まとめ：</span>オンコロジックエマージェンシーは、疾患名で覚えるだけでは実臨床で拾いにくい。主訴から逆引きし、見逃すと不可逆的な病態を先に除外する。</span></div>
+  </section>
+
+  <div class="soft-divider"></div>
+
+  <section class="ref-section">
+    <p class="ref-label">REFERENCES</p>
+    <ol class="ref-list">
+      <li><span class="ref-num">1</span><span>Gould Rothberg BE, Quest TE, Yeung SCJ, et al. Oncologic emergencies and urgencies: A comprehensive review. <em>CA Cancer J Clin</em>. 2022;72:570-593.</span></li>
+      <li><span class="ref-num">2</span><span>Freifeld AG, Bow EJ, Sepkowitz KA, et al. Clinical practice guideline for the use of antimicrobial agents in neutropenic patients with cancer. <em>Clin Infect Dis</em>. 2011;52:e56-e93.</span></li>
+      <li><span class="ref-num">3</span><span>Taplitz RA, Kennedy EB, Bow EJ, et al. Outpatient management of fever and neutropenia in adults treated for malignancy: ASCO/IDSA clinical practice guideline update. <em>J Clin Oncol</em>. 2018;36:1443-1453.</span></li>
+      <li><span class="ref-num">4</span><span>Miura F, Okamoto K, Takada T, et al. Tokyo Guidelines 2018: initial management of acute biliary infection and flowchart for acute cholangitis. <em>J Hepatobiliary Pancreat Sci</em>. 2018;25:31-40.</span></li>
+      <li><span class="ref-num">5</span><span>Key NS, Khorana AA, Kuderer NM, et al. Venous thromboembolism prophylaxis and treatment in patients with cancer: ASCO guideline update. <em>J Clin Oncol</em>. 2023.</span></li>
+      <li><span class="ref-num">6</span><span>Schneider BJ, Naidoo J, Santomasso BD, et al. Management of immune-related adverse events in patients treated with immune checkpoint inhibitor therapy: ASCO guideline update. <em>J Clin Oncol</em>. 2021;39:4073-4126.</span></li>
+      <li><span class="ref-num">7</span><span>Haanen J, Obeid M, Spain L, et al. Management of toxicities from immunotherapy: ESMO Clinical Practice Guideline. <em>Ann Oncol</em>. 2022;33:1217-1238.</span></li>
+      <li><span class="ref-num">8</span><span>El-Hajj Fuleihan G, Clines GA, Hu MI, et al. Treatment of hypercalcemia of malignancy in adults: An Endocrine Society Clinical Practice Guideline. <em>J Clin Endocrinol Metab</em>. 2023;108:507-528.</span></li>
+      <li><span class="ref-num">9</span><span>National Institute for Health and Care Excellence. Spinal metastases and metastatic spinal cord compression. NICE guideline NG234. Published 2023.</span></li>
+      <li><span class="ref-num">10</span><span>Howard SC, Jones DP, Pui C-H. The tumor lysis syndrome. <em>N Engl J Med</em>. 2011;364:1844-1854.</span></li>
+      <li><span class="ref-num">11</span><span>日本臨床腫瘍学会. 腫瘍崩壊症候群（TLS）診療ガイダンス 第2版.</span></li>
+    </ol>
+  </section>
+
+  <div class="credit-block">
+    <dl>
+      <div class="credit-row"><dt>文責</dt><dd>東北医科薬科大学病院 腫瘍内科　川村 佳史</dd></div>
+      <div class="credit-row"><dt>対象</dt><dd>医師・研修医・医学生・看護師・薬剤師など医療従事者向け</dd></div>
+      <div class="credit-row"><dt>注意</dt><dd>本資料は教育目的の概説です。実際の診療では、患者背景、施設の診療体制、最新の添付文書・ガイドラインを確認してください。</dd></div>
+    </dl>
+  </div>
+
+  <div class="home-nav-section">
+    <a href="education.html" class="home-button">← 教育コラム一覧へ戻る</a>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-logo">東北医科薬科大学病院 腫瘍内科</div>
+    <div>Medical Education Column vol.03</div>
+  </footer>
+</div>
+</body>
+</html>
