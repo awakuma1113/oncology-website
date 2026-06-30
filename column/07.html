@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>「食べてほしい」と思うご家族へ | tmpu-oncology.jp コラム</title>
+<meta name="description" content="がん患者さんの食欲低下に対して、ご家族ができる支え方を、医学的な背景とともにやさしく解説します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green-50: #f0faf4;
+    --green-100: #d6f0e0;
+    --green-200: #a8dfc0;
+    --green-300: #6cc89a;
+    --green-400: #3db37a;
+    --green-500: #1d8f5a;
+    --green-600: #167348;
+    --green-700: #115a38;
+    --accent-warm: #d4943a;
+    --accent-warm-light: #fef4e0;
+    --accent-blue: #4a90c4;
+    --accent-blue-light: #eaf3fb;
+    --accent-rose: #c4726a;
+    --accent-rose-light: #fdf0ee;
+    --text-primary: #1a2e23;
+    --text-secondary: #4a6356;
+    --text-muted: #7a9488;
+    --bg-white: #ffffff;
+    --bg-off: #f7faf8;
+    --bg-card: #ffffff;
+    --shadow-soft: 0 2px 16px rgba(29, 143, 90, 0.06);
+    --shadow-card: 0 4px 24px rgba(29, 143, 90, 0.08);
+    --radius: 14px;
+    --radius-sm: 10px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    color: var(--text-primary);
+    background: var(--bg-white);
+    line-height: 1.9;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  .page-wrapper { max-width: 520px; margin: 0 auto; padding: 0 20px; }
+  .hero { position: relative; padding: 56px 0 48px; text-align: center; overflow: hidden; }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: -40px; right: -40px; bottom: -20px;
+    background:
+      radial-gradient(ellipse 70% 50% at 20% 30%, rgba(168, 223, 192, 0.35) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 60% at 80% 60%, rgba(108, 200, 154, 0.2) 0%, transparent 70%),
+      radial-gradient(ellipse 80% 40% at 50% 80%, rgba(214, 240, 224, 0.4) 0%, transparent 60%);
+    z-index: 0;
+  }
+  .hero-content { position: relative; z-index: 1; }
+  .hero-illustration { width: 200px; height: 150px; margin: 0 auto 28px; display: block; }
+  .hero-badge {
+    display: inline-block; background: var(--green-100); color: var(--green-600);
+    font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+    padding: 6px 16px; border-radius: 100px; margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+    font-weight: 700; font-size: 27px; line-height: 1.55;
+    color: var(--green-700); letter-spacing: 0.04em; margin-bottom: 12px;
+  }
+  .hero-subtitle {
+    font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+    font-weight: 400; font-size: 15px; color: var(--text-muted); letter-spacing: 0.08em;
+  }
+  .hero-divider { width: 48px; height: 3px; background: linear-gradient(90deg, var(--green-300), var(--green-200)); border-radius: 2px; margin: 28px auto 0; }
+  .section { padding: 40px 0; }
+  .section-label { font-size: 11px; font-weight: 700; color: var(--green-400); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 8px; }
+  .section-title {
+    font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+    font-weight: 700; font-size: 20px; color: var(--text-primary); line-height: 1.6; margin-bottom: 20px;
+  }
+  .section-lead { font-size: 14.5px; color: var(--text-secondary); line-height: 1.9; margin-bottom: 24px; }
+  .soft-divider { width: 100%; height: 1px; background: linear-gradient(90deg, transparent, var(--green-100), transparent); margin: 8px 0; }
+  .empathy-section { background: var(--bg-off); border-radius: var(--radius); padding: 32px 24px; margin: 0 -4px; }
+  .thought-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .thought-list li {
+    background: var(--bg-card); border: 1px solid var(--green-100);
+    border-radius: var(--radius-sm); padding: 16px 18px;
+    box-shadow: var(--shadow-soft); font-size: 14.5px;
+    color: var(--text-primary); line-height: 1.7;
+  }
+  .thought-list li::before { content: '“'; color: var(--green-300); font-size: 22px; line-height: 0; margin-right: 2px; }
+  .card-grid { display: flex; flex-direction: column; gap: 16px; }
+  .info-card { background: var(--bg-card); border: 1px solid var(--green-100); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow-soft); }
+  .card-icon { width: 48px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+  .card-icon.green { background: var(--green-50); }
+  .card-icon.warm { background: var(--accent-warm-light); }
+  .card-icon.blue { background: var(--accent-blue-light); }
+  .card-icon.rose { background: var(--accent-rose-light); }
+  .card-icon svg { width: 25px; height: 25px; }
+  .card-title { font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif; font-weight: 700; font-size: 16px; color: var(--text-primary); margin-bottom: 10px; line-height: 1.5; }
+  .card-text { font-size: 14px; color: var(--text-secondary); line-height: 1.85; }
+  .card-text + .card-text { margin-top: 10px; }
+  .voice-card { background: var(--bg-off); border-radius: var(--radius); padding: 24px; margin-top: 16px; position: relative; }
+  .voice-card::before { content: '\201C'; font-family: Georgia, serif; font-size: 48px; color: var(--green-200); position: absolute; top: 8px; left: 18px; line-height: 1; }
+  .voice-quote { font-size: 14px; color: var(--text-secondary); line-height: 1.9; padding-left: 8px; margin-bottom: 14px; font-style: italic; }
+  .example-label { display: inline-block; background: var(--accent-warm-light); color: var(--accent-warm); font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; padding: 3px 10px; border-radius: 100px; margin-bottom: 12px; }
+  .voice-after { margin-top: 16px; padding: 14px 18px; background: var(--bg-card); border-radius: var(--radius-sm); border-left: 3px solid var(--green-400); font-size: 13.5px; color: var(--text-secondary); line-height: 1.8; }
+  .voice-after-label { font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif; font-weight: 700; font-size: 12px; color: var(--green-500); letter-spacing: 0.06em; margin-bottom: 4px; }
+  .highlight-box { position: relative; background: linear-gradient(135deg, var(--green-500) 0%, var(--green-600) 100%); border-radius: var(--radius); padding: 32px 24px; color: #fff; overflow: hidden; }
+  .highlight-box .section-title { color: #fff; position: relative; z-index: 1; }
+  .highlight-text { font-size: 14.5px; line-height: 1.9; color: rgba(255,255,255,0.92); position: relative; z-index: 1; }
+  .notice-box { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.18); border-radius: var(--radius-sm); padding: 16px 18px; margin-top: 20px; position: relative; z-index: 1; }
+  .notice-box p { font-size: 13px; color: rgba(255,255,255,0.9); line-height: 1.8; }
+  .prep-steps { display: flex; flex-direction: column; gap: 14px; }
+  .prep-step { display: flex; align-items: flex-start; gap: 16px; padding: 20px; background: var(--bg-card); border-radius: var(--radius-sm); border: 1px solid var(--green-100); }
+  .prep-number { flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; background: var(--green-500); color: #fff; font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
+  .prep-title { font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif; font-weight: 700; font-size: 15px; color: var(--text-primary); margin-bottom: 4px; line-height: 1.5; }
+  .prep-desc { font-size: 13.5px; color: var(--text-muted); line-height: 1.75; }
+  .reference-list { padding-left: 1.2em; font-size: 12.5px; color: var(--text-secondary); line-height: 1.7; }
+  .reference-list li { margin-bottom: 8px; scroll-margin-top: 100px; }
+  .reference-list a { color: var(--green-700); text-decoration: underline; text-underline-offset: 3px; }
+  .ref-link {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 18px; height: 18px; margin-left: 4px; border-radius: 50%;
+    background: var(--green-100); color: var(--green-700); font-size: 11px;
+    font-weight: 700; text-decoration: none; vertical-align: super; line-height: 1;
+  }
+  .nav-buttons { display: flex; flex-direction: column; gap: 10px; margin: 8px 0 28px; }
+  .nav-button {
+    display: flex; align-items: center; justify-content: center; min-height: 46px;
+    padding: 12px 20px; border-radius: var(--radius-sm);
+    font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif; font-weight: 700;
+    font-size: 13px; letter-spacing: 0.05em; text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  }
+  .nav-button.primary { color: #fff; background: var(--green-600); border: 1px solid var(--green-600); }
+  .nav-button.secondary { color: var(--green-700); background: #fff; border: 1px solid var(--green-300); }
+  .nav-button:hover { transform: translateY(-1px); }
+  .nav-button.primary:hover { background: var(--green-700); }
+  .nav-button.secondary:hover { background: var(--green-50); }
+  .credit-block { border-top: 1px solid var(--green-100); padding: 24px 0 32px; margin-top: 8px; }
+  .credit-list { display: flex; flex-direction: column; gap: 10px; }
+  .credit-row { display: flex; align-items: baseline; gap: 16px; }
+  .credit-row dt { font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif; font-weight: 700; font-size: 11px; color: var(--green-500); letter-spacing: 0.1em; white-space: nowrap; padding: 3px 10px; background: var(--green-50); border-radius: 100px; line-height: 1.6; }
+  .credit-row dd { font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
+  .footer { text-align: center; padding: 24px 0 40px; border-top: 1px solid var(--green-100); font-size: 11.5px; color: var(--text-muted); }
+  .footer-logo { font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif; font-weight: 700; font-size: 13px; color: var(--green-500); margin-bottom: 4px; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  .animate-in { opacity: 0; }
+  .animate-in.is-visible { animation: fadeUp 0.6s ease-out forwards; }
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.2s; }
+  .delay-3 { animation-delay: 0.3s; }
+  @media (min-width: 768px) {
+    .page-wrapper { max-width: 720px; padding: 0 40px; }
+    .hero { padding: 72px 0 60px; }
+    .hero-illustration { width: 220px; height: 165px; }
+    .card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .nav-buttons { flex-direction: row; justify-content: center; }
+    .nav-button { min-width: 210px; }
+  }
+</style>
+</head>
+<body>
+<div id="top" class="page-wrapper">
+  <header class="hero">
+    <div class="hero-content animate-in is-visible">
+      <svg class="hero-illustration" viewBox="0 0 260 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <ellipse cx="130" cy="150" rx="82" ry="14" fill="#d6f0e0"/>
+        <circle cx="130" cy="96" r="48" fill="#ffffff" stroke="#a8dfc0" stroke-width="3"/>
+        <circle cx="130" cy="96" r="30" fill="#f0faf4" stroke="#d6f0e0" stroke-width="3"/>
+        <path d="M91 105c12 18 64 18 78 0" stroke="#1d8f5a" stroke-width="4" stroke-linecap="round"/>
+        <path d="M178 80v54" stroke="#d4943a" stroke-width="4" stroke-linecap="round"/>
+        <path d="M190 80v54" stroke="#d4943a" stroke-width="4" stroke-linecap="round"/>
+        <path d="M178 80h12" stroke="#d4943a" stroke-width="4" stroke-linecap="round"/>
+        <path d="M78 74v60" stroke="#4a90c4" stroke-width="4" stroke-linecap="round"/>
+        <path d="M70 78c0 12 16 12 16 0" stroke="#4a90c4" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+      <span class="hero-badge">FOR FAMILY</span>
+      <h1>「食べてほしい」と<br>思うご家族へ</h1>
+      <p class="hero-subtitle">無理に食べさせる前に、知っておいてほしいこと</p>
+      <div class="hero-divider"></div>
+    </div>
+  </header>
+
+  <section class="section animate-in">
+    <p class="section-label">FAMILY THOUGHTS</p>
+    <h2 class="section-title">こんなふうに考えていませんか</h2>
+    <div class="empathy-section">
+      <ul class="thought-list">
+        <li>本人の食事をどうしよう</li>
+        <li>栄養を取らせなきゃ</li>
+        <li>食べないと、もっと弱ってしまうのでは</li>
+        <li>少しでも食べて体力をつけてほしい</li>
+        <li>せっかく作ったものを、一口でも食べてほしい</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section animate-in">
+    <p class="section-label">PAUSE</p>
+    <h2 class="section-title">そう思うのは、とても自然なことです</h2>
+    <p class="section-lead">食事は、単なる栄養ではありません。家族で過ごす時間であり、愛情を伝える手段でもあります。患者さんが食べられない姿を見ることは、ご家族にとっても大きな不安になります。</p>
+    <p class="section-lead">だからこそ、「食べてほしい」と思う気持ちは、患者さんを大切に思う気持ちの表れです。この記事は、その気持ちを否定するためのものではありません。</p>
+  </section>
+
+  <div class="soft-divider"></div>
+
+  <section class="section animate-in">
+    <div class="highlight-box">
+      <h2 class="section-title">でも、もし「食べること」自体がつらい時間になっていたら？</h2>
+      <p class="highlight-text">患者さんは、ご家族を悲しませたくなくて「本当は食べるのがつらい」と言えないことがあります。無理に食べようとすることで、吐き気、腹部膨満感、息苦しさ、疲労感が強くなることもあります。</p>
+      <div class="notice-box"><p>大切なのは、「食べさせること」そのものではなく、患者さんが安心して過ごせるように、食べるつらさを減らしていくことです。</p></div>
+    </div>
+  </section>
+
+  <section class="section animate-in">
+    <p class="section-label">MEDICAL BACKGROUND</p>
+    <h2 class="section-title">食べたくても、体が受けつけないことがあります</h2>
+    <p class="section-lead">ご家族は「食べないから弱ってしまうのでは」と心配されることがあります。もちろん食事は大切ですが、がんや治療の影響で体が弱り、食べたくても食べられない状態になっていることもあります。</p>
+    <p class="section-lead">食欲不振は、がんそのもの、治療、悪液質、吐き気、便秘、痛み、息苦しさ、口内炎、味覚やにおいの変化、不安、環境の変化など、いくつもの原因が重なって起こります。<a href="#ref-1" class="ref-link">1</a></p>
+    <div class="card-grid">
+      <div class="info-card animate-in"><div class="card-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green-600)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.5 5.5l8 8a4.2 4.2 0 0 1-6 6l-8-8a4.2 4.2 0 0 1 6-6z"/><path d="M8.5 13.5l5-5"/></svg></div><h3 class="card-title">がんや治療の影響</h3><p class="card-text">抗がん薬、放射線治療、手術後の変化、がんそのものによって、食欲が落ちたり、食べ物を受けつけにくくなったりします。</p></div>
+      <div class="info-card animate-in delay-1"><div class="card-icon warm"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-warm)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-4.6 7-11a5 5 0 0 0-9-3 5 5 0 0 0-9 3c0 6.4 7 11 7 11"/><path d="M7 13h3l1.5-3 2.5 6 1.5-3H17"/></svg></div><h3 class="card-title">体の症状</h3><p class="card-text">吐き気、便秘、痛み、息苦しさ、口内炎、飲み込みにくさ、だるさなどがあると、食べること自体が大きな負担になります。</p></div>
+      <div class="info-card animate-in delay-2"><div class="card-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 11.5L12 4l8.5 7.5"/><path d="M5.5 10.5V20h13v-9.5"/><path d="M9 20v-5.5h6V20"/><path d="M17.5 6.5c1.8-.2 3 1 2.8 2.8-1.8.2-3-1-2.8-2.8z"/></svg></div><h3 class="card-title">心の状態や環境</h3><p class="card-text">不安、落ち込み、周囲の期待、食卓の雰囲気、においなども、食べやすさに影響します。</p></div>
+      <div class="info-card animate-in delay-3"><div class="card-icon rose"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-rose)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18.5 8.5A7 7 0 0 0 6 7.2"/><path d="M18.5 4.5v4h-4"/><path d="M5.5 15.5A7 7 0 0 0 18 16.8"/><path d="M5.5 19.5v-4h4"/><circle cx="12" cy="12" r="2.5"/></svg></div><h3 class="card-title">悪液質という状態</h3><p class="card-text">進行したがんでは、通常の栄養サポートだけでは完全には戻りにくい筋肉量の低下を伴う「がん悪液質」が関わることがあります。<a href="#ref-2" class="ref-link">2</a><a href="#ref-3" class="ref-link">3</a></p></div>
+    </div>
+  </section>
+
+  <div class="soft-divider"></div>
+
+  <section class="section animate-in">
+    <p class="section-label">PATIENT VOICE</p>
+    <h2 class="section-title">患者さんは「食べられない」と言いにくいことがあります</h2>
+    <p class="section-lead">ご家族が一生懸命用意した食事を前にすると、患者さんは「残して申し訳ない」「食べないと家族を悲しませてしまう」と感じることがあります。</p>
+    <div class="voice-card">
+      <span class="example-label">患者さんの中で起きているかもしれないこと</span>
+      <p class="voice-quote">「本当は今は食べたくない」<br>「でも、せっかく作ってくれたから残しにくい」<br>「食べられないと言うと、家族が心配してしまう」</p>
+      <div class="voice-after"><p class="voice-after-label">▶ 誰が悪い、という話ではありません</p>患者さんもご家族も、お互いを思いやるからこそ、食事の時間がつらい場面になってしまうことがあります。</div>
+    </div>
+  </section>
+
+  <section class="section animate-in">
+    <p class="section-label">REFRAME</p>
+    <h2 class="section-title">「食べさせる」より「食べるつらさを減らす」</h2>
+    <p class="section-lead">目標を「たくさん食べること」だけにすると、患者さんにもご家族にも負担がかかります。食べる量よりも、まずは「楽に口にできるか」「安心して食卓にいられるか」を大切にしてみてください。</p>
+    <div class="voice-card">
+      <span class="example-label">声かけの例</span>
+      <p class="voice-quote">「食べられそうなときに、少しだけで大丈夫だよ」<br>「今日は無理しなくていいよ」<br>「残しても大丈夫。食べられそうなものがあったら教えてね」</p>
+      <div class="voice-after"><p class="voice-after-label">▶ 安心できる言葉が、食べやすさにつながることがあります</p>責められない、残してもよい、という安心感は、患者さんの罪悪感を軽くします。</div>
+    </div>
+  </section>
+
+  <div class="soft-divider"></div>
+
+  <section class="section animate-in">
+    <p class="section-label">PRACTICAL TIPS</p>
+    <h2 class="section-title">今日からできる工夫</h2>
+    <p class="section-lead">栄養や量、規則正しさにこだわりすぎず、食べたいとき、食べられそうなときに、食べたいものを少しだけ口にする考え方が勧められています。吐き気があるときなどは、無理に食べる必要はありません。<a href="#ref-1" class="ref-link">1</a></p>
+    <div class="prep-steps">
+      <div class="prep-step animate-in"><div class="prep-number">1</div><div><p class="prep-title">一口、数口からでよいと考える</p><p class="prep-desc">最初から一人前を出すと、見るだけで負担になることがあります。小皿に少量だけ出すと、患者さんが選びやすくなります。<a href="#ref-4" class="ref-link">4</a></p></div></div>
+      <div class="prep-step animate-in delay-1"><div class="prep-number">2</div><div><p class="prep-title">本人に選んでもらう</p><p class="prep-desc">食べたいもの、食べられそうな時間帯、温度、においの好みは日によって変わります。「何ならいけそう？」と聞いてみてください。<a href="#ref-4" class="ref-link">4</a></p></div></div>
+      <div class="prep-step animate-in delay-2"><div class="prep-number">3</div><div><p class="prep-title">冷たいもの、のどごしのよいものを試す</p><p class="prep-desc">ゼリー、果物、アイス、スープ、茶わん蒸し、栄養補助食品など、楽に口にできるものを一緒に探します。</p></div></div>
+      <div class="prep-step animate-in delay-3"><div class="prep-number">4</div><div><p class="prep-title">においと食卓の圧を減らす</p><p class="prep-desc">温かい料理のにおいがつらいことがあります。換気、冷ました料理、市販品の活用も選択肢です。「食べなきゃ」と感じる雰囲気を減らすこともケアです。<a href="#ref-4" class="ref-link">4</a></p></div></div>
+    </div>
+  </section>
+
+  <section class="section animate-in">
+    <div class="highlight-box">
+      <h2 class="section-title">ご家族も、手をかけすぎなくて大丈夫です</h2>
+      <p class="highlight-text">一生懸命作ったものを食べてもらえないと、ご家族も傷ついてしまいます。市販品、冷凍食品、栄養補助食品、簡単に出せるものを使ってください。手をかけた食事だけが愛情ではありません。</p>
+      <div class="notice-box"><p>「食べる量」ではなく、「安心して過ごせる時間」を支えることも、ご家族にしかできない大切なケアです。</p></div>
+    </div>
+  </section>
+
+  <section class="section animate-in">
+    <p class="section-label">WHEN TO CONSULT</p>
+    <h2 class="section-title">こんなときは、医療者に相談してください</h2>
+    <p class="section-lead">症状を和らげることで、少し食べやすくなることがあります。食べられないことを、患者さんとご家族だけで抱え込む必要はありません。</p>
+    <div class="prep-steps">
+      <div class="prep-step animate-in"><div class="prep-number">✓</div><div><p class="prep-title">水分もほとんど取れない、尿が少ない</p><p class="prep-desc">脱水や電解質異常の評価が必要になることがあります。</p></div></div>
+      <div class="prep-step animate-in delay-1"><div class="prep-number">✓</div><div><p class="prep-title">吐き気、嘔吐、便秘、痛み、口内炎が強い</p><p class="prep-desc">薬の調整や症状緩和で、食べる負担が減ることがあります。</p></div></div>
+      <div class="prep-step animate-in delay-2"><div class="prep-number">✓</div><div><p class="prep-title">むせる、飲み込みにくい</p><p class="prep-desc">誤嚥のリスクや食形態の調整について相談が必要です。</p></div></div>
+      <div class="prep-step animate-in delay-3"><div class="prep-number">✓</div><div><p class="prep-title">ご家族がつらくなっている</p><p class="prep-desc">介護する側の不安や疲れも、相談してよい大切なテーマです。<a href="#ref-4" class="ref-link">4</a></p></div></div>
+    </div>
+  </section>
+
+  <section class="section animate-in">
+    <div class="empathy-section">
+      <p class="section-label">SUMMARY</p>
+      <h2 class="section-title">最後に</h2>
+      <p class="section-lead">「食べてほしい」と思う気持ちは、患者さんを大切に思う気持ちです。その気持ちを、食事の量ではなく、患者さんが安心して過ごせる時間に変えていく。</p>
+      <p class="section-lead">食卓は、栄養をとる場所である前に、安心できる場所であってほしいと思います。食べられない日があっても、そばにいること、責めずに見守ること、手を握ることも、大切な支えです。</p>
+    </div>
+  </section>
+
+  <section class="section animate-in">
+    <p class="section-label">REFERENCES</p>
+    <h2 class="section-title">参考文献</h2>
+    <ol class="reference-list">
+      <li id="ref-1">国立がん研究センター がん情報サービス. <a href="https://ganjoho.jp/public/support/condition/anorexia/index.html" target="_blank" rel="noopener noreferrer">食欲がない・食欲不振</a>. 2026年6月30日閲覧.</li>
+      <li id="ref-2">Fearon K, Strasser F, Anker SD, et al. Definition and classification of cancer cachexia: an international consensus. <em>Lancet Oncol.</em> 2011;12(5):489-495.</li>
+      <li id="ref-3">Roeland EJ, Bohlke K, Baracos VE, et al. Management of Cancer Cachexia: ASCO Guideline. <em>J Clin Oncol.</em> 2020;38(21):2438-2453.</li>
+      <li id="ref-4">Macmillan Cancer Support. <a href="https://www.macmillan.org.uk/cancer-information-and-support/impacts-of-cancer/eating-problems" target="_blank" rel="noopener noreferrer">Cancer and eating problems</a>. 2026年6月30日閲覧.</li>
+    </ol>
+  </section>
+
+  <nav class="nav-buttons" aria-label="ページ内ナビゲーション">
+    <a href="../index.html" class="nav-button primary">トップページへ戻る</a>
+    <a href="#top" class="nav-button secondary">ページ上部へ戻る</a>
+  </nav>
+
+  <section class="credit-block animate-in">
+    <dl class="credit-list">
+      <div class="credit-row"><dt>作成日</dt><dd>2026年6月30日</dd></div>
+      <div class="credit-row"><dt>作成</dt><dd>東北医科薬科大学病院 腫瘍内科</dd></div>
+      <div class="credit-row"><dt>注意</dt><dd>このページは一般的な情報提供を目的としています。個別の症状や治療方針については、担当の医療者にご相談ください。</dd></div>
+    </dl>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-logo">tmpu-oncology.jp</div>
+    <p>Department of Medical Oncology, Tohoku Medical and Pharmaceutical University Hospital</p>
+  </footer>
+</div>
+<script>
+  const targets = document.querySelectorAll('.animate-in:not(.is-visible)');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.14 });
+  targets.forEach((target) => observer.observe(target));
+</script>
+</body>
+</html>
