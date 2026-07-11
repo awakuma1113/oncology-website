@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1700" viewBox="0 0 1200 1700" role="img" aria-labelledby="title desc">
+  <title id="title">BSテレ東「教えて！ドクター 家族の健康」出演告知</title>
+  <desc id="desc">番組テーマは「胃がん 薬物療法の進歩と腫瘍内科」。2026年8月22日20時54分放送。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f3fbf7"/>
+      <stop offset="0.55" stop-color="#e8f5ef"/>
+      <stop offset="1" stop-color="#d9efe4"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#065f46" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="1700" fill="url(#bg)"/>
+  <circle cx="1040" cy="180" r="260" fill="#10b981" opacity="0.12"/>
+  <circle cx="120" cy="1510" r="300" fill="#065f46" opacity="0.10"/>
+  <rect x="90" y="92" width="1020" height="1516" rx="44" fill="#ffffff" filter="url(#shadow)"/>
+  <rect x="90" y="92" width="1020" height="190" rx="44" fill="#065f46"/>
+  <rect x="90" y="220" width="1020" height="62" fill="#065f46"/>
+
+  <text x="600" y="178" text-anchor="middle" font-family="'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="48" font-weight="700" fill="#ffffff">テレビ出演のお知らせ</text>
+  <text x="600" y="244" text-anchor="middle" font-family="'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="28" font-weight="500" fill="#d1fae5">東北医科薬科大学医学部 腫瘍内科学教室</text>
+
+  <text x="600" y="390" text-anchor="middle" font-family="'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="34" font-weight="700" fill="#065f46">BSテレ東</text>
+  <text x="600" y="464" text-anchor="middle" font-family="'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="56" font-weight="700" fill="#111827">「教えて！ドクター</text>
+  <text x="600" y="535" text-anchor="middle" font-family="'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="56" font-weight="700" fill="#111827">家族の健康」</text>
+
+  <rect x="190" y="625" width="820" height="228" rx="28" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="3"/>
+  <text x="600" y="700" text-anchor="middle" font-family="'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="28" font-weight="700" fill="#047857">番組テーマ</text>
+  <text x="600" y="768" text-anchor="middle" font-family="'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="38" font-weight="700" fill="#111827">「胃がん 薬物療法の進歩と</text>
+  <text x="600" y="822" text-anchor="middle" font-family="'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="38" font-weight="700" fill="#111827">腫瘍内科」</text>
+
+  <line x1="190" y1="936" x2="1010" y2="936" stroke="#d1d5db" stroke-width="2"/>
+  <text x="220" y="1010" font-family="'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="28" font-weight="700" fill="#065f46">出演</text>
+  <text x="220" y="1068" font-family="'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="34" font-weight="500" fill="#111827">フリーアナウンサー　木佐彩子さん</text>
+  <text x="220" y="1126" font-family="'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="34" font-weight="500" fill="#111827">教授　下平秀樹</text>
+
+  <rect x="190" y="1210" width="820" height="170" rx="26" fill="#065f46"/>
+  <text x="600" y="1272" text-anchor="middle" font-family="'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="30" font-weight="700" fill="#d1fae5">放送日時</text>
+  <text x="600" y="1340" text-anchor="middle" font-family="'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="46" font-weight="700" fill="#ffffff">2026年8月22日（土）</text>
+  <text x="600" y="1405" text-anchor="middle" font-family="'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="42" font-weight="700" fill="#ffffff">20時54分～21時00分</text>
+
+  <text x="600" y="1496" text-anchor="middle" font-family="'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="34" font-weight="700" fill="#111827">BSテレ東（BSデジタル7ch）</text>
+  <text x="600" y="1558" text-anchor="middle" font-family="'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif" font-size="24" font-weight="400" fill="#6b7280">※放送日時・内容は変更となる場合があります。</text>
+</svg>
