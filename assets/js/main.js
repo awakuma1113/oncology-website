@@ -66,7 +66,7 @@ function getBaseUrl() {
  */
 function getSitePrefix() {
     const pathname = window.location.pathname;
-    const subdirPatterns = ['/column/', '/medical/'];
+    const subdirPatterns = ['/column/', '/medical/', '/news/'];
     if (isEnglish()) return '../';
     if (subdirPatterns.some(p => pathname.includes(p))) return '../';
     return './';
