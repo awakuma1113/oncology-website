@@ -83,11 +83,13 @@ function addColumnNavigation(html) {
 
 export default async function handler(request, context) {
   const url = new URL(request.url);
+  const normalizedPath = url.pathname.replace(/\/+$/, '');
+
   if (
     request.method !== 'GET' ||
-    url.pathname === '/column/' ||
-    url.pathname.endsWith('/column/index.html') ||
-    !url.pathname.endsWith('.html')
+    normalizedPath === '/column' ||
+    normalizedPath === '/column/index' ||
+    normalizedPath === '/column/index.html'
   ) {
     return;
   }
