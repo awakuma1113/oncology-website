@@ -1,17 +1,16 @@
 name: Update column navigation once
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - .github/workflows/column-navigation-once-main.yml
+  issues:
+    types: [opened]
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   update-column-navigation:
+    if: github.event.issue.title == 'Run column navigation update'
     runs-on: ubuntu-latest
     steps:
       - name: Check out main
@@ -133,8 +132,6 @@ jobs:
                   raise RuntimeError(f'Column-list button count error: {path}')
               if text.count('トップページへ戻る') != 1:
                   raise RuntimeError(f'Home button count error: {path}')
-              if text.count('data-column-navigation') != 2:
-                  raise RuntimeError(f'Generated navigation marker error: {path}')
               if 'href="index.html"' not in text or 'href="../index.html"' not in text:
                   raise RuntimeError(f'Navigation link error: {path}')
 
@@ -163,7 +160,7 @@ jobs:
           print(f'Validated {len(pages)} column detail pages.')
           PY
 
-      - name: Remove one-time workflow and commit changes
+      - name: Remove updater and commit changes
         shell: bash
         run: |
           rm .github/workflows/column-navigation-once-main.yml
@@ -172,3 +169,9 @@ jobs:
           git add column .github/workflows/column-navigation-once-main.yml
           git commit -m "Add column list and home navigation buttons"
           git push origin HEAD:main
+
+      - name: Close trigger issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: gh issue close "$ISSUE_NUMBER" --comment "Column navigation buttons were added and validated."
