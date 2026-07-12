@@ -1,0 +1,174 @@
+name: Update column navigation once
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/column-navigation-once-main.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update-column-navigation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Update all patient column detail pages
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          STYLE = '''
+<style data-column-navigation-styles>
+  .column-page-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 24px 0 32px;
+  }
+  .column-page-navigation a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .column-page-navigation a:hover { transform: translateY(-1px); }
+  .column-page-navigation a:focus-visible {
+    outline: 3px solid rgba(29, 143, 90, 0.35);
+    outline-offset: 3px;
+  }
+  .column-nav-list {
+    color: #ffffff;
+    background: #167348;
+    border: 1px solid #167348;
+    box-shadow: 0 3px 12px rgba(22, 115, 72, 0.18);
+  }
+  .column-nav-list:hover { background: #115a38; }
+  .column-nav-home {
+    color: #115a38;
+    background: #ffffff;
+    border: 1px solid #6cc89a;
+  }
+  .column-nav-home:hover { background: #f0faf4; }
+  @media (min-width: 640px) {
+    .column-page-navigation {
+      flex-direction: row;
+      justify-content: center;
+    }
+    .column-page-navigation a { min-width: 210px; }
+  }
+</style>
+'''
+
+          NAV = '''
+  <nav class="column-page-navigation" data-column-navigation aria-label="コラムナビゲーション">
+    <a href="index.html" class="column-nav-list">← コラム一覧に戻る</a>
+    <a href="../index.html" class="column-nav-home">トップページへ戻る</a>
+  </nav>
+'''
+
+          generated_style = re.compile(
+              r'\s*<style\s+data-column-navigation-styles>.*?</style>\s*',
+              re.DOTALL | re.IGNORECASE,
+          )
+          generated_nav = re.compile(
+              r'\s*<nav\b[^>]*data-column-navigation[^>]*>.*?</nav>\s*',
+              re.DOTALL | re.IGNORECASE,
+          )
+          legacy_button = re.compile(
+              r'\s*<a\b[^>]*>(?:(?!</a>).)*(?:トップページへ戻る|コラム一覧に戻る)(?:(?!</a>).)*</a>\s*',
+              re.DOTALL | re.IGNORECASE,
+          )
+
+          column_dir = Path('column')
+          detail_pages = sorted(p for p in column_dir.glob('*.html') if p.name != 'index.html')
+          changed = []
+
+          for path in detail_pages:
+              text = path.read_text(encoding='utf-8')
+              original = text
+
+              text = generated_style.sub('\n', text)
+              text = generated_nav.sub('\n', text)
+              text = legacy_button.sub('\n', text)
+
+              if '</head>' not in text or '</body>' not in text:
+                  raise RuntimeError(f'Invalid HTML structure: {path}')
+
+              text = text.replace('</head>', f'{STYLE}</head>', 1)
+
+              insertion_markers = (
+                  '<section class="credit-block',
+                  '<div class="credit-block',
+                  '<footer class="footer',
+                  '</body>',
+              )
+              for marker in insertion_markers:
+                  position = text.find(marker)
+                  if position != -1:
+                      text = text[:position] + NAV + '\n' + text[position:]
+                      break
+              else:
+                  raise RuntimeError(f'Could not place navigation: {path}')
+
+              if text.count('コラム一覧に戻る') != 1:
+                  raise RuntimeError(f'Column-list button count error: {path}')
+              if text.count('トップページへ戻る') != 1:
+                  raise RuntimeError(f'Home button count error: {path}')
+              if text.count('data-column-navigation') != 2:
+                  raise RuntimeError(f'Generated navigation marker error: {path}')
+              if 'href="index.html"' not in text or 'href="../index.html"' not in text:
+                  raise RuntimeError(f'Navigation link error: {path}')
+
+              if text != original:
+                  path.write_text(text, encoding='utf-8')
+                  changed.append(str(path))
+
+          print(f'Updated {len(changed)} of {len(detail_pages)} column detail pages:')
+          for item in changed:
+              print(f'- {item}')
+          PY
+
+      - name: Validate generated navigation
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          pages = sorted(p for p in Path('column').glob('*.html') if p.name != 'index.html')
+          for path in pages:
+              text = path.read_text(encoding='utf-8')
+              assert text.count('コラム一覧に戻る') == 1, path
+              assert text.count('トップページへ戻る') == 1, path
+              assert 'href="index.html"' in text, path
+              assert 'href="../index.html"' in text, path
+          print(f'Validated {len(pages)} column detail pages.')
+          PY
+
+      - name: Remove one-time workflow and commit changes
+        shell: bash
+        run: |
+          rm .github/workflows/column-navigation-once-main.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add column .github/workflows/column-navigation-once-main.yml
+          git commit -m "Add column list and home navigation buttons"
+          git push origin HEAD:main
