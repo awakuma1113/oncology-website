@@ -4,6 +4,13 @@
  */
 const TMPU_NEWS_ITEMS = [
     {
+        date: '2026-07-14',
+        category: 'コラム',
+        title: 'コラム vol.06「大切な人ががんになったとき」を公開しました。',
+        url: 'column/08.html',
+        status: 'published',
+    },
+    {
         date: '2026-07-11',
         category: 'メディア',
         title: '下平秀樹教授がBSテレ東「教えて！ドクター 家族の健康」に出演します',
