@@ -1,5 +1,5 @@
 const TARGET_PATHS = new Set(['/', '/index.html', '/news.html']);
-const VERSIONED_NEWS_SCRIPT = 'assets/js/news.js?v=20260714-2';
+const VERSIONED_NEWS_SCRIPT = 'assets/js/news.js?v=20260714-3';
 
 function addNewsVersion(html) {
   return html.replace(
